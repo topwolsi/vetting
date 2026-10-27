@@ -1,0 +1,269 @@
+﻿action_id,finding_id,corrective_action,owner,target_date,status
+ACT-000001,FND-000001,Complete overdue inspection and upload signed checklist.,Chief Engineer,2024-03-11,Open
+ACT-000010,FND-000010,Conduct toolbox talk and verify implementation during next internal inspection.,Safety Officer,2025-01-14,Open
+ACT-000011,FND-000011,Conduct toolbox talk and verify implementation during next internal inspection.,Chief Engineer,2025-01-03,Under Review
+ACT-000012,FND-000012,Complete overdue inspection and upload signed checklist.,Safety Officer,2024-12-21,Open
+ACT-000015,FND-000015,Conduct toolbox talk and verify implementation during next internal inspection.,Master,2026-02-04,Under Review
+ACT-000016,FND-000016,Complete overdue inspection and upload signed checklist.,DPA,2024-11-02,Open
+ACT-000017,FND-000017,Update procedure and brief relevant crew.,Master,2024-11-12,Under Review
+ACT-000018,FND-000018,Complete overdue inspection and upload signed checklist.,Safety Officer,2026-12-14,Open
+ACT-000020,FND-000020,Repair/replace affected component and retain photographic evidence.,DPA,2026-12-31,Under Review
+ACT-000021,FND-000021,Update procedure and brief relevant crew.,DPA,2026-12-12,Under Review
+ACT-000023,FND-000023,Conduct toolbox talk and verify implementation during next internal inspection.,Safety Officer,2025-04-27,Under Review
+ACT-000024,FND-000024,Complete overdue inspection and upload signed checklist.,Chief Engineer,2025-06-06,Open
+ACT-000026,FND-000026,Repair/replace affected component and retain photographic evidence.,DPA,2026-07-05,Under Review
+ACT-000027,FND-000027,Complete overdue inspection and upload signed checklist.,Master,2026-07-26,Open
+ACT-000029,FND-000029,Repair/replace affected component and retain photographic evidence.,Master,2026-08-09,Open
+ACT-000031,FND-000031,Repair/replace affected component and retain photographic evidence.,DPA,2025-08-20,Under Review
+ACT-000032,FND-000032,Complete overdue inspection and upload signed checklist.,Master,2025-09-30,Open
+ACT-000033,FND-000033,Repair/replace affected component and retain photographic evidence.,Chief Engineer,2025-05-23,Open
+ACT-000034,FND-000034,Complete overdue inspection and upload signed checklist.,Chief Engineer,2025-04-27,Under Review
+ACT-000035,FND-000035,Update procedure and brief relevant crew.,Safety Officer,2024-06-17,Under Review
+ACT-000036,FND-000036,Conduct toolbox talk and verify implementation during next internal inspection.,Master,2024-06-15,Open
+ACT-000037,FND-000037,Repair/replace affected component and retain photographic evidence.,Master,2024-05-21,Open
+ACT-000038,FND-000038,Conduct toolbox talk and verify implementation during next internal inspection.,DPA,2024-06-23,Under Review
+ACT-000040,FND-000040,Update procedure and brief relevant crew.,Safety Officer,2024-08-09,Under Review
+ACT-000041,FND-000041,Repair/replace affected component and retain photographic evidence.,Master,2024-08-29,Open
+ACT-000042,FND-000042,Conduct toolbox talk and verify implementation during next internal inspection.,Master,2024-08-04,Open
+ACT-000043,FND-000043,Complete overdue inspection and upload signed checklist.,Safety Officer,2024-07-29,Open
+ACT-000044,FND-000044,Update procedure and brief relevant crew.,Chief Engineer,2024-07-27,Open
+ACT-000045,FND-000045,Update procedure and brief relevant crew.,Master,2024-08-06,Under Review
+ACT-000046,FND-000046,Complete overdue inspection and upload signed checklist.,DPA,2024-04-21,Under Review
+ACT-000048,FND-000048,Repair/replace affected component and retain photographic evidence.,Chief Engineer,2024-04-21,Open
+ACT-000049,FND-000049,Conduct toolbox talk and verify implementation during next internal inspection.,Master,2025-07-13,Open
+ACT-000051,FND-000051,Complete overdue inspection and upload signed checklist.,Chief Engineer,2025-07-13,Open
+ACT-000052,FND-000052,Repair/replace affected component and retain photographic evidence.,Safety Officer,2026-09-29,Under Review
+ACT-000054,FND-000054,Complete overdue inspection and upload signed checklist.,Chief Engineer,2026-09-16,Open
+ACT-000056,FND-000056,Conduct toolbox talk and verify implementation during next internal inspection.,DPA,2024-11-16,Open
+ACT-000057,FND-000057,Complete overdue inspection and upload signed checklist.,DPA,2024-11-20,Under Review
+ACT-000058,FND-000058,Conduct toolbox talk and verify implementation during next internal inspection.,DPA,2024-11-29,Open
+ACT-000059,FND-000059,Complete overdue inspection and upload signed checklist.,DPA,2024-11-24,Under Review
+ACT-000061,FND-000061,Complete overdue inspection and upload signed checklist.,Master,2026-09-14,Under Review
+ACT-000062,FND-000062,Repair/replace affected component and retain photographic evidence.,Safety Officer,2025-10-16,Under Review
+ACT-000063,FND-000063,Complete overdue inspection and upload signed checklist.,Master,2025-10-06,Open
+ACT-000066,FND-000066,Conduct toolbox talk and verify implementation during next internal inspection.,Chief Engineer,2025-11-05,Under Review
+ACT-000067,FND-000067,Conduct toolbox talk and verify implementation during next internal inspection.,Safety Officer,2025-11-09,Under Review
+ACT-000068,FND-000068,Complete overdue inspection and upload signed checklist.,Master,2025-10-09,Open
+ACT-000069,FND-000069,Conduct toolbox talk and verify implementation during next internal inspection.,Safety Officer,2025-09-23,Under Review
+ACT-000071,FND-000071,Repair/replace affected component and retain photographic evidence.,Chief Engineer,2025-11-02,Open
+ACT-000072,FND-000072,Conduct toolbox talk and verify implementation during next internal inspection.,Master,2024-02-07,Open
+ACT-000074,FND-000074,Conduct toolbox talk and verify implementation during next internal inspection.,DPA,2026-04-26,Open
+ACT-000077,FND-000077,Complete overdue inspection and upload signed checklist.,Master,2025-06-03,Under Review
+ACT-000078,FND-000078,Conduct toolbox talk and verify implementation during next internal inspection.,DPA,2025-06-21,Under Review
+ACT-000079,FND-000079,Complete overdue inspection and upload signed checklist.,DPA,2025-11-04,Under Review
+ACT-000080,FND-000080,Complete overdue inspection and upload signed checklist.,Chief Engineer,2025-02-09,Open
+ACT-000081,FND-000081,Repair/replace affected component and retain photographic evidence.,Safety Officer,2025-01-06,Open
+ACT-000084,FND-000084,Update procedure and brief relevant crew.,Safety Officer,2026-04-09,Open
+ACT-000085,FND-000085,Complete overdue inspection and upload signed checklist.,Chief Engineer,2026-03-05,Under Review
+ACT-000086,FND-000086,Complete overdue inspection and upload signed checklist.,Safety Officer,2026-03-26,Open
+ACT-000087,FND-000087,Repair/replace affected component and retain photographic evidence.,Safety Officer,2025-10-25,Under Review
+ACT-000088,FND-000088,Repair/replace affected component and retain photographic evidence.,DPA,2025-10-24,Open
+ACT-000089,FND-000089,Complete overdue inspection and upload signed checklist.,Chief Engineer,2025-10-22,Open
+ACT-000090,FND-000090,Update procedure and brief relevant crew.,Safety Officer,2025-10-22,Under Review
+ACT-000091,FND-000091,Update procedure and brief relevant crew.,Chief Engineer,2025-10-29,Open
+ACT-000092,FND-000092,Update procedure and brief relevant crew.,Master,2025-10-31,Open
+ACT-000094,FND-000094,Update procedure and brief relevant crew.,Chief Engineer,2026-12-14,Under Review
+ACT-000095,FND-000095,Complete overdue inspection and upload signed checklist.,Safety Officer,2026-12-23,Under Review
+ACT-000096,FND-000096,Update procedure and brief relevant crew.,Safety Officer,2026-11-23,Under Review
+ACT-000097,FND-000097,Update procedure and brief relevant crew.,Master,2026-11-30,Under Review
+ACT-000098,FND-000098,Complete overdue inspection and upload signed checklist.,Chief Engineer,2026-11-25,Open
+ACT-000099,FND-000099,Update procedure and brief relevant crew.,Master,2025-11-05,Open
+ACT-000100,FND-000100,Update procedure and brief relevant crew.,DPA,2025-11-02,Under Review
+ACT-000101,FND-000101,Conduct toolbox talk and verify implementation during next internal inspection.,Master,2025-10-22,Under Review
+ACT-000106,FND-000106,Complete overdue inspection and upload signed checklist.,DPA,2024-03-23,Open
+ACT-000109,FND-000109,Repair/replace affected component and retain photographic evidence.,Master,2026-11-29,Open
+ACT-000113,FND-000113,Conduct toolbox talk and verify implementation during next internal inspection.,Safety Officer,2026-09-18,Under Review
+ACT-000114,FND-000114,Complete overdue inspection and upload signed checklist.,Master,2025-07-24,Under Review
+ACT-000115,FND-000115,Conduct toolbox talk and verify implementation during next internal inspection.,Chief Engineer,2025-07-30,Under Review
+ACT-000117,FND-000117,Complete overdue inspection and upload signed checklist.,Safety Officer,2025-08-17,Under Review
+ACT-000119,FND-000119,Conduct toolbox talk and verify implementation during next internal inspection.,Chief Engineer,2025-07-09,Open
+ACT-000120,FND-000120,Complete overdue inspection and upload signed checklist.,Chief Engineer,2024-02-05,Under Review
+ACT-000122,FND-000122,Conduct toolbox talk and verify implementation during next internal inspection.,Safety Officer,2024-03-03,Open
+ACT-000123,FND-000123,Update procedure and brief relevant crew.,Safety Officer,2024-08-26,Under Review
+ACT-000127,FND-000127,Repair/replace affected component and retain photographic evidence.,Chief Engineer,2025-11-26,Open
+ACT-000128,FND-000128,Conduct toolbox talk and verify implementation during next internal inspection.,Master,2025-12-04,Open
+ACT-000129,FND-000129,Conduct toolbox talk and verify implementation during next internal inspection.,Master,2025-10-30,Under Review
+ACT-000131,FND-000131,Update procedure and brief relevant crew.,Master,2025-11-18,Open
+ACT-000132,FND-000132,Complete overdue inspection and upload signed checklist.,Master,2025-01-29,Under Review
+ACT-000135,FND-000135,Update procedure and brief relevant crew.,Chief Engineer,2026-09-21,Open
+ACT-000137,FND-000137,Complete overdue inspection and upload signed checklist.,DPA,2025-04-27,Open
+ACT-000138,FND-000138,Conduct toolbox talk and verify implementation during next internal inspection.,Chief Engineer,2024-07-01,Open
+ACT-000140,FND-000140,Update procedure and brief relevant crew.,Master,2024-06-13,Open
+ACT-000141,FND-000141,Complete overdue inspection and upload signed checklist.,Master,2024-06-09,Under Review
+ACT-000142,FND-000142,Complete overdue inspection and upload signed checklist.,Safety Officer,2024-06-06,Under Review
+ACT-000143,FND-000143,Complete overdue inspection and upload signed checklist.,Chief Engineer,2024-05-14,Under Review
+ACT-000145,FND-000145,Complete overdue inspection and upload signed checklist.,Chief Engineer,2024-05-17,Under Review
+ACT-000146,FND-000146,Complete overdue inspection and upload signed checklist.,DPA,2024-06-12,Under Review
+ACT-000148,FND-000148,Conduct toolbox talk and verify implementation during next internal inspection.,Master,2024-12-25,Open
+ACT-000149,FND-000149,Repair/replace affected component and retain photographic evidence.,Chief Engineer,2024-03-14,Under Review
+ACT-000151,FND-000151,Complete overdue inspection and upload signed checklist.,Master,2025-08-06,Under Review
+ACT-000154,FND-000154,Conduct toolbox talk and verify implementation during next internal inspection.,DPA,2025-05-25,Under Review
+ACT-000155,FND-000155,Repair/replace affected component and retain photographic evidence.,Master,2025-06-19,Open
+ACT-000156,FND-000156,Repair/replace affected component and retain photographic evidence.,Master,2025-04-13,Under Review
+ACT-000157,FND-000157,Complete overdue inspection and upload signed checklist.,Master,2025-03-28,Open
+ACT-000158,FND-000158,Conduct toolbox talk and verify implementation during next internal inspection.,DPA,2025-03-27,Under Review
+ACT-000160,FND-000160,Conduct toolbox talk and verify implementation during next internal inspection.,Chief Engineer,2024-04-08,Under Review
+ACT-000161,FND-000161,Complete overdue inspection and upload signed checklist.,DPA,2024-04-13,Under Review
+ACT-000162,FND-000162,Conduct toolbox talk and verify implementation during next internal inspection.,Safety Officer,2024-04-12,Under Review
+ACT-000163,FND-000163,Repair/replace affected component and retain photographic evidence.,Master,2025-07-30,Open
+ACT-000164,FND-000164,Conduct toolbox talk and verify implementation during next internal inspection.,DPA,2025-07-12,Under Review
+ACT-000165,FND-000165,Repair/replace affected component and retain photographic evidence.,Master,2025-11-14,Open
+ACT-000166,FND-000166,Update procedure and brief relevant crew.,Master,2025-11-26,Under Review
+ACT-000167,FND-000167,Update procedure and brief relevant crew.,Safety Officer,2024-10-09,Under Review
+ACT-000168,FND-000168,Complete overdue inspection and upload signed checklist.,Safety Officer,2024-11-23,Open
+ACT-000170,FND-000170,Repair/replace affected component and retain photographic evidence.,DPA,2024-07-30,Open
+ACT-000171,FND-000171,Update procedure and brief relevant crew.,Chief Engineer,2025-03-24,Under Review
+ACT-000172,FND-000172,Complete overdue inspection and upload signed checklist.,DPA,2025-03-21,Under Review
+ACT-000173,FND-000173,Complete overdue inspection and upload signed checklist.,Master,2025-03-08,Under Review
+ACT-000174,FND-000174,Complete overdue inspection and upload signed checklist.,Chief Engineer,2025-02-14,Under Review
+ACT-000177,FND-000177,Conduct toolbox talk and verify implementation during next internal inspection.,DPA,2026-11-19,Under Review
+ACT-000178,FND-000178,Complete overdue inspection and upload signed checklist.,Chief Engineer,2026-10-25,Open
+ACT-000179,FND-000179,Complete overdue inspection and upload signed checklist.,Safety Officer,2025-10-13,Under Review
+ACT-000180,FND-000180,Complete overdue inspection and upload signed checklist.,DPA,2025-10-26,Open
+ACT-000181,FND-000181,Complete overdue inspection and upload signed checklist.,Chief Engineer,2025-10-14,Open
+ACT-000183,FND-000183,Conduct toolbox talk and verify implementation during next internal inspection.,DPA,2026-01-02,Under Review
+ACT-000186,FND-000186,Conduct toolbox talk and verify implementation during next internal inspection.,Safety Officer,2025-07-24,Under Review
+ACT-000187,FND-000187,Update procedure and brief relevant crew.,Master,2025-07-09,Open
+ACT-000188,FND-000188,Repair/replace affected component and retain photographic evidence.,Chief Engineer,2025-07-03,Under Review
+ACT-000189,FND-000189,Complete overdue inspection and upload signed checklist.,Master,2025-07-08,Under Review
+ACT-000190,FND-000190,Repair/replace affected component and retain photographic evidence.,DPA,2025-07-28,Open
+ACT-000191,FND-000191,Repair/replace affected component and retain photographic evidence.,Chief Engineer,2025-08-02,Open
+ACT-000192,FND-000192,Complete overdue inspection and upload signed checklist.,Chief Engineer,2024-02-26,Open
+ACT-000194,FND-000194,Repair/replace affected component and retain photographic evidence.,Master,2026-10-20,Open
+ACT-000197,FND-000197,Repair/replace affected component and retain photographic evidence.,DPA,2027-01-20,Under Review
+ACT-000198,FND-000198,Conduct toolbox talk and verify implementation during next internal inspection.,DPA,2027-01-16,Under Review
+ACT-000201,FND-000201,Repair/replace affected component and retain photographic evidence.,Master,2025-04-09,Under Review
+ACT-000202,FND-000202,Complete overdue inspection and upload signed checklist.,Chief Engineer,2025-04-04,Under Review
+ACT-000203,FND-000203,Complete overdue inspection and upload signed checklist.,Chief Engineer,2025-03-27,Open
+ACT-000205,FND-000205,Complete overdue inspection and upload signed checklist.,Chief Engineer,2025-02-08,Open
+ACT-000206,FND-000206,Update procedure and brief relevant crew.,Master,2025-02-09,Open
+ACT-000207,FND-000207,Update procedure and brief relevant crew.,Master,2024-02-03,Under Review
+ACT-000208,FND-000208,Complete overdue inspection and upload signed checklist.,Safety Officer,2024-02-03,Under Review
+ACT-000209,FND-000209,Complete overdue inspection and upload signed checklist.,Chief Engineer,2024-02-11,Under Review
+ACT-000210,FND-000210,Update procedure and brief relevant crew.,Safety Officer,2025-08-06,Open
+ACT-000212,FND-000212,Repair/replace affected component and retain photographic evidence.,Safety Officer,2025-08-03,Under Review
+ACT-000214,FND-000214,Complete overdue inspection and upload signed checklist.,DPA,2024-02-09,Open
+ACT-000215,FND-000215,Repair/replace affected component and retain photographic evidence.,Master,2024-02-19,Under Review
+ACT-000216,FND-000216,Conduct toolbox talk and verify implementation during next internal inspection.,DPA,2024-01-28,Open
+ACT-000217,FND-000217,Conduct toolbox talk and verify implementation during next internal inspection.,Safety Officer,2024-02-19,Open
+ACT-000219,FND-000219,Complete overdue inspection and upload signed checklist.,DPA,2024-01-27,Open
+ACT-000220,FND-000220,Update procedure and brief relevant crew.,Master,2026-05-29,Under Review
+ACT-000221,FND-000221,Complete overdue inspection and upload signed checklist.,Master,2026-06-04,Open
+ACT-000222,FND-000222,Conduct toolbox talk and verify implementation during next internal inspection.,Chief Engineer,2026-05-27,Open
+ACT-000223,FND-000223,Update procedure and brief relevant crew.,Chief Engineer,2026-05-25,Open
+ACT-000224,FND-000224,Conduct toolbox talk and verify implementation during next internal inspection.,Chief Engineer,2026-05-24,Under Review
+ACT-000225,FND-000225,Update procedure and brief relevant crew.,Chief Engineer,2026-06-20,Under Review
+ACT-000230,FND-000230,Complete overdue inspection and upload signed checklist.,Master,2024-05-21,Open
+ACT-000232,FND-000232,Update procedure and brief relevant crew.,DPA,2024-05-20,Open
+ACT-000233,FND-000233,Update procedure and brief relevant crew.,Safety Officer,2024-08-06,Open
+ACT-000235,FND-000235,Conduct toolbox talk and verify implementation during next internal inspection.,Safety Officer,2025-05-01,Open
+ACT-000236,FND-000236,Conduct toolbox talk and verify implementation during next internal inspection.,Master,2025-05-05,Open
+ACT-000239,FND-000239,Repair/replace affected component and retain photographic evidence.,DPA,2026-01-14,Under Review
+ACT-000240,FND-000240,Update procedure and brief relevant crew.,Master,2025-08-15,Open
+ACT-000241,FND-000241,Conduct toolbox talk and verify implementation during next internal inspection.,Chief Engineer,2025-05-07,Under Review
+ACT-000242,FND-000242,Complete overdue inspection and upload signed checklist.,Safety Officer,2025-05-10,Under Review
+ACT-000243,FND-000243,Update procedure and brief relevant crew.,DPA,2025-03-30,Open
+ACT-000244,FND-000244,Repair/replace affected component and retain photographic evidence.,Chief Engineer,2025-04-02,Open
+ACT-000245,FND-000245,Conduct toolbox talk and verify implementation during next internal inspection.,DPA,2025-04-15,Open
+ACT-000250,FND-000250,Repair/replace affected component and retain photographic evidence.,Chief Engineer,2026-07-20,Open
+ACT-000251,FND-000251,Complete overdue inspection and upload signed checklist.,Safety Officer,2024-08-10,Open
+ACT-000253,FND-000253,Complete overdue inspection and upload signed checklist.,Master,2024-06-26,Open
+ACT-000254,FND-000254,Update procedure and brief relevant crew.,Chief Engineer,2024-06-13,Under Review
+ACT-000255,FND-000255,Update procedure and brief relevant crew.,Chief Engineer,2024-06-13,Under Review
+ACT-000256,FND-000256,Repair/replace affected component and retain photographic evidence.,Chief Engineer,2025-06-13,Open
+ACT-000257,FND-000257,Update procedure and brief relevant crew.,Safety Officer,2025-05-13,Open
+ACT-000260,FND-000260,Complete overdue inspection and upload signed checklist.,Master,2025-05-27,Open
+ACT-000261,FND-000261,Repair/replace affected component and retain photographic evidence.,Safety Officer,2025-06-21,Open
+ACT-000262,FND-000262,Complete overdue inspection and upload signed checklist.,DPA,2026-09-07,Under Review
+ACT-000263,FND-000263,Complete overdue inspection and upload signed checklist.,DPA,2026-08-13,Under Review
+ACT-000265,FND-000265,Update procedure and brief relevant crew.,DPA,2026-03-11,Open
+ACT-000268,FND-000268,Repair/replace affected component and retain photographic evidence.,Safety Officer,2025-08-02,Under Review
+ACT-000269,FND-000269,Complete overdue inspection and upload signed checklist.,DPA,2026-11-01,Under Review
+ACT-000271,FND-000271,Conduct toolbox talk and verify implementation during next internal inspection.,Chief Engineer,2024-09-06,Open
+ACT-000272,FND-000272,Repair/replace affected component and retain photographic evidence.,Safety Officer,2024-09-16,Open
+ACT-000273,FND-000273,Conduct toolbox talk and verify implementation during next internal inspection.,DPA,2024-10-01,Open
+ACT-000274,FND-000274,Complete overdue inspection and upload signed checklist.,Master,2024-08-25,Open
+ACT-000275,FND-000275,Repair/replace affected component and retain photographic evidence.,Chief Engineer,2024-10-05,Open
+ACT-000276,FND-000276,Complete overdue inspection and upload signed checklist.,Chief Engineer,2024-08-29,Open
+ACT-000277,FND-000277,Conduct toolbox talk and verify implementation during next internal inspection.,Chief Engineer,2024-09-21,Under Review
+ACT-000281,FND-000281,Conduct toolbox talk and verify implementation during next internal inspection.,Chief Engineer,2026-03-14,Under Review
+ACT-000282,FND-000282,Update procedure and brief relevant crew.,Master,2025-09-21,Open
+ACT-000283,FND-000283,Update procedure and brief relevant crew.,Safety Officer,2025-09-26,Open
+ACT-000284,FND-000284,Repair/replace affected component and retain photographic evidence.,Master,2025-09-24,Under Review
+ACT-000285,FND-000285,Repair/replace affected component and retain photographic evidence.,Master,2025-05-01,Open
+ACT-000288,FND-000288,Conduct toolbox talk and verify implementation during next internal inspection.,Safety Officer,2025-04-11,Under Review
+ACT-000290,FND-000290,Update procedure and brief relevant crew.,DPA,2026-04-28,Under Review
+ACT-000291,FND-000291,Update procedure and brief relevant crew.,Master,2026-04-25,Open
+ACT-000292,FND-000292,Complete overdue inspection and upload signed checklist.,DPA,2026-11-25,Under Review
+ACT-000293,FND-000293,Complete overdue inspection and upload signed checklist.,Safety Officer,2026-11-25,Open
+ACT-000294,FND-000294,Update procedure and brief relevant crew.,Safety Officer,2026-12-19,Open
+ACT-000295,FND-000295,Complete overdue inspection and upload signed checklist.,Master,2026-12-03,Open
+ACT-000297,FND-000297,Complete overdue inspection and upload signed checklist.,DPA,2026-11-14,Under Review
+ACT-000302,FND-000302,Update procedure and brief relevant crew.,Chief Engineer,2026-10-29,Under Review
+ACT-000305,FND-000305,Repair/replace affected component and retain photographic evidence.,Chief Engineer,2025-09-27,Open
+ACT-000306,FND-000306,Conduct toolbox talk and verify implementation during next internal inspection.,Master,2025-08-29,Open
+ACT-000307,FND-000307,Update procedure and brief relevant crew.,Safety Officer,2025-09-24,Open
+ACT-000308,FND-000308,Update procedure and brief relevant crew.,Safety Officer,2025-08-27,Open
+ACT-000309,FND-000309,Repair/replace affected component and retain photographic evidence.,Chief Engineer,2025-10-02,Open
+ACT-000310,FND-000310,Update procedure and brief relevant crew.,Master,2026-05-06,Open
+ACT-000311,FND-000311,Complete overdue inspection and upload signed checklist.,Master,2026-07-23,Open
+ACT-000315,FND-000315,Conduct toolbox talk and verify implementation during next internal inspection.,Chief Engineer,2026-04-09,Under Review
+ACT-000318,FND-000318,Repair/replace affected component and retain photographic evidence.,Chief Engineer,2026-01-05,Open
+ACT-000320,FND-000320,Repair/replace affected component and retain photographic evidence.,Master,2024-12-02,Under Review
+ACT-000321,FND-000321,Complete overdue inspection and upload signed checklist.,Safety Officer,2024-12-11,Under Review
+ACT-000322,FND-000322,Complete overdue inspection and upload signed checklist.,DPA,2026-11-18,Under Review
+ACT-000324,FND-000324,Conduct toolbox talk and verify implementation during next internal inspection.,Safety Officer,2026-11-01,Under Review
+ACT-000327,FND-000327,Repair/replace affected component and retain photographic evidence.,Master,2026-10-16,Open
+ACT-000328,FND-000328,Update procedure and brief relevant crew.,Safety Officer,2026-10-29,Under Review
+ACT-000330,FND-000330,Update procedure and brief relevant crew.,Chief Engineer,2025-12-28,Under Review
+ACT-000331,FND-000331,Repair/replace affected component and retain photographic evidence.,Safety Officer,2025-12-06,Open
+ACT-000333,FND-000333,Repair/replace affected component and retain photographic evidence.,Master,2026-04-11,Open
+ACT-000335,FND-000335,Conduct toolbox talk and verify implementation during next internal inspection.,DPA,2026-03-15,Open
+ACT-000337,FND-000337,Complete overdue inspection and upload signed checklist.,Master,2025-12-19,Open
+ACT-000338,FND-000338,Complete overdue inspection and upload signed checklist.,Chief Engineer,2025-12-07,Open
+ACT-000339,FND-000339,Conduct toolbox talk and verify implementation during next internal inspection.,Safety Officer,2025-01-13,Under Review
+ACT-000344,FND-000344,Conduct toolbox talk and verify implementation during next internal inspection.,Master,2025-10-11,Open
+ACT-000345,FND-000345,Conduct toolbox talk and verify implementation during next internal inspection.,Master,2025-06-05,Open
+ACT-000346,FND-000346,Repair/replace affected component and retain photographic evidence.,Master,2025-04-28,Open
+ACT-000348,FND-000348,Repair/replace affected component and retain photographic evidence.,DPA,2025-05-22,Under Review
+ACT-000349,FND-000349,Update procedure and brief relevant crew.,Safety Officer,2025-05-31,Open
+ACT-000353,FND-000353,Conduct toolbox talk and verify implementation during next internal inspection.,Safety Officer,2026-10-13,Open
+ACT-000354,FND-000354,Conduct toolbox talk and verify implementation during next internal inspection.,Chief Engineer,2026-10-21,Open
+ACT-000355,FND-000355,Repair/replace affected component and retain photographic evidence.,Safety Officer,2026-09-22,Open
+ACT-000356,FND-000356,Update procedure and brief relevant crew.,DPA,2025-07-18,Under Review
+ACT-000357,FND-000357,Complete overdue inspection and upload signed checklist.,DPA,2025-12-06,Under Review
+ACT-000359,FND-000359,Complete overdue inspection and upload signed checklist.,DPA,2026-07-10,Under Review
+ACT-000360,FND-000360,Update procedure and brief relevant crew.,Safety Officer,2024-05-31,Under Review
+ACT-000362,FND-000362,Conduct toolbox talk and verify implementation during next internal inspection.,DPA,2025-08-15,Open
+ACT-000363,FND-000363,Complete overdue inspection and upload signed checklist.,Safety Officer,2025-07-27,Open
+ACT-000364,FND-000364,Conduct toolbox talk and verify implementation during next internal inspection.,DPA,2025-08-03,Under Review
+ACT-000365,FND-000365,Update procedure and brief relevant crew.,DPA,2024-04-19,Under Review
+ACT-000366,FND-000366,Update procedure and brief relevant crew.,DPA,2024-03-31,Open
+ACT-000367,FND-000367,Repair/replace affected component and retain photographic evidence.,Chief Engineer,2024-04-24,Under Review
+ACT-000370,FND-000370,Complete overdue inspection and upload signed checklist.,DPA,2024-03-04,Open
+ACT-000372,FND-000372,Conduct toolbox talk and verify implementation during next internal inspection.,Safety Officer,2024-02-24,Under Review
+ACT-000373,FND-000373,Conduct toolbox talk and verify implementation during next internal inspection.,Chief Engineer,2024-03-02,Open
+ACT-000374,FND-000374,Repair/replace affected component and retain photographic evidence.,Chief Engineer,2026-05-13,Under Review
+ACT-000375,FND-000375,Repair/replace affected component and retain photographic evidence.,Safety Officer,2026-06-14,Under Review
+ACT-000376,FND-000376,Complete overdue inspection and upload signed checklist.,Chief Engineer,2026-05-07,Open
+ACT-000377,FND-000377,Conduct toolbox talk and verify implementation during next internal inspection.,Chief Engineer,2026-05-10,Open
+ACT-000378,FND-000378,Complete overdue inspection and upload signed checklist.,Master,2026-06-14,Under Review
+ACT-000379,FND-000379,Update procedure and brief relevant crew.,DPA,2026-05-18,Open
+ACT-000380,FND-000380,Conduct toolbox talk and verify implementation during next internal inspection.,DPA,2026-05-08,Open
+ACT-000381,FND-000381,Update procedure and brief relevant crew.,Safety Officer,2024-12-26,Under Review
+ACT-000382,FND-000382,Update procedure and brief relevant crew.,Chief Engineer,2024-12-19,Under Review
+ACT-000383,FND-000383,Conduct toolbox talk and verify implementation during next internal inspection.,Chief Engineer,2025-01-22,Under Review
+ACT-000384,FND-000384,Update procedure and brief relevant crew.,Master,2024-03-16,Open
+ACT-000385,FND-000385,Complete overdue inspection and upload signed checklist.,Safety Officer,2024-03-04,Open
+ACT-000386,FND-000386,Update procedure and brief relevant crew.,Chief Engineer,2026-02-05,Under Review
+ACT-000387,FND-000387,Conduct toolbox talk and verify implementation during next internal inspection.,Chief Engineer,2025-07-17,Under Review
+ACT-000388,FND-000388,Update procedure and brief relevant crew.,Chief Engineer,2026-12-08,Open
+ACT-000389,FND-000389,Conduct toolbox talk and verify implementation during next internal inspection.,Safety Officer,2027-01-05,Open
+ACT-000390,FND-000390,Update procedure and brief relevant crew.,DPA,2026-12-13,Open
+ACT-000391,FND-000391,Update procedure and brief relevant crew.,Master,2026-01-30,Under Review
+ACT-000392,FND-000392,Repair/replace affected component and retain photographic evidence.,DPA,2026-02-28,Open
+ACT-000395,FND-000395,Complete overdue inspection and upload signed checklist.,Chief Engineer,2026-02-21,Under Review
+ACT-000397,FND-000397,Complete overdue inspection and upload signed checklist.,Chief Engineer,2025-08-04,Open
+ACT-000399,FND-000399,Complete overdue inspection and upload signed checklist.,DPA,2026-07-13,Open
+ACT-000400,FND-000400,Conduct toolbox talk and verify implementation during next internal inspection.,Master,2026-08-20,Open
+ACT-000401,FND-000401,Repair/replace affected component and retain photographic evidence.,DPA,2025-10-24,Under Review

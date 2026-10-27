@@ -1,0 +1,51 @@
+﻿arrival_id,imo,vessel_name,eta,berth,cargo,supplier,agent,submitted_at,synthetic
+ARR-20261028-9300015,9300015,HORIZON PRIDE 15,2026-10-28,당진 원료부두,원료 양하 – 석탄,Maritime Commodity Partners,Dangjin Marine Agency,2026-10-18,True
+ARR-20261029-9300014,9300014,HORIZON TRADER 14,2026-10-29,당진 원료부두,원료 양하 – 철광석,Maritime Commodity Partners,Korea Port Services,2026-10-19,True
+ARR-20261030-9300013,9300013,EASTERN PRIDE 13,2026-10-30,당진 제품부두,제품 적하 – 후판,Maritime Commodity Partners,Seohae Shipping Agency,2026-10-20,True
+ARR-20261031-9300012,9300012,MERIDIAN FORTUNE 12,2026-10-31,당진 제품부두,제품 적하 – 열연/냉연 코일,Global Steel Logistics,Dangjin Marine Agency,2026-10-21,True
+ARR-20261101-9300011,9300011,EASTERN FORTUNE 11,2026-11-01,당진 원료부두,원료 양하 – 석탄,Maritime Commodity Partners,Korea Port Services,2026-10-22,True
+ARR-20261102-9300010,9300010,PACIFIC SPIRIT 10,2026-11-02,당진 원료부두,원료 양하 – 철광석,East Asia Bulk Trading,Seohae Shipping Agency,2026-10-23,True
+ARR-20261103-9300009,9300009,EASTERN SPIRIT 09,2026-11-03,당진 제품부두,제품 적하 – 열연/냉연 코일,Maritime Commodity Partners,Dangjin Marine Agency,2026-10-24,True
+ARR-20261104-9300008,9300008,EASTERN FORTUNE 08,2026-11-04,당진 제품부두,제품 적하 – 형강/철근,East Asia Bulk Trading,Korea Port Services,2026-10-25,True
+ARR-20261105-9300007,9300007,PACIFIC TRADER 07,2026-11-05,당진 원료부두,원료 양하 – 석탄,East Asia Bulk Trading,Seohae Shipping Agency,2026-10-26,True
+ARR-20261106-9300006,9300006,NORTHSTAR MERIDIAN 06,2026-11-06,당진 원료부두,원료 양하 – 철광석,Global Steel Logistics,Dangjin Marine Agency,2026-10-27,True
+ARR-20261107-9300005,9300005,EASTERN SPIRIT 05,2026-11-07,당진 원료부두,원료 양하 – 석탄,Global Steel Logistics,Korea Port Services,2026-10-28,True
+ARR-20261107-9300050,9300050,ATLAS STAR 50,2026-11-07,당진 원료부두,원료 양하 – 철광석,East Asia Bulk Trading,Korea Port Services,2026-10-28,True
+ARR-20261108-9300004,9300004,ATLAS TRADER 04,2026-11-08,당진 제품부두,제품 적하 – 후판,Global Steel Logistics,Seohae Shipping Agency,2026-10-29,True
+ARR-20261108-9300049,9300049,PACIFIC MERIDIAN 49,2026-11-08,당진 원료부두,원료 양하 – 석탄,East Asia Bulk Trading,Seohae Shipping Agency,2026-10-29,True
+ARR-20261109-9300003,9300003,MERIDIAN MERIDIAN 03,2026-11-09,당진 제품부두,제품 적하 – 열연/냉연 코일,East Asia Bulk Trading,Dangjin Marine Agency,2026-10-30,True
+ARR-20261109-9300048,9300048,EASTERN NAVIGATOR 48,2026-11-09,당진 제품부두,제품 적하 – 열연/냉연 코일,Maritime Commodity Partners,Dangjin Marine Agency,2026-10-30,True
+ARR-20261110-9300002,9300002,ATLAS MERIDIAN 02,2026-11-10,당진 원료부두,원료 양하 – 철광석,Maritime Commodity Partners,Korea Port Services,2026-10-31,True
+ARR-20261110-9300047,9300047,EASTERN TRADER 47,2026-11-10,당진 제품부두,제품 적하 – 형강/철근,Maritime Commodity Partners,Korea Port Services,2026-10-31,True
+ARR-20261111-9300001,9300001,OCEAN MERIDIAN 01,2026-11-11,당진 제품부두,제품 적하 – 후판,Maritime Commodity Partners,Seohae Shipping Agency,2026-11-01,True
+ARR-20261111-9300046,9300046,ATLAS NAVIGATOR 46,2026-11-11,당진 제품부두,제품 적하 – 후판,East Asia Bulk Trading,Seohae Shipping Agency,2026-11-01,True
+ARR-20261112-9300045,9300045,ATLAS STAR 45,2026-11-12,당진 원료부두,원료 양하 – 석탄,Global Steel Logistics,Dangjin Marine Agency,2026-11-02,True
+ARR-20261113-9300044,9300044,OCEAN FORTUNE 44,2026-11-13,당진 제품부두,제품 적하 – 형강/철근,East Asia Bulk Trading,Korea Port Services,2026-11-03,True
+ARR-20261114-9300043,9300043,ATLAS STAR 43,2026-11-14,당진 제품부두,제품 적하 – 후판,Global Steel Logistics,Seohae Shipping Agency,2026-11-04,True
+ARR-20261115-9300042,9300042,ATLAS PRIDE 42,2026-11-15,당진 제품부두,제품 적하 – 열연/냉연 코일,East Asia Bulk Trading,Dangjin Marine Agency,2026-11-05,True
+ARR-20261116-9300041,9300041,EASTERN TRADER 41,2026-11-16,당진 원료부두,원료 양하 – 석탄,Maritime Commodity Partners,Korea Port Services,2026-11-06,True
+ARR-20261117-9300040,9300040,PACIFIC FORTUNE 40,2026-11-17,당진 원료부두,원료 양하 – 철광석,Maritime Commodity Partners,Seohae Shipping Agency,2026-11-07,True
+ARR-20261118-9300039,9300039,OCEAN PRIDE 39,2026-11-18,당진 제품부두,제품 적하 – 열연/냉연 코일,Global Steel Logistics,Dangjin Marine Agency,2026-11-08,True
+ARR-20261119-9300038,9300038,NORTHSTAR FORTUNE 38,2026-11-19,당진 제품부두,제품 적하 – 형강/철근,East Asia Bulk Trading,Korea Port Services,2026-11-09,True
+ARR-20261120-9300037,9300037,EASTERN PRIDE 37,2026-11-20,당진 원료부두,원료 양하 – 석탄,Maritime Commodity Partners,Seohae Shipping Agency,2026-11-10,True
+ARR-20261121-9300036,9300036,OCEAN STAR 36,2026-11-21,당진 제품부두,제품 적하 – 열연/냉연 코일,East Asia Bulk Trading,Dangjin Marine Agency,2026-11-11,True
+ARR-20261122-9300035,9300035,PACIFIC TRADER 35,2026-11-22,당진 제품부두,제품 적하 – 형강/철근,East Asia Bulk Trading,Korea Port Services,2026-11-12,True
+ARR-20261123-9300034,9300034,PACIFIC STAR 34,2026-11-23,당진 원료부두,원료 양하 – 철광석,East Asia Bulk Trading,Seohae Shipping Agency,2026-11-13,True
+ARR-20261124-9300033,9300033,HORIZON TRADER 33,2026-11-24,당진 원료부두,원료 양하 – 석탄,East Asia Bulk Trading,Dangjin Marine Agency,2026-11-14,True
+ARR-20261125-9300032,9300032,EASTERN PRIDE 32,2026-11-25,당진 제품부두,제품 적하 – 형강/철근,Global Steel Logistics,Korea Port Services,2026-11-15,True
+ARR-20261126-9300031,9300031,OCEAN SPIRIT 31,2026-11-26,당진 제품부두,제품 적하 – 후판,Global Steel Logistics,Seohae Shipping Agency,2026-11-16,True
+ARR-20261127-9300030,9300030,MERIDIAN FORTUNE 30,2026-11-27,당진 제품부두,제품 적하 – 열연/냉연 코일,Maritime Commodity Partners,Dangjin Marine Agency,2026-11-17,True
+ARR-20261128-9300029,9300029,MERIDIAN NAVIGATOR 29,2026-11-28,당진 원료부두,원료 양하 – 석탄,Maritime Commodity Partners,Korea Port Services,2026-11-18,True
+ARR-20261129-9300028,9300028,PACIFIC SPIRIT 28,2026-11-29,당진 원료부두,원료 양하 – 철광석,Maritime Commodity Partners,Seohae Shipping Agency,2026-11-19,True
+ARR-20261130-9300027,9300027,OCEAN MERIDIAN 27,2026-11-30,당진 제품부두,제품 적하 – 열연/냉연 코일,Maritime Commodity Partners,Dangjin Marine Agency,2026-11-20,True
+ARR-20261201-9300026,9300026,NORTHSTAR FORTUNE 26,2026-12-01,당진 제품부두,제품 적하 – 형강/철근,East Asia Bulk Trading,Korea Port Services,2026-11-21,True
+ARR-20261202-9300025,9300025,NORTHSTAR TRADER 25,2026-12-02,당진 제품부두,제품 적하 – 후판,East Asia Bulk Trading,Seohae Shipping Agency,2026-11-22,True
+ARR-20261203-9300024,9300024,ATLAS TRADER 24,2026-12-03,당진 제품부두,제품 적하 – 열연/냉연 코일,East Asia Bulk Trading,Dangjin Marine Agency,2026-11-23,True
+ARR-20261204-9300023,9300023,OCEAN SPIRIT 23,2026-12-04,당진 원료부두,원료 양하 – 석탄,Maritime Commodity Partners,Korea Port Services,2026-11-24,True
+ARR-20261205-9300022,9300022,OCEAN PRIDE 22,2026-12-05,당진 제품부두,제품 적하 – 후판,Global Steel Logistics,Seohae Shipping Agency,2026-11-25,True
+ARR-20261206-9300021,9300021,PACIFIC SPIRIT 21,2026-12-06,당진 제품부두,제품 적하 – 열연/냉연 코일,Maritime Commodity Partners,Dangjin Marine Agency,2026-11-26,True
+ARR-20261207-9300020,9300020,PACIFIC PRIDE 20,2026-12-07,당진 제품부두,제품 적하 – 형강/철근,Maritime Commodity Partners,Korea Port Services,2026-11-27,True
+ARR-20261208-9300019,9300019,ATLAS NAVIGATOR 19,2026-12-08,당진 원료부두,원료 양하 – 석탄,Maritime Commodity Partners,Seohae Shipping Agency,2026-11-28,True
+ARR-20261209-9300018,9300018,OCEAN NAVIGATOR 18,2026-12-09,당진 원료부두,원료 양하 – 철광석,Global Steel Logistics,Dangjin Marine Agency,2026-11-29,True
+ARR-20261210-9300017,9300017,MERIDIAN STAR 17,2026-12-10,당진 제품부두,제품 적하 – 형강/철근,Global Steel Logistics,Korea Port Services,2026-11-30,True
+ARR-20261211-9300016,9300016,NORTHSTAR STAR 16,2026-12-11,당진 제품부두,제품 적하 – 후판,Global Steel Logistics,Seohae Shipping Agency,2026-12-01,True

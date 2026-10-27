@@ -1,0 +1,51 @@
+﻿incident_id,imo,vessel_name,incident_date,incident_type,severity,location,summary,root_cause_status
+INC-00001,9300004,ATLAS TRADER 04,2025-09-26,Cargo Damage,Low,Newcastle,Navigation-related event investigated with no reported injury.,Closed
+INC-00002,9300041,EASTERN TRADER 41,2026-10-04,Machinery Failure,Low,Tubarao,Temporary machinery malfunction; vessel resumed normal operation after corrective maintenance.,Under Investigation
+INC-00003,9300021,PACIFIC SPIRIT 21,2023-03-02,Grounding,Low,Kaohsiung,Navigation-related event investigated with no reported injury.,Closed
+INC-00004,9300007,PACIFIC TRADER 07,2023-09-02,Near Miss,Medium,Bintulu,Temporary machinery malfunction; vessel resumed normal operation after corrective maintenance.,Corrective Action Ongoing
+INC-00005,9300049,PACIFIC MERIDIAN 49,2026-04-20,Navigation Incident,High,Singapore,Navigation-related event investigated with no reported injury.,Under Investigation
+INC-00006,9300030,MERIDIAN FORTUNE 30,2026-10-20,Machinery Failure,Medium,Rotterdam,Temporary machinery malfunction; vessel resumed normal operation after corrective maintenance.,Under Investigation
+INC-00007,9300034,PACIFIC STAR 34,2025-10-07,Machinery Failure,Low,Singapore,Temporary machinery malfunction; vessel resumed normal operation after corrective maintenance.,Corrective Action Ongoing
+INC-00008,9300013,EASTERN PRIDE 13,2024-11-17,Near Miss,Medium,Bintulu,Navigation-related event investigated with no reported injury.,Corrective Action Ongoing
+INC-00009,9300040,PACIFIC FORTUNE 40,2026-03-08,Cargo Damage,Low,Singapore,Cargo handling deviation identified and contained without escalation.,Under Investigation
+INC-00010,9300038,NORTHSTAR FORTUNE 38,2026-09-21,Near Miss,Medium,Richards Bay,Cargo handling deviation identified and contained without escalation.,Closed
+INC-00011,9300031,OCEAN SPIRIT 31,2025-10-11,Near Miss,Medium,Singapore,Cargo handling deviation identified and contained without escalation.,Closed
+INC-00012,9300016,NORTHSTAR STAR 16,2023-07-12,Cargo Damage,Low,Rotterdam,Cargo handling deviation identified and contained without escalation.,Closed
+INC-00013,9300022,OCEAN PRIDE 22,2024-11-16,Navigation Incident,High,Visakhapatnam,Near-miss reported during deck operation; procedural review initiated.,Corrective Action Ongoing
+INC-00014,9300037,EASTERN PRIDE 37,2025-10-10,Grounding,Medium,Busan,Temporary machinery malfunction; vessel resumed normal operation after corrective maintenance.,Under Investigation
+INC-00015,9300003,MERIDIAN MERIDIAN 03,2026-04-01,Navigation Incident,Low,Hamburg,Cargo handling deviation identified and contained without escalation.,Under Investigation
+INC-00016,9300040,PACIFIC FORTUNE 40,2024-04-16,Navigation Incident,Medium,Newcastle,Navigation-related event investigated with no reported injury.,Closed
+INC-00017,9300026,NORTHSTAR FORTUNE 26,2024-01-12,Machinery Failure,Low,Port Klang,Temporary machinery malfunction; vessel resumed normal operation after corrective maintenance.,Corrective Action Ongoing
+INC-00018,9300008,EASTERN FORTUNE 08,2024-05-15,Cargo Damage,High,Richards Bay,Near-miss reported during deck operation; procedural review initiated.,Closed
+INC-00019,9300002,ATLAS MERIDIAN 02,2024-04-10,Cargo Damage,Low,Tubarao,Near-miss reported during deck operation; procedural review initiated.,Corrective Action Ongoing
+INC-00020,9300012,MERIDIAN FORTUNE 12,2025-09-08,Cargo Damage,Low,Singapore,Cargo handling deviation identified and contained without escalation.,Under Investigation
+INC-00021,9300007,PACIFIC TRADER 07,2023-11-05,Grounding,High,Newcastle,Temporary machinery malfunction; vessel resumed normal operation after corrective maintenance.,Under Investigation
+INC-00022,9300014,HORIZON TRADER 14,2025-08-08,Near Miss,Medium,Rotterdam,Cargo handling deviation identified and contained without escalation.,Corrective Action Ongoing
+INC-00023,9300040,PACIFIC FORTUNE 40,2026-12-03,Machinery Failure,Low,Tubarao,Cargo handling deviation identified and contained without escalation.,Closed
+INC-00024,9300013,EASTERN PRIDE 13,2026-12-12,Near Miss,High,Bintulu,Cargo handling deviation identified and contained without escalation.,Closed
+INC-00025,9300049,PACIFIC MERIDIAN 49,2024-09-10,Cargo Damage,Medium,Yokohama,Temporary machinery malfunction; vessel resumed normal operation after corrective maintenance.,Corrective Action Ongoing
+INC-00026,9300018,OCEAN NAVIGATOR 18,2024-09-19,Grounding,Low,Hamburg,Temporary machinery malfunction; vessel resumed normal operation after corrective maintenance.,Under Investigation
+INC-00027,9300043,ATLAS STAR 43,2023-03-17,Grounding,High,Newcastle,Near-miss reported during deck operation; procedural review initiated.,Under Investigation
+INC-00028,9300034,PACIFIC STAR 34,2026-03-11,Navigation Incident,Medium,Mundra,Navigation-related event investigated with no reported injury.,Corrective Action Ongoing
+INC-00029,9300032,EASTERN PRIDE 32,2026-05-19,Grounding,High,Tubarao,Temporary machinery malfunction; vessel resumed normal operation after corrective maintenance.,Closed
+INC-00030,9300015,HORIZON PRIDE 15,2024-08-08,Grounding,Low,Kaohsiung,Navigation-related event investigated with no reported injury.,Under Investigation
+INC-00031,9300037,EASTERN PRIDE 37,2024-06-09,Pollution Incident,Low,Busan,Temporary machinery malfunction; vessel resumed normal operation after corrective maintenance.,Under Investigation
+INC-00032,9300029,MERIDIAN NAVIGATOR 29,2025-04-19,Machinery Failure,Medium,Mundra,Near-miss reported during deck operation; procedural review initiated.,Under Investigation
+INC-00033,9300029,MERIDIAN NAVIGATOR 29,2026-07-14,Near Miss,Medium,Port Klang,Near-miss reported during deck operation; procedural review initiated.,Under Investigation
+INC-00034,9300002,ATLAS MERIDIAN 02,2024-08-08,Near Miss,High,Ulsan,Near-miss reported during deck operation; procedural review initiated.,Closed
+INC-00035,9300019,ATLAS NAVIGATOR 19,2023-05-08,Machinery Failure,Low,Ulsan,Near-miss reported during deck operation; procedural review initiated.,Closed
+INC-00036,9300035,PACIFIC TRADER 35,2024-06-07,Navigation Incident,Medium,Kaohsiung,Near-miss reported during deck operation; procedural review initiated.,Corrective Action Ongoing
+INC-00037,9300050,ATLAS STAR 50,2025-04-23,Pollution Incident,Low,Port Hedland,Near-miss reported during deck operation; procedural review initiated.,Closed
+INC-00038,9300050,ATLAS STAR 50,2025-05-27,Near Miss,Medium,Bintulu,Temporary machinery malfunction; vessel resumed normal operation after corrective maintenance.,Under Investigation
+INC-00039,9300042,ATLAS PRIDE 42,2024-07-08,Cargo Damage,High,Hamburg,Cargo handling deviation identified and contained without escalation.,Under Investigation
+INC-00040,9300015,HORIZON PRIDE 15,2026-12-27,Grounding,Medium,Newcastle,Temporary machinery malfunction; vessel resumed normal operation after corrective maintenance.,Under Investigation
+INC-00041,9300013,EASTERN PRIDE 13,2026-12-14,Cargo Damage,Medium,Visakhapatnam,Temporary machinery malfunction; vessel resumed normal operation after corrective maintenance.,Under Investigation
+INC-00042,9300009,EASTERN SPIRIT 09,2024-05-24,Machinery Failure,Medium,Newcastle,Near-miss reported during deck operation; procedural review initiated.,Under Investigation
+INC-00043,9300015,HORIZON PRIDE 15,2026-07-22,Grounding,High,Mundra,Near-miss reported during deck operation; procedural review initiated.,Under Investigation
+INC-00044,9300038,NORTHSTAR FORTUNE 38,2023-10-26,Machinery Failure,Low,Busan,Near-miss reported during deck operation; procedural review initiated.,Corrective Action Ongoing
+INC-00045,9300041,EASTERN TRADER 41,2026-07-07,Grounding,Low,Mundra,Navigation-related event investigated with no reported injury.,Closed
+INC-00046,9300031,OCEAN SPIRIT 31,2023-06-19,Grounding,High,Tubarao,Near-miss reported during deck operation; procedural review initiated.,Closed
+INC-00047,9300011,EASTERN FORTUNE 11,2023-11-18,Cargo Damage,Low,Port Hedland,Navigation-related event investigated with no reported injury.,Closed
+INC-00048,9300012,MERIDIAN FORTUNE 12,2024-02-13,Near Miss,Low,Yokohama,Near-miss reported during deck operation; procedural review initiated.,Corrective Action Ongoing
+INC-00049,9300034,PACIFIC STAR 34,2023-08-02,Near Miss,High,Singapore,Cargo handling deviation identified and contained without escalation.,Under Investigation
+INC-00050,9300027,OCEAN MERIDIAN 27,2026-03-04,Cargo Damage,High,Bintulu,Navigation-related event investigated with no reported injury.,Corrective Action Ongoing

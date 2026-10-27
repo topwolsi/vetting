@@ -1,0 +1,201 @@
+﻿psc_id,imo,vessel_name,inspection_date,port,country,authority,deficiencies,detention,deficiency_summary
+PSC-00001,9300019,ATLAS NAVIGATOR 19,2025-03-05,Port Klang,Malaysia,Tokyo MoU,0,No,
+PSC-00002,9300037,EASTERN PRIDE 37,2026-01-18,Bintulu,Malaysia,MPA,2,No,Emergency preparedness; Mooring equipment
+PSC-00003,9300028,PACIFIC SPIRIT 28,2026-03-25,Busan,Korea,AMS A,3,No,Navigation equipment; Emergency preparedness; Engine room housekeeping
+PSC-00004,9300042,ATLAS PRIDE 42,2026-04-18,Richards Bay,South Africa,USCG,5,No,Fire safety; ISM; Emergency preparedness
+PSC-00005,9300021,PACIFIC SPIRIT 21,2026-10-03,Ulsan,Korea,Paris MoU,5,No,ISM; Navigation equipment; Pollution prevention
+PSC-00006,9300023,OCEAN SPIRIT 23,2026-11-01,Newcastle,Australia,USCG,2,No,ISM; Mooring equipment
+PSC-00007,9300029,MERIDIAN NAVIGATOR 29,2026-03-15,Singapore,Singapore,Paris MoU,6,No,Navigation equipment; Engine room housekeeping; Fire safety
+PSC-00008,9300008,EASTERN FORTUNE 08,2026-01-08,Richards Bay,South Africa,Paris MoU,1,No,Fire safety
+PSC-00009,9300022,OCEAN PRIDE 22,2026-02-10,Visakhapatnam,India,MPA,3,No,ISM; Navigation equipment; Mooring equipment
+PSC-00010,9300014,HORIZON TRADER 14,2024-09-17,Newcastle,Australia,AMS A,2,No,Emergency preparedness; Mooring equipment
+PSC-00011,9300047,EASTERN TRADER 47,2024-12-23,Rotterdam,Netherlands,Tokyo MoU,0,No,
+PSC-00012,9300038,NORTHSTAR FORTUNE 38,2026-09-02,Kaohsiung,Taiwan,MPA,1,No,ISM
+PSC-00013,9300013,EASTERN PRIDE 13,2026-10-09,Singapore,Singapore,MPA,3,No,Fire safety; Emergency preparedness; ISM
+PSC-00014,9300043,ATLAS STAR 43,2026-06-04,Singapore,Singapore,Tokyo MoU,2,No,Navigation equipment; Emergency preparedness
+PSC-00015,9300033,HORIZON TRADER 33,2026-02-11,Visakhapatnam,India,MPA,6,No,Navigation equipment; Pollution prevention; Mooring equipment
+PSC-00016,9300030,MERIDIAN FORTUNE 30,2026-12-01,Singapore,Singapore,AMS A,1,No,ISM
+PSC-00017,9300022,OCEAN PRIDE 22,2025-07-24,Busan,Korea,Paris MoU,0,No,
+PSC-00018,9300044,OCEAN FORTUNE 44,2025-06-21,Kaohsiung,Taiwan,AMS A,1,No,ISM
+PSC-00019,9300004,ATLAS TRADER 04,2026-05-13,Tubarao,Brazil,AMS A,6,No,ISM; Navigation equipment; Engine room housekeeping
+PSC-00020,9300022,OCEAN PRIDE 22,2025-11-05,Ulsan,Korea,AMS A,5,No,Pollution prevention; Engine room housekeeping; Navigation equipment
+PSC-00021,9300027,OCEAN MERIDIAN 27,2024-10-05,Bintulu,Malaysia,AMS A,2,No,ISM; Emergency preparedness
+PSC-00022,9300035,PACIFIC TRADER 35,2024-04-21,Busan,Korea,AMS A,4,No,Engine room housekeeping; Navigation equipment; Pollution prevention
+PSC-00023,9300020,PACIFIC PRIDE 20,2026-12-17,Tubarao,Brazil,Tokyo MoU,1,No,Pollution prevention
+PSC-00024,9300010,PACIFIC SPIRIT 10,2026-10-06,Port Klang,Malaysia,AMS A,0,No,
+PSC-00025,9300035,PACIFIC TRADER 35,2026-02-06,Port Klang,Malaysia,MPA,6,No,Pollution prevention; ISM; Emergency preparedness
+PSC-00026,9300027,OCEAN MERIDIAN 27,2025-08-24,Tubarao,Brazil,Paris MoU,6,No,Navigation equipment; Pollution prevention; Fire safety
+PSC-00027,9300009,EASTERN SPIRIT 09,2024-01-25,Richards Bay,South Africa,Paris MoU,4,No,Mooring equipment; Pollution prevention; Engine room housekeeping
+PSC-00028,9300015,HORIZON PRIDE 15,2026-04-08,Rotterdam,Netherlands,Paris MoU,0,No,
+PSC-00029,9300006,NORTHSTAR MERIDIAN 06,2026-08-05,Mundra,India,Paris MoU,6,No,Navigation equipment; Emergency preparedness; Engine room housekeeping
+PSC-00030,9300031,OCEAN SPIRIT 31,2024-03-07,Yokohama,Japan,Tokyo MoU,0,No,
+PSC-00031,9300049,PACIFIC MERIDIAN 49,2024-05-14,Yokohama,Japan,USCG,5,No,Pollution prevention; Navigation equipment; Fire safety
+PSC-00032,9300012,MERIDIAN FORTUNE 12,2025-10-16,Hamburg,Germany,Tokyo MoU,2,No,Navigation equipment; Emergency preparedness
+PSC-00033,9300026,NORTHSTAR FORTUNE 26,2024-10-24,Port Hedland,Australia,Paris MoU,3,No,Emergency preparedness; Mooring equipment; Engine room housekeeping
+PSC-00034,9300039,OCEAN PRIDE 39,2026-09-21,Tubarao,Brazil,AMS A,5,No,Fire safety; Emergency preparedness; Engine room housekeeping
+PSC-00035,9300003,MERIDIAN MERIDIAN 03,2024-09-18,Bintulu,Malaysia,Tokyo MoU,5,Yes,Mooring equipment; Engine room housekeeping; Fire safety
+PSC-00036,9300013,EASTERN PRIDE 13,2025-08-13,Tubarao,Brazil,Paris MoU,2,No,Emergency preparedness; Navigation equipment
+PSC-00037,9300028,PACIFIC SPIRIT 28,2025-10-02,Hamburg,Germany,USCG,4,No,Emergency preparedness; Engine room housekeeping; Pollution prevention
+PSC-00038,9300006,NORTHSTAR MERIDIAN 06,2026-09-04,Busan,Korea,AMS A,6,No,Navigation equipment; Emergency preparedness; Engine room housekeeping
+PSC-00039,9300021,PACIFIC SPIRIT 21,2025-01-06,Visakhapatnam,India,USCG,4,No,Emergency preparedness; Fire safety; ISM
+PSC-00040,9300021,PACIFIC SPIRIT 21,2026-11-23,Newcastle,Australia,MPA,1,No,Fire safety
+PSC-00041,9300008,EASTERN FORTUNE 08,2026-08-21,Port Klang,Malaysia,AMS A,0,No,
+PSC-00042,9300046,ATLAS NAVIGATOR 46,2025-12-26,Mundra,India,USCG,4,No,Emergency preparedness; Mooring equipment; Pollution prevention
+PSC-00043,9300003,MERIDIAN MERIDIAN 03,2024-06-19,Port Hedland,Australia,USCG,5,No,Pollution prevention; Navigation equipment; Engine room housekeeping
+PSC-00044,9300050,ATLAS STAR 50,2026-01-14,Kaohsiung,Taiwan,Tokyo MoU,2,No,ISM; Engine room housekeeping
+PSC-00045,9300012,MERIDIAN FORTUNE 12,2024-03-07,Singapore,Singapore,Paris MoU,4,No,Fire safety; Emergency preparedness; Engine room housekeeping
+PSC-00046,9300032,EASTERN PRIDE 32,2026-01-20,Tubarao,Brazil,USCG,3,No,Navigation equipment; Mooring equipment; Emergency preparedness
+PSC-00047,9300030,MERIDIAN FORTUNE 30,2025-08-03,Richards Bay,South Africa,MPA,4,No,Navigation equipment; Mooring equipment; ISM
+PSC-00048,9300040,PACIFIC FORTUNE 40,2026-09-27,Port Hedland,Australia,MPA,1,No,Navigation equipment
+PSC-00049,9300010,PACIFIC SPIRIT 10,2024-11-12,Singapore,Singapore,MPA,1,No,Engine room housekeeping
+PSC-00050,9300037,EASTERN PRIDE 37,2026-05-11,Tubarao,Brazil,MPA,0,No,
+PSC-00051,9300007,PACIFIC TRADER 07,2025-03-06,Rotterdam,Netherlands,AMS A,2,No,Engine room housekeeping; Pollution prevention
+PSC-00052,9300045,ATLAS STAR 45,2026-10-26,Mundra,India,Tokyo MoU,1,No,Engine room housekeeping
+PSC-00053,9300038,NORTHSTAR FORTUNE 38,2025-01-03,Newcastle,Australia,Paris MoU,2,No,ISM; Emergency preparedness
+PSC-00054,9300005,EASTERN SPIRIT 05,2025-09-03,Kaohsiung,Taiwan,USCG,3,No,Fire safety; Engine room housekeeping; ISM
+PSC-00055,9300022,OCEAN PRIDE 22,2026-07-17,Yokohama,Japan,MPA,5,No,Fire safety; Mooring equipment; Engine room housekeeping
+PSC-00056,9300006,NORTHSTAR MERIDIAN 06,2025-12-23,Richards Bay,South Africa,Paris MoU,6,No,Emergency preparedness; Mooring equipment; ISM
+PSC-00057,9300017,MERIDIAN STAR 17,2026-10-20,Port Klang,Malaysia,AMS A,1,No,Mooring equipment
+PSC-00058,9300032,EASTERN PRIDE 32,2026-12-21,Visakhapatnam,India,USCG,3,No,Mooring equipment; Navigation equipment; ISM
+PSC-00059,9300013,EASTERN PRIDE 13,2024-02-01,Visakhapatnam,India,USCG,5,No,Pollution prevention; Mooring equipment; Emergency preparedness
+PSC-00060,9300027,OCEAN MERIDIAN 27,2024-06-12,Mundra,India,MPA,6,No,Engine room housekeeping; Navigation equipment; ISM
+PSC-00061,9300017,MERIDIAN STAR 17,2024-05-10,Mundra,India,Paris MoU,4,No,Pollution prevention; Fire safety; Engine room housekeeping
+PSC-00062,9300044,OCEAN FORTUNE 44,2025-06-13,Hamburg,Germany,AMS A,4,No,Fire safety; Navigation equipment; Engine room housekeeping
+PSC-00063,9300022,OCEAN PRIDE 22,2025-11-16,Tubarao,Brazil,MPA,3,No,Engine room housekeeping; Navigation equipment; Emergency preparedness
+PSC-00064,9300010,PACIFIC SPIRIT 10,2026-08-18,Tubarao,Brazil,Tokyo MoU,2,No,Pollution prevention; Emergency preparedness
+PSC-00065,9300048,EASTERN NAVIGATOR 48,2024-09-10,Richards Bay,South Africa,AMS A,5,No,Mooring equipment; Fire safety; Navigation equipment
+PSC-00066,9300037,EASTERN PRIDE 37,2026-06-26,Tubarao,Brazil,USCG,6,No,ISM; Fire safety; Pollution prevention
+PSC-00067,9300025,NORTHSTAR TRADER 25,2026-09-27,Busan,Korea,AMS A,4,No,Emergency preparedness; Navigation equipment; Mooring equipment
+PSC-00068,9300008,EASTERN FORTUNE 08,2025-12-11,Hamburg,Germany,Paris MoU,0,No,
+PSC-00069,9300027,OCEAN MERIDIAN 27,2024-08-08,Port Klang,Malaysia,Paris MoU,3,No,Navigation equipment; Mooring equipment; ISM
+PSC-00070,9300012,MERIDIAN FORTUNE 12,2024-06-26,Singapore,Singapore,MPA,6,No,Emergency preparedness; Mooring equipment; Fire safety
+PSC-00071,9300031,OCEAN SPIRIT 31,2026-03-07,Port Klang,Malaysia,AMS A,3,No,ISM; Pollution prevention; Navigation equipment
+PSC-00072,9300050,ATLAS STAR 50,2024-09-22,Busan,Korea,MPA,1,No,Emergency preparedness
+PSC-00073,9300025,NORTHSTAR TRADER 25,2026-09-04,Singapore,Singapore,MPA,2,No,Engine room housekeeping; Mooring equipment
+PSC-00074,9300006,NORTHSTAR MERIDIAN 06,2025-08-02,Ulsan,Korea,Paris MoU,4,No,Fire safety; Mooring equipment; ISM
+PSC-00075,9300041,EASTERN TRADER 41,2024-06-07,Yokohama,Japan,Paris MoU,2,No,Mooring equipment; ISM
+PSC-00076,9300050,ATLAS STAR 50,2025-11-04,Kaohsiung,Taiwan,USCG,1,No,ISM
+PSC-00077,9300008,EASTERN FORTUNE 08,2024-10-18,Mundra,India,USCG,0,No,
+PSC-00078,9300035,PACIFIC TRADER 35,2025-09-11,Kaohsiung,Taiwan,Paris MoU,1,No,Mooring equipment
+PSC-00079,9300016,NORTHSTAR STAR 16,2024-02-10,Richards Bay,South Africa,AMS A,2,No,Emergency preparedness; Fire safety
+PSC-00080,9300009,EASTERN SPIRIT 09,2024-08-22,Singapore,Singapore,Tokyo MoU,0,No,
+PSC-00081,9300004,ATLAS TRADER 04,2024-07-13,Busan,Korea,AMS A,5,No,Engine room housekeeping; Pollution prevention; Emergency preparedness
+PSC-00082,9300040,PACIFIC FORTUNE 40,2025-05-11,Port Hedland,Australia,AMS A,1,No,Fire safety
+PSC-00083,9300049,PACIFIC MERIDIAN 49,2025-10-05,Ulsan,Korea,Tokyo MoU,6,No,Fire safety; Emergency preparedness; ISM
+PSC-00084,9300044,OCEAN FORTUNE 44,2026-12-25,Visakhapatnam,India,USCG,3,No,Navigation equipment; Pollution prevention; Mooring equipment
+PSC-00085,9300017,MERIDIAN STAR 17,2025-07-06,Hamburg,Germany,Paris MoU,5,No,Emergency preparedness; Pollution prevention; Fire safety
+PSC-00086,9300005,EASTERN SPIRIT 05,2025-02-12,Visakhapatnam,India,USCG,3,No,ISM; Pollution prevention; Mooring equipment
+PSC-00087,9300037,EASTERN PRIDE 37,2024-09-04,Bintulu,Malaysia,MPA,6,No,ISM; Mooring equipment; Fire safety
+PSC-00088,9300020,PACIFIC PRIDE 20,2026-08-13,Richards Bay,South Africa,USCG,3,No,Mooring equipment; Navigation equipment; Pollution prevention
+PSC-00089,9300011,EASTERN FORTUNE 11,2025-07-03,Port Klang,Malaysia,AMS A,1,No,Emergency preparedness
+PSC-00090,9300028,PACIFIC SPIRIT 28,2026-06-18,Hamburg,Germany,USCG,1,No,Engine room housekeeping
+PSC-00091,9300043,ATLAS STAR 43,2024-12-23,Richards Bay,South Africa,AMS A,6,No,Mooring equipment; Emergency preparedness; ISM
+PSC-00092,9300036,OCEAN STAR 36,2024-08-06,Kaohsiung,Taiwan,MPA,3,No,Mooring equipment; Fire safety; Pollution prevention
+PSC-00093,9300050,ATLAS STAR 50,2025-06-16,Rotterdam,Netherlands,USCG,5,Yes,Pollution prevention; Navigation equipment; Mooring equipment
+PSC-00094,9300049,PACIFIC MERIDIAN 49,2026-01-25,Busan,Korea,AMS A,5,No,ISM; Emergency preparedness; Mooring equipment
+PSC-00095,9300037,EASTERN PRIDE 37,2025-04-07,Rotterdam,Netherlands,Paris MoU,2,No,Mooring equipment; Engine room housekeeping
+PSC-00096,9300020,PACIFIC PRIDE 20,2025-12-12,Ulsan,Korea,MPA,4,No,Mooring equipment; Pollution prevention; Emergency preparedness
+PSC-00097,9300009,EASTERN SPIRIT 09,2025-01-12,Tubarao,Brazil,MPA,4,No,Fire safety; Engine room housekeeping; Mooring equipment
+PSC-00098,9300023,OCEAN SPIRIT 23,2024-05-01,Yokohama,Japan,AMS A,3,No,Emergency preparedness; Engine room housekeeping; ISM
+PSC-00099,9300046,ATLAS NAVIGATOR 46,2025-07-13,Bintulu,Malaysia,USCG,4,No,Engine room housekeeping; Navigation equipment; Emergency preparedness
+PSC-00100,9300009,EASTERN SPIRIT 09,2024-09-13,Port Hedland,Australia,Tokyo MoU,2,No,Navigation equipment; ISM
+PSC-00101,9300043,ATLAS STAR 43,2024-03-01,Ulsan,Korea,Tokyo MoU,5,Yes,Engine room housekeeping; Emergency preparedness; Navigation equipment
+PSC-00102,9300006,NORTHSTAR MERIDIAN 06,2024-11-26,Bintulu,Malaysia,AMS A,6,No,Emergency preparedness; Mooring equipment; Navigation equipment
+PSC-00103,9300030,MERIDIAN FORTUNE 30,2026-07-18,Port Hedland,Australia,Tokyo MoU,3,No,ISM; Navigation equipment; Engine room housekeeping
+PSC-00104,9300028,PACIFIC SPIRIT 28,2026-01-19,Visakhapatnam,India,AMS A,6,No,ISM; Emergency preparedness; Mooring equipment
+PSC-00105,9300037,EASTERN PRIDE 37,2025-01-02,Richards Bay,South Africa,Paris MoU,3,No,Fire safety; Mooring equipment; Emergency preparedness
+PSC-00106,9300045,ATLAS STAR 45,2024-03-24,Hamburg,Germany,Paris MoU,4,No,Emergency preparedness; Mooring equipment; Fire safety
+PSC-00107,9300034,PACIFIC STAR 34,2026-02-08,Visakhapatnam,India,MPA,5,No,Engine room housekeeping; Pollution prevention; Mooring equipment
+PSC-00108,9300038,NORTHSTAR FORTUNE 38,2025-10-02,Tubarao,Brazil,AMS A,2,No,Pollution prevention; Fire safety
+PSC-00109,9300031,OCEAN SPIRIT 31,2025-09-16,Richards Bay,South Africa,Paris MoU,5,No,Pollution prevention; ISM; Engine room housekeeping
+PSC-00110,9300011,EASTERN FORTUNE 11,2024-12-20,Hamburg,Germany,AMS A,2,No,ISM; Fire safety
+PSC-00111,9300041,EASTERN TRADER 41,2025-10-06,Richards Bay,South Africa,Paris MoU,0,No,
+PSC-00112,9300048,EASTERN NAVIGATOR 48,2026-01-10,Visakhapatnam,India,USCG,0,No,
+PSC-00113,9300033,HORIZON TRADER 33,2024-05-09,Busan,Korea,Paris MoU,4,No,ISM; Pollution prevention; Fire safety
+PSC-00114,9300048,EASTERN NAVIGATOR 48,2024-10-06,Tubarao,Brazil,USCG,4,No,Engine room housekeeping; Emergency preparedness; ISM
+PSC-00115,9300012,MERIDIAN FORTUNE 12,2025-12-08,Visakhapatnam,India,AMS A,1,No,Pollution prevention
+PSC-00116,9300003,MERIDIAN MERIDIAN 03,2025-02-05,Richards Bay,South Africa,Tokyo MoU,6,No,Pollution prevention; Emergency preparedness; Engine room housekeeping
+PSC-00117,9300016,NORTHSTAR STAR 16,2026-08-24,Rotterdam,Netherlands,USCG,1,No,Mooring equipment
+PSC-00118,9300047,EASTERN TRADER 47,2025-01-21,Kaohsiung,Taiwan,MPA,6,No,Navigation equipment; Emergency preparedness; Engine room housekeeping
+PSC-00119,9300031,OCEAN SPIRIT 31,2025-08-24,Newcastle,Australia,USCG,4,No,Emergency preparedness; Engine room housekeeping; Pollution prevention
+PSC-00120,9300031,OCEAN SPIRIT 31,2025-03-17,Port Hedland,Australia,MPA,3,No,ISM; Emergency preparedness; Engine room housekeeping
+PSC-00121,9300044,OCEAN FORTUNE 44,2025-09-22,Singapore,Singapore,AMS A,0,No,
+PSC-00122,9300041,EASTERN TRADER 41,2025-07-20,Tubarao,Brazil,Paris MoU,5,No,ISM; Pollution prevention; Fire safety
+PSC-00123,9300017,MERIDIAN STAR 17,2026-10-13,Visakhapatnam,India,USCG,6,No,Engine room housekeeping; Pollution prevention; Mooring equipment
+PSC-00124,9300050,ATLAS STAR 50,2024-09-11,Rotterdam,Netherlands,Paris MoU,5,No,Mooring equipment; Fire safety; Engine room housekeeping
+PSC-00125,9300005,EASTERN SPIRIT 05,2024-07-04,Mundra,India,Tokyo MoU,0,No,
+PSC-00126,9300023,OCEAN SPIRIT 23,2024-12-10,Kaohsiung,Taiwan,MPA,1,No,Fire safety
+PSC-00127,9300040,PACIFIC FORTUNE 40,2024-01-20,Rotterdam,Netherlands,AMS A,6,No,Engine room housekeeping; Fire safety; Pollution prevention
+PSC-00128,9300006,NORTHSTAR MERIDIAN 06,2026-03-13,Rotterdam,Netherlands,AMS A,6,No,Pollution prevention; Navigation equipment; Fire safety
+PSC-00129,9300045,ATLAS STAR 45,2024-05-10,Visakhapatnam,India,Tokyo MoU,5,No,ISM; Emergency preparedness; Pollution prevention
+PSC-00130,9300017,MERIDIAN STAR 17,2024-02-09,Newcastle,Australia,Tokyo MoU,0,No,
+PSC-00131,9300025,NORTHSTAR TRADER 25,2025-01-09,Port Hedland,Australia,USCG,2,No,Emergency preparedness; Fire safety
+PSC-00132,9300032,EASTERN PRIDE 32,2024-10-13,Busan,Korea,USCG,5,No,Mooring equipment; Emergency preparedness; Navigation equipment
+PSC-00133,9300040,PACIFIC FORTUNE 40,2026-02-15,Hamburg,Germany,MPA,2,No,Fire safety; Pollution prevention
+PSC-00134,9300005,EASTERN SPIRIT 05,2026-12-09,Newcastle,Australia,MPA,3,No,Emergency preparedness; Navigation equipment; Fire safety
+PSC-00135,9300003,MERIDIAN MERIDIAN 03,2026-07-09,Busan,Korea,Tokyo MoU,5,No,Mooring equipment; Fire safety; Pollution prevention
+PSC-00136,9300046,ATLAS NAVIGATOR 46,2025-08-14,Bintulu,Malaysia,MPA,6,No,Mooring equipment; Navigation equipment; Fire safety
+PSC-00137,9300025,NORTHSTAR TRADER 25,2026-08-04,Richards Bay,South Africa,Paris MoU,4,No,ISM; Engine room housekeeping; Pollution prevention
+PSC-00138,9300026,NORTHSTAR FORTUNE 26,2024-11-21,Ulsan,Korea,AMS A,2,No,Pollution prevention; ISM
+PSC-00139,9300006,NORTHSTAR MERIDIAN 06,2025-05-21,Yokohama,Japan,AMS A,1,No,Fire safety
+PSC-00140,9300025,NORTHSTAR TRADER 25,2026-04-10,Hamburg,Germany,MPA,3,No,Engine room housekeeping; Pollution prevention; ISM
+PSC-00141,9300032,EASTERN PRIDE 32,2024-11-15,Hamburg,Germany,USCG,1,No,Fire safety
+PSC-00142,9300013,EASTERN PRIDE 13,2024-12-19,Yokohama,Japan,Tokyo MoU,3,No,Fire safety; Mooring equipment; ISM
+PSC-00143,9300032,EASTERN PRIDE 32,2026-08-01,Singapore,Singapore,MPA,2,No,ISM; Engine room housekeeping
+PSC-00144,9300003,MERIDIAN MERIDIAN 03,2025-02-07,Newcastle,Australia,Tokyo MoU,5,No,Engine room housekeeping; Mooring equipment; Navigation equipment
+PSC-00145,9300048,EASTERN NAVIGATOR 48,2026-04-03,Singapore,Singapore,MPA,5,No,Emergency preparedness; Mooring equipment; Fire safety
+PSC-00146,9300016,NORTHSTAR STAR 16,2026-11-05,Singapore,Singapore,MPA,1,No,ISM
+PSC-00147,9300007,PACIFIC TRADER 07,2025-10-06,Port Hedland,Australia,MPA,4,No,Pollution prevention; Fire safety; Engine room housekeeping
+PSC-00148,9300032,EASTERN PRIDE 32,2026-10-08,Ulsan,Korea,Paris MoU,6,No,Pollution prevention; Engine room housekeeping; Emergency preparedness
+PSC-00149,9300021,PACIFIC SPIRIT 21,2024-11-19,Mundra,India,Paris MoU,1,No,Pollution prevention
+PSC-00150,9300014,HORIZON TRADER 14,2024-10-06,Port Klang,Malaysia,MPA,0,No,
+PSC-00151,9300018,OCEAN NAVIGATOR 18,2024-07-06,Hamburg,Germany,AMS A,2,No,Navigation equipment; Emergency preparedness
+PSC-00152,9300016,NORTHSTAR STAR 16,2026-01-05,Ulsan,Korea,AMS A,6,No,Emergency preparedness; Navigation equipment; Fire safety
+PSC-00153,9300032,EASTERN PRIDE 32,2024-01-01,Busan,Korea,AMS A,0,No,
+PSC-00154,9300019,ATLAS NAVIGATOR 19,2025-12-26,Newcastle,Australia,USCG,6,No,Navigation equipment; Pollution prevention; ISM
+PSC-00155,9300034,PACIFIC STAR 34,2025-07-08,Busan,Korea,MPA,4,No,Mooring equipment; Navigation equipment; Emergency preparedness
+PSC-00156,9300040,PACIFIC FORTUNE 40,2024-11-27,Newcastle,Australia,Paris MoU,2,No,Emergency preparedness; Fire safety
+PSC-00157,9300036,OCEAN STAR 36,2024-04-04,Mundra,India,AMS A,0,No,
+PSC-00158,9300024,ATLAS TRADER 24,2026-09-08,Visakhapatnam,India,USCG,6,No,ISM; Fire safety; Navigation equipment
+PSC-00159,9300008,EASTERN FORTUNE 08,2024-11-16,Visakhapatnam,India,USCG,1,No,Engine room housekeeping
+PSC-00160,9300003,MERIDIAN MERIDIAN 03,2024-11-12,Kaohsiung,Taiwan,Tokyo MoU,1,No,ISM
+PSC-00161,9300022,OCEAN PRIDE 22,2026-08-02,Ulsan,Korea,AMS A,5,Yes,Navigation equipment; Pollution prevention; Fire safety
+PSC-00162,9300032,EASTERN PRIDE 32,2026-02-03,Tubarao,Brazil,Tokyo MoU,1,No,Mooring equipment
+PSC-00163,9300038,NORTHSTAR FORTUNE 38,2025-07-07,Hamburg,Germany,USCG,5,No,Pollution prevention; Fire safety; ISM
+PSC-00164,9300015,HORIZON PRIDE 15,2024-04-24,Bintulu,Malaysia,USCG,6,No,Fire safety; Emergency preparedness; Mooring equipment
+PSC-00165,9300032,EASTERN PRIDE 32,2024-07-05,Yokohama,Japan,Tokyo MoU,4,No,Navigation equipment; Emergency preparedness; ISM
+PSC-00166,9300009,EASTERN SPIRIT 09,2025-12-07,Rotterdam,Netherlands,Paris MoU,2,No,Navigation equipment; ISM
+PSC-00167,9300009,EASTERN SPIRIT 09,2024-12-19,Singapore,Singapore,USCG,2,No,Fire safety; Emergency preparedness
+PSC-00168,9300030,MERIDIAN FORTUNE 30,2025-03-25,Port Klang,Malaysia,Paris MoU,1,No,Mooring equipment
+PSC-00169,9300011,EASTERN FORTUNE 11,2026-10-06,Richards Bay,South Africa,USCG,4,No,Fire safety; Emergency preparedness; Mooring equipment
+PSC-00170,9300032,EASTERN PRIDE 32,2024-10-16,Port Hedland,Australia,Paris MoU,3,No,Fire safety; Engine room housekeeping; Emergency preparedness
+PSC-00171,9300048,EASTERN NAVIGATOR 48,2024-04-11,Bintulu,Malaysia,USCG,4,No,Mooring equipment; Navigation equipment; Pollution prevention
+PSC-00172,9300001,OCEAN MERIDIAN 01,2025-01-02,Visakhapatnam,India,MPA,5,No,Emergency preparedness; Mooring equipment; Pollution prevention
+PSC-00173,9300031,OCEAN SPIRIT 31,2026-02-15,Visakhapatnam,India,MPA,1,No,Mooring equipment
+PSC-00174,9300049,PACIFIC MERIDIAN 49,2024-12-24,Bintulu,Malaysia,USCG,1,No,ISM
+PSC-00175,9300019,ATLAS NAVIGATOR 19,2024-11-03,Singapore,Singapore,Paris MoU,3,No,Navigation equipment; Engine room housekeeping; Emergency preparedness
+PSC-00176,9300037,EASTERN PRIDE 37,2026-10-01,Visakhapatnam,India,USCG,3,No,Pollution prevention; Engine room housekeeping; Emergency preparedness
+PSC-00177,9300012,MERIDIAN FORTUNE 12,2025-11-15,Hamburg,Germany,MPA,5,Yes,Emergency preparedness; Engine room housekeeping; ISM
+PSC-00178,9300034,PACIFIC STAR 34,2024-05-14,Newcastle,Australia,AMS A,2,No,Mooring equipment; Pollution prevention
+PSC-00179,9300014,HORIZON TRADER 14,2026-02-20,Tubarao,Brazil,MPA,2,No,Mooring equipment; Engine room housekeeping
+PSC-00180,9300024,ATLAS TRADER 24,2024-02-13,Port Klang,Malaysia,AMS A,3,No,Fire safety; ISM; Engine room housekeeping
+PSC-00181,9300012,MERIDIAN FORTUNE 12,2026-09-23,Ulsan,Korea,USCG,4,No,Navigation equipment; ISM; Pollution prevention
+PSC-00182,9300035,PACIFIC TRADER 35,2024-11-16,Hamburg,Germany,USCG,6,No,Pollution prevention; Engine room housekeeping; Navigation equipment
+PSC-00183,9300021,PACIFIC SPIRIT 21,2025-05-17,Rotterdam,Netherlands,Paris MoU,3,No,Fire safety; Pollution prevention; ISM
+PSC-00184,9300023,OCEAN SPIRIT 23,2025-08-17,Mundra,India,AMS A,6,No,Engine room housekeeping; Mooring equipment; ISM
+PSC-00185,9300029,MERIDIAN NAVIGATOR 29,2026-06-26,Rotterdam,Netherlands,MPA,5,No,Navigation equipment; Emergency preparedness; Fire safety
+PSC-00186,9300006,NORTHSTAR MERIDIAN 06,2025-03-10,Ulsan,Korea,USCG,0,No,
+PSC-00187,9300018,OCEAN NAVIGATOR 18,2024-12-05,Visakhapatnam,India,USCG,1,No,Mooring equipment
+PSC-00188,9300041,EASTERN TRADER 41,2024-05-14,Rotterdam,Netherlands,USCG,4,No,Emergency preparedness; ISM; Pollution prevention
+PSC-00189,9300029,MERIDIAN NAVIGATOR 29,2026-11-01,Kaohsiung,Taiwan,MPA,1,No,Fire safety
+PSC-00190,9300015,HORIZON PRIDE 15,2026-11-11,Bintulu,Malaysia,Paris MoU,4,No,Engine room housekeeping; Pollution prevention; ISM
+PSC-00191,9300032,EASTERN PRIDE 32,2026-11-23,Mundra,India,Tokyo MoU,6,No,ISM; Mooring equipment; Navigation equipment
+PSC-00192,9300020,PACIFIC PRIDE 20,2024-05-08,Visakhapatnam,India,Paris MoU,2,No,Pollution prevention; Fire safety
+PSC-00193,9300010,PACIFIC SPIRIT 10,2025-05-15,Busan,Korea,USCG,4,No,Engine room housekeeping; Mooring equipment; ISM
+PSC-00194,9300012,MERIDIAN FORTUNE 12,2024-12-23,Tubarao,Brazil,USCG,5,No,Navigation equipment; Fire safety; Engine room housekeeping
+PSC-00195,9300021,PACIFIC SPIRIT 21,2026-03-15,Kaohsiung,Taiwan,USCG,2,No,Navigation equipment; Mooring equipment
+PSC-00196,9300046,ATLAS NAVIGATOR 46,2024-11-11,Port Klang,Malaysia,Paris MoU,1,No,Emergency preparedness
+PSC-00197,9300035,PACIFIC TRADER 35,2024-09-10,Ulsan,Korea,Tokyo MoU,0,No,
+PSC-00198,9300032,EASTERN PRIDE 32,2024-08-11,Busan,Korea,AMS A,0,No,
+PSC-00199,9300033,HORIZON TRADER 33,2025-11-23,Kaohsiung,Taiwan,Paris MoU,3,No,Pollution prevention; Mooring equipment; Navigation equipment
+PSC-00200,9300037,EASTERN PRIDE 37,2026-08-11,Hamburg,Germany,Tokyo MoU,0,No,

@@ -1,0 +1,1612 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>현대제철 선박 Vetting 시스템</title>
+<style>
+:root{
+  --bg:#eef1f5;--card:#fff;--ink:#17202b;--muted:#667085;--line:#d9dee5;--soft:#f6f8fa;
+  --brand:#0a3a66;--brand2:#1663b8;
+  --pass:#17803a;--passbg:#e5f4ea;--fail:#c4291f;--failbg:#fdebea;--warn:#a85f00;--warnbg:#fff3df;--pend:#7a8594;--pendbg:#eef0f3;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Malgun Gothic","Apple SD Gothic Neo","Noto Sans KR",system-ui,sans-serif;font-size:14px;line-height:1.5}
+header{background:var(--brand);color:#fff;padding:14px 24px;display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+header h1{font-size:18px;margin:0;letter-spacing:-.3px}
+header .sub{opacity:.7;font-size:12px}
+nav{margin-left:auto;display:flex;gap:4px}
+nav button{background:transparent;border:1px solid rgba(255,255,255,.35);color:#fff;padding:7px 14px;border-radius:6px;cursor:pointer;font:inherit}
+nav button.on{background:#fff;color:var(--brand);font-weight:700}
+main{max-width:1400px;margin:0 auto;padding:20px 16px 60px}
+.tab{display:none}.tab.on{display:block}
+.layout{display:grid;grid-template-columns:minmax(0,1fr) 340px;gap:20px;align-items:start}
+@media(max-width:1000px){.layout{grid-template-columns:1fr}}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:18px 20px;margin-bottom:16px}
+.card h2{font-size:16px;margin:0 0 4px;display:flex;align-items:center;gap:8px}
+.card .desc{color:var(--muted);font-size:12.5px;margin:0 0 14px}
+.num{display:inline-grid;place-items:center;width:24px;height:24px;border-radius:50%;background:var(--brand);color:#fff;font-size:12px;font-weight:700;flex:none}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px 14px}
+.f label{display:block;font-size:12px;color:var(--muted);margin-bottom:3px;font-weight:600}
+.f label .req{color:var(--fail)}
+input,select,textarea{width:100%;padding:8px 10px;border:1px solid var(--line);border-radius:6px;font:inherit;background:#fff;color:var(--ink)}
+input:focus,select:focus,textarea:focus{outline:2px solid #b9d4f3;border-color:var(--brand2)}
+textarea{resize:vertical;min-height:60px}
+.span2{grid-column:span 2}.spanall{grid-column:1/-1}
+@media(max-width:560px){.span2{grid-column:auto}}
+.cat{border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin-bottom:12px;background:var(--soft)}
+.cat-h{display:flex;align-items:center;gap:10px;margin-bottom:10px;flex-wrap:wrap}
+.cat-h h3{margin:0;font-size:15px}
+.cat-h .crit{color:var(--muted);font-size:12px}
+.cat-h .badge{margin-left:auto}
+.res{margin-top:10px;display:flex;gap:10px;align-items:center;flex-wrap:wrap;padding-top:10px;border-top:1px dashed var(--line)}
+.res .msg{font-size:12.5px;color:var(--muted);flex:1;min-width:180px}
+.res .ov{display:flex;gap:6px;align-items:center}
+.res .ov select{width:auto;padding:5px 8px;font-size:12.5px}
+.res .ov input{width:200px;padding:5px 8px;font-size:12.5px}
+.badge{display:inline-block;padding:3px 10px;border-radius:99px;font-size:12px;font-weight:700;white-space:nowrap}
+.b-pass{background:var(--passbg);color:var(--pass)}.b-fail{background:var(--failbg);color:var(--fail)}
+.b-pend{background:var(--pendbg);color:var(--pend)}.b-warn{background:var(--warnbg);color:var(--warn)}
+.b-man{background:#e8eefc;color:#2a4fb0;font-weight:600;margin-left:4px}
+.radio-row{display:flex;gap:8px;flex-wrap:wrap}
+.radio-row label{display:flex;gap:6px;align-items:center;border:1px solid var(--line);background:#fff;padding:7px 12px;border-radius:6px;cursor:pointer;font-size:13px;color:var(--ink);font-weight:400;margin:0}
+.radio-row input{width:auto}
+.hidden{display:none!important}
+/* photos */
+.ph-sec{margin-top:6px}
+.ph-sec h4{font-size:13.5px;margin:16px 0 8px;display:flex;align-items:center;gap:8px}
+.slots{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:10px}
+.slot{border:1.5px dashed #c5ccd6;border-radius:8px;padding:8px;background:#fff;min-height:110px;display:flex;flex-direction:column;gap:6px}
+.slot.has{border-style:solid;border-color:#9fc3a9}
+.slot.drag{background:#eaf3ff;border-color:var(--brand2)}
+.slot .sl{font-size:12px;font-weight:600;color:#3b4654;display:flex;justify-content:space-between}
+.thumbs{display:flex;flex-wrap:wrap;gap:5px}
+.thumb{position:relative;width:62px;height:50px;border-radius:4px;overflow:hidden;background:#ddd;cursor:zoom-in}
+.thumb img{width:100%;height:100%;object-fit:cover;display:block}
+.thumb button{position:absolute;top:1px;right:1px;width:17px;height:17px;border:0;border-radius:50%;background:rgba(0,0,0,.65);color:#fff;font-size:11px;line-height:17px;padding:0;cursor:pointer}
+.add{margin-top:auto;display:block;text-align:center;border:1px solid var(--line);border-radius:5px;padding:5px;font-size:12px;color:var(--brand2);cursor:pointer;background:var(--soft)}
+.add:hover{background:#e8f0fb}
+.add input{display:none}
+.holds{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:12px}
+.hold{border:1px solid var(--line);border-radius:10px;padding:10px;background:var(--soft)}
+.hold-h{display:flex;justify-content:space-between;align-items:center;font-weight:700;font-size:13.5px;margin-bottom:8px}
+.hold .slots{grid-template-columns:repeat(3,minmax(0,1fr));gap:6px}
+.hold .slot .sl span:first-child{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.hold .slot{min-height:96px;padding:6px}
+.hold .thumb{width:44px;height:38px}
+.ship-diag{display:flex;align-items:flex-end;gap:2px;margin:6px 0 4px;overflow-x:auto;padding-bottom:4px}
+.ship-diag .bow{width:0;height:0;border-top:22px solid transparent;border-left:30px solid #9aa7b6}
+.ship-diag .h{min-width:38px;height:22px;background:#c9d3de;border-radius:2px;font-size:11px;display:grid;place-items:center;color:#2b3a4b;font-weight:700}
+.ship-diag .h.ok{background:#9fd3ae}
+.ship-diag .acc{width:30px;height:36px;background:#9aa7b6;border-radius:3px 3px 0 0}
+.ship-diag .lbl{font-size:11px;color:var(--muted);align-self:center;padding:0 6px}
+/* advisory */
+.adv-g{margin-bottom:14px}
+.adv-g h4{margin:0 0 6px;font-size:13.5px;color:var(--brand)}
+.adv-r{display:flex;align-items:center;gap:10px;padding:7px 0;border-bottom:1px solid #edf0f3}
+.adv-r .t{flex:1;font-size:13px}
+.adv-r .t small{display:block;color:var(--muted);font-size:11.5px}
+.seg{display:flex;border:1px solid var(--line);border-radius:6px;overflow:hidden;flex:none}
+.seg button{border:0;background:#fff;padding:5px 10px;font:inherit;font-size:12px;cursor:pointer;color:var(--muted);border-right:1px solid var(--line)}
+.seg button:last-child{border-right:0}
+.seg button.on.ok{background:var(--passbg);color:var(--pass);font-weight:700}
+.seg button.on.ng{background:var(--failbg);color:var(--fail);font-weight:700}
+.seg button.on.na{background:var(--pendbg);color:#333;font-weight:700}
+/* side */
+.side{position:sticky;top:16px}
+.score{display:flex;align-items:baseline;gap:6px;margin:6px 0}
+.score b{font-size:40px;line-height:1;color:var(--brand)}
+.score span{color:var(--muted)}
+.bar{display:flex;gap:4px;margin-bottom:12px}
+.bar i{flex:1;height:8px;border-radius:4px;background:var(--pendbg)}
+.bar i.p{background:var(--pass)}.bar i.f{background:var(--fail)}
+.lights{list-style:none;margin:0 0 12px;padding:0}
+.lights li{display:flex;justify-content:space-between;align-items:center;padding:6px 0;border-bottom:1px solid #edf0f3;font-size:13px}
+.reco{border-radius:8px;padding:10px 12px;font-weight:700;text-align:center;margin-bottom:10px}
+.warns{font-size:12px;margin:0 0 12px;padding:10px 10px 10px 26px;background:var(--warnbg);border-radius:8px;color:#6b4300}
+.warns:empty{display:none}
+.warns li{margin:2px 0}
+.btn{border:1px solid var(--line);background:#fff;padding:8px 14px;border-radius:6px;font:inherit;cursor:pointer;color:var(--ink)}
+.btn:hover{background:var(--soft)}
+.btn.pri{background:var(--brand2);border-color:var(--brand2);color:#fff}
+.btn.sm{padding:4px 9px;font-size:12px}
+.btn.danger{color:var(--fail)}
+.final-btns{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:10px 0}
+.final-btns button{border:0;border-radius:8px;padding:14px 8px;font:inherit;font-size:15px;font-weight:800;cursor:pointer;color:#fff}
+.final-btns .ok{background:var(--pass)}.final-btns .ng{background:var(--fail)}
+.final-btns button:hover{filter:brightness(1.08)}
+.stamp{border:3px solid;border-radius:10px;padding:10px;text-align:center;margin:10px 0}
+.stamp b{font-size:24px;letter-spacing:2px;display:block}
+.stamp.pass{color:var(--pass);border-color:var(--pass);background:var(--passbg)}
+.stamp.fail{color:var(--fail);border-color:var(--fail);background:var(--failbg)}
+.stamp small{color:#444;display:block;font-size:12px}
+.row-btns{display:flex;gap:6px;flex-wrap:wrap}
+/* history */
+table{width:100%;border-collapse:collapse;background:#fff}
+th,td{padding:9px 10px;border-bottom:1px solid var(--line);text-align:left;font-size:13px;vertical-align:middle}
+th{background:var(--soft);font-size:12px;color:var(--muted)}
+.toolbar{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px;align-items:center}
+.toolbar input[type=search]{max-width:280px}
+.tbl-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:10px}
+/* modal */
+#modal{position:fixed;inset:0;background:rgba(10,20,35,.6);display:none;align-items:flex-start;justify-content:center;padding:30px 12px;z-index:50;overflow:auto}
+#modal.on{display:flex}
+.mbox{background:#fff;border-radius:10px;max-width:1000px;width:100%;padding:24px}
+.mbox.img{background:transparent;padding:0;text-align:center;max-width:none}
+.mbox.img img{max-width:94vw;max-height:88vh;border-radius:6px}
+.rep h1{font-size:20px;margin:0 0 4px}
+.rep table{margin:8px 0 16px}
+.rep td,.rep th{border:1px solid var(--line);font-size:12.5px;padding:6px 8px}
+.rep h3{font-size:14px;margin:18px 0 6px;border-left:4px solid var(--brand);padding-left:8px}
+.rep .pg{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.rep .pg figure{margin:0}.rep .pg img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:4px;border:1px solid var(--line)}
+.rep .pg figcaption{font-size:11px;color:var(--muted)}
+.toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%);background:#1d2733;color:#fff;padding:10px 18px;border-radius:8px;z-index:60;opacity:0;transition:.25s;pointer-events:none}
+.toast.on{opacity:1}
+.chk{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:6px}
+.chk label{display:flex;gap:8px;align-items:center;font-size:13px}
+.chk input{width:auto}
+/* fleet */
+.fleet-head{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:12px}
+.fleet-head h2{margin:0;font-size:18px}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px;margin-bottom:16px}
+.tile{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px 16px;cursor:pointer;text-align:left;font:inherit;color:var(--ink)}
+.tile:hover{border-color:var(--brand2)}
+.tile .l{font-size:12px;color:var(--muted);font-weight:600}
+.tile .v{font-size:30px;font-weight:800;line-height:1.2;font-variant-numeric:tabular-nums}
+.tile .s{font-size:12px;color:var(--muted)}
+.tile .ic{font-size:13px;margin-right:4px}
+.charts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+@media(max-width:1000px){.charts{grid-template-columns:1fr}}
+.charts .card{margin-bottom:16px}
+.ch{font-size:14px;margin:0 0 10px}
+.hb{display:grid;grid-template-columns:minmax(0,120px) 1fr 34px;gap:8px;align-items:center;padding:3px 0}
+.hb .hl{font-size:12.5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.hb .ht{height:14px}
+.hb .ht i{display:block;height:100%;border-radius:0 4px 4px 0;min-width:2px}
+.hb .hv{font-size:12.5px;text-align:right;font-variant-numeric:tabular-nums}
+.hb:hover .ht i{filter:brightness(.9)}
+.ft th{cursor:pointer;white-space:nowrap;user-select:none}
+.ft th.nosort{cursor:default}
+.ft tbody tr{cursor:pointer}
+.ft tbody tr:hover{background:#f4f8fd}
+.ft td{white-space:nowrap}
+.ft tr.urgent td:first-child{box-shadow:inset 4px 0 0 var(--fail)}
+.ft .nm b{display:block}.ft .nm small{color:var(--muted)}
+.dots{display:inline-flex;gap:3px;vertical-align:middle;margin-right:6px}
+.dots i{width:11px;height:11px;border-radius:2px;background:var(--pendbg);border:1px solid #c9cfd8}
+.dots i.p{background:var(--pass);border-color:var(--pass)}.dots i.f{background:var(--fail);border-color:var(--fail)}
+.muted{color:var(--muted)}
+.warn-t{color:var(--fail);font-weight:700}
+#tip{position:fixed;z-index:70;background:#1d2733;color:#fff;font-size:12px;padding:6px 9px;border-radius:6px;pointer-events:none;max-width:320px;display:none;white-space:pre-line}
+.vd h1{font-size:20px;margin:0}
+.vd h3{font-size:14px;margin:20px 0 8px;border-left:4px solid var(--brand);padding-left:8px}
+.vd .meta{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:6px 16px;font-size:13px;margin-top:10px}
+.vd .meta span{color:var(--muted);font-size:12px;display:block}
+.vd .two{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media(max-width:760px){.vd .two{grid-template-columns:1fr}}
+.vd table td{white-space:normal}
+.vd .imgs{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:8px}
+.vd .imgs img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:6px;border:1px solid var(--line);cursor:zoom-in}
+.vd .imgs figure{margin:0;font-size:11.5px;color:var(--muted)}
+/* timeline */
+.tl{position:relative;margin:22px 0 6px}
+.tl-row{display:grid;grid-template-columns:110px 1fr;align-items:center;min-height:26px}
+.tl-lab{font-size:12px;font-weight:600;color:#3b4654}
+.tl-lab small{color:var(--muted);font-weight:400;margin-left:4px}
+.tl-track{position:relative;height:26px;border-bottom:1px solid #edf0f3}
+.tl-m{position:absolute;top:50%;width:12px;height:12px;margin:-6px 0 0 -6px;border-radius:50%;border:2px solid var(--card);box-sizing:content-box;cursor:pointer}
+.tl-m:hover{transform:scale(1.35);z-index:2}
+.tl-m.st-p{background:var(--pass);color:var(--pass)}.tl-m.st-w{background:var(--warn);color:var(--warn)}.tl-m.st-f{background:var(--fail);color:var(--fail)}.tl-m.st-n{background:#8a96a6;color:#6b7684}
+.tl-m.fut{background:var(--card)!important;border:2px dashed currentColor}
+.tl-axis{position:relative;height:20px}
+.tl-tick{position:absolute;top:2px;transform:translateX(-50%);font-size:11px;color:var(--muted)}
+.tl-tick::before{content:"";position:absolute;left:50%;top:-6px;height:5px;border-left:1px solid #c5ccd6}
+.tl-today{position:absolute;top:0;bottom:20px;border-left:2px dashed var(--brand2);pointer-events:none}
+.tl-today span{position:absolute;top:-16px;left:-14px;font-size:11px;color:var(--brand2);font-weight:700;white-space:nowrap}
+.tl-legend{display:flex;gap:14px;flex-wrap:wrap;font-size:12px;color:var(--muted);margin:2px 0 10px 110px}
+.tl-legend span{display:flex;align-items:center;gap:5px}
+.tl-legend .tl-m{position:static;margin:0;cursor:default}
+.tl-stats{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:8px 16px;font-size:13px;margin:0 0 16px;padding:10px 12px;background:var(--soft);border-radius:8px}
+.tl-stats>div>span:first-child{display:block;font-size:12px;color:var(--muted)}
+.ev-chips{display:flex;gap:12px;flex-wrap:wrap;font-size:12.5px;margin:6px 0 8px}
+.ev-chips label{display:flex;gap:4px;align-items:center}.ev-chips input{width:auto}
+.ev-list{max-height:460px;overflow:auto;border:1px solid var(--line);border-radius:8px;padding:0 10px}
+.ev-ym{font-size:12px;font-weight:700;color:var(--brand);padding:10px 0 4px;position:sticky;top:0;background:var(--card)}
+.ev,.ev>summary{display:flex;gap:10px;align-items:center;padding:7px 0;border-bottom:1px solid #edf0f3;font-size:13px}
+details.ev{display:block;padding:0}
+details.ev>summary{cursor:pointer;list-style:none}
+details.ev>summary::-webkit-details-marker{display:none}
+details.ev>summary::after{content:"▾";color:var(--muted);margin-left:2px}
+details.ev[open]>summary::after{content:"▴"}
+details.ev .tbl-wrap{margin:6px 0 10px}
+.ev.hl,.ev.hl>summary{background:#eaf3ff}
+.ev-d{width:42px;flex:none;color:var(--muted);font-variant-numeric:tabular-nums}
+.ev-lane{flex:none;font-size:11px;padding:2px 7px;border-radius:4px;background:var(--soft);border:1px solid var(--line);color:#3b4654}
+.ev-t{flex:1;min-width:0}
+.ev-t small{display:block;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.ev-f{font-size:12px;color:var(--muted);flex:none}
+/* findings workflow */
+#fdRows tr,.vd tr.clk{cursor:pointer}
+#fdRows tr:hover,.vd tr.clk:hover{background:#f4f8fd}
+.fd h1{font-size:19px;margin:0}
+.fd h3{font-size:14px;margin:18px 0 8px;border-left:4px solid var(--brand);padding-left:8px}
+.steps{display:flex;gap:6px;align-items:center;margin:14px 0;flex-wrap:wrap}
+.step{padding:5px 12px;border-radius:99px;background:var(--pendbg);color:var(--muted);font-size:12.5px}
+.step.on{background:var(--brand2);color:#fff;font-weight:700}
+.step.done{background:var(--passbg);color:var(--pass)}
+.arr{color:var(--muted)}
+.fd-q{background:var(--soft);border-radius:8px;padding:10px 14px;font-size:13.5px}
+.fd-q span{display:block;font-size:12px}.fd-q p{margin:4px 0 0;color:#3b4654}
+.fd .two{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+@media(max-width:760px){.fd .two{grid-template-columns:1fr}}
+.fd-files div{font-size:13px;padding:3px 0}
+.hist{list-style:none;padding:0;margin:0;font-size:12.5px;max-height:320px;overflow:auto}
+.hist li{padding:7px 0 7px 14px;border-left:2px solid var(--line);position:relative}
+.hist li::before{content:"";position:absolute;left:-5px;top:12px;width:8px;height:8px;border-radius:50%;background:var(--brand2)}
+.btn.ok{background:var(--pass);border-color:var(--pass);color:#fff}
+.card.lock{background:#fff8e6;border-color:#f0d9a0;font-size:13px;padding:10px 16px}
+#form.locked .add{opacity:.45;pointer-events:none}
+.card.src{background:#eef5ff;border-color:#bcd5f5;font-size:13px;display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+@media print{
+  body.printing>*:not(#modal){display:none!important}
+  body.printing #modal{position:static;background:none;padding:0;display:block;overflow:visible}
+  body.printing .mbox{max-width:none;padding:0}
+  .no-print{display:none!important}
+  .rep .pg figure{break-inside:avoid}
+}
+</style>
+</head>
+<body>
+<header>
+  <div>
+    <h1>⚓ 현대제철 입항선박 Vetting 시스템</h1>
+    <div class="sub">Ship Vetting &amp; Berthing Acceptance Review</div>
+  </div>
+  <nav>
+    <button data-tab="arrivals">입항예정 선박</button>
+    <button data-tab="review" class="on">선박 검토</button>
+    <button data-tab="history">검토 이력</button>
+    <button data-tab="findings">지적사항 (참고)</button>
+    <button data-tab="settings">심사 기준 설정</button>
+  </nav>
+</header>
+
+<main>
+<!-- ================= 입항예정 선박 ================= -->
+<section class="tab" id="tab-arrivals">
+  <div class="card hidden" id="arrEmpty">
+    <h2>입항예정 데이터 없음</h2>
+    <p class="desc"><code>data/arrivals.csv</code>(공급사 제출 입항 일정)를 넣고 프로젝트 폴더에서 <code>python tools/build_fleet_data.py</code>를 실행한 뒤 새로고침하세요.</p>
+  </div>
+  <div id="arrBody">
+    <div class="fleet-head"><h2>입항예정 선박</h2><span class="desc" id="arrSrc"></span></div>
+    <div class="kpis" id="kpis"></div>
+    <div class="card">
+      <div class="toolbar">
+        <input type="search" id="aSearch" placeholder="선박명 / IMO / 공급사 / 대리점">
+        <select id="aPeriod" style="width:auto"><option value="">입항일 전체</option><option value="7">7일 이내</option><option value="14">14일 이내</option><option value="30">30일 이내</option><option value="past">입항일 경과</option></select>
+        <select id="aState" style="width:auto"><option value="">심사 상태 전체</option><option value="todo">심사 미착수</option><option value="doing">심사중</option><option value="open">최종 판정 전 (미착수+심사중)</option><option value="pass">최종 합격</option><option value="fail">최종 불합격</option></select>
+        <select id="aPre" style="width:auto"><option value="">자동판정 전체</option><option value="pass">합격 권고</option><option value="fail">불합격 권고</option><option value="pend">판정 불가</option></select>
+        <select id="aBerth" style="width:auto"></select>
+        <span style="flex:1"></span><span class="desc" id="aCount" style="margin:0"></span>
+      </div>
+      <div class="tbl-wrap"><table class="ft"><thead id="aHead"></thead><tbody id="aBody"></tbody></table></div>
+      <p class="desc" style="margin:8px 0 0">선박을 누르면 <b>선박 검토</b> 화면으로 이동해 심사합니다(입항 1건당 검토 기록 1건). 자동판정은 공급사 제출 정보와 선박 DB로 ETA 기준 5개 카테고리를 미리 판정한 결과이며, 검사 증빙 파일은 있다고 가정합니다. 실제 판정은 검토 화면에서 증빙·사진을 첨부해 확정합니다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 지적사항 · 시정조치 ================= -->
+<section class="tab" id="tab-findings">
+  <div class="card hidden" id="fdEmpty"><h2>선대 데이터 없음</h2><p class="desc"><code>python tools/build_fleet_data.py</code> 실행 후 새로고침하세요.</p></div>
+  <div id="fdBody">
+    <div class="fleet-head"><h2>지적사항 · 시정조치</h2><span class="desc">미결 → 조치 완료 보고 → 검토 대기 → 검증 후 종결. 처리 내용은 이 브라우저에 저장되며 원본 데이터는 바뀌지 않습니다.</span></div>
+    <div class="kpis" id="fdKpis"></div>
+    <div class="card">
+      <div class="toolbar">
+        <input type="search" id="fdSearch" placeholder="선박명 / 지적 ID / 내용 / 담당자">
+        <select id="fdStatus" style="width:auto"><option value="active">미종결 전체</option><option value="Open">미결 (Open)</option><option value="Under Review">검토 대기</option><option value="Closed">종결</option><option value="">전체</option></select>
+        <select id="fdSev" style="width:auto"><option value="">심각도 전체</option><option>High</option><option>Medium</option><option>Low</option></select>
+        <select id="fdChapter" style="width:auto"></select>
+        <select id="fdFlag" style="width:auto"><option value="">조건 전체</option><option value="overdue">기한 경과</option><option value="soon">14일 내 기한</option><option value="repeat">반복 지적</option><option value="noaction">시정조치 미등록</option><option value="noevid">검토 대기 · 증빙 없음</option><option value="touched">처리 이력 있음</option></select>
+        <select id="fdSort" style="width:auto"><option value="due">기한 순</option><option value="sev">심각도 순</option><option value="recent">최근 처리 순</option></select>
+        <span style="flex:1"></span><span class="desc" id="fdCount" style="margin:0"></span>
+      </div>
+      <div class="tbl-wrap"><table class="ft"><thead><tr><th class="nosort">ID / 검사</th><th class="nosort">선박</th><th class="nosort">심각도 / 분야</th><th class="nosort">상태</th><th class="nosort">기한</th><th class="nosort">내용</th><th class="nosort">시정조치</th></tr></thead><tbody id="fdRows"></tbody></table></div>
+      <div style="text-align:center;margin-top:10px"><button class="btn sm hidden" id="fdMore">더 보기</button></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 선박 검토 ================= -->
+<section class="tab on" id="tab-review">
+<div class="layout">
+<div id="form">
+  <div class="card src hidden" id="srcBanner"></div>
+  <div class="card lock hidden" id="lockNote">🔒 최종 판정이 완료되어 입력이 잠겨 있습니다. 수정하려면 오른쪽 종합 판정의 <b>판정 취소 (재검토)</b>를 누르세요.</div>
+
+  <div class="card">
+    <h2>선박 기본 정보</h2>
+    <p class="desc">검토 대상 선박과 입항 정보를 입력합니다. <span style="color:var(--fail)">*</span> 항목은 최종 판정 전 필수입니다.</p>
+    <div class="grid">
+      <div class="f"><label>선박명 <span class="req">*</span></label><input data-k="info.name" placeholder="예) HYUNDAI STAR"></div>
+      <div class="f"><label>IMO 번호 <span class="req">*</span></label><input data-k="info.imo" placeholder="7자리 숫자" inputmode="numeric"></div>
+      <div class="f"><label>선적국 (Flag)</label><input data-k="info.flag" placeholder="예) Panama"></div>
+      <div class="f"><label>선급 (Class)</label><input data-k="info.cls" list="classList" placeholder="예) KR, NK, DNV"></div>
+      <div class="f"><label>재화중량 DWT (MT)</label><input data-k="info.dwt" type="number" min="0"></div>
+      <div class="f"><label>입항예정일 (ETA)</label><input data-k="info.eta" type="date"></div>
+      <div class="f"><label>입항 부두</label>
+        <select data-k="info.berth"><option value="">선택</option><option>당진 원료부두</option><option>당진 제품부두</option><option>인천</option><option>포항</option><option>순천</option><option>기타</option></select></div>
+      <div class="f"><label>작업 구분 / 화물</label>
+        <select data-k="info.cargo"><option value="">선택</option><option>원료 양하 – 철광석</option><option>원료 양하 – 석탄</option><option>원료 양하 – 부원료/기타</option><option>제품 적하 – 열연/냉연 코일</option><option>제품 적하 – 후판</option><option>제품 적하 – 형강/철근</option><option>제품 적하 – 강관/기타</option></select></div>
+      <div class="f"><label>선주 / 운항사</label><input data-k="info.operator"></div>
+      <div class="f"><label>대리점 (Agent)</label><input data-k="info.agent"></div>
+      <div class="f"><label>공급사 (정보 제출)</label><input data-k="info.supplier"></div>
+      <div class="f"><label>검토자</label><input data-k="info.reviewer"></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>핵심 심사 항목 (5개 카테고리)</h2>
+    <p class="desc">입력값으로 자동 판정되며, 필요 시 검토자가 사유를 기재하고 수동 판정으로 변경할 수 있습니다. <b id="needTxt">5개 중 4개 이상</b> 합격 시 최종 합격 권고.</p>
+
+    <!-- C1 -->
+    <div class="cat" id="cat-c1">
+      <div class="cat-h"><span class="num">1</span><h3>선박 타입</h3><span class="crit">허용 선종 여부</span><span class="badge b-pend" id="bd-c1">대기</span></div>
+      <div class="grid">
+        <div class="f span2"><label>선박 타입</label><select data-k="c1.type" id="typeSel"></select></div>
+        <div class="f"><label>홀드(Hold) 수</label><input data-k="c1.holds" id="holdsInp" type="number" min="0" max="12"></div>
+        <div class="f"><label>하역장비 (Gear)</label>
+          <select data-k="c1.geared"><option value="">선택</option><option value="Y">Geared (선박 크레인 보유)</option><option value="N">Gearless</option></select></div>
+        <div class="f" id="craneWrap"><label>선박 크레인 수</label><input data-k="c1.cranes" type="number" min="0" max="8"></div>
+      </div>
+      <div class="res"><span class="msg" id="msg-c1"></span>
+        <span class="ov"><select data-k="ov.c1.v"><option value="auto">자동판정</option><option value="pass">수동: 합격</option><option value="fail">수동: 불합격</option></select>
+        <input data-k="ov.c1.r" placeholder="수동판정 사유"></span></div>
+    </div>
+
+    <!-- C2 -->
+    <div class="cat" id="cat-c2">
+      <div class="cat-h"><span class="num">2</span><h3>선박 연령</h3><span class="crit" id="crit-c2">선령 15년 이내</span><span class="badge b-pend" id="bd-c2">대기</span></div>
+      <div class="grid">
+        <div class="f"><label>건조(인도) 년월</label><input data-k="c2.built" type="month"></div>
+        <div class="f"><label>기준일</label><input id="refDate" disabled placeholder="ETA 또는 오늘"></div>
+      </div>
+      <div class="res"><span class="msg" id="msg-c2"></span>
+        <span class="ov"><select data-k="ov.c2.v"><option value="auto">자동판정</option><option value="pass">수동: 합격</option><option value="fail">수동: 불합격</option></select>
+        <input data-k="ov.c2.r" placeholder="수동판정 사유"></span></div>
+    </div>
+
+    <!-- C3 -->
+    <div class="cat" id="cat-c3">
+      <div class="cat-h"><span class="num">3</span><h3>사고 유무</h3><span class="crit" id="crit-c3">최근 5년 해양사고·기관고장·인명사고</span><span class="badge b-pend" id="bd-c3">대기</span></div>
+      <div class="radio-row">
+        <label><input type="radio" name="c3has" data-k="c3.has" value="no"> 사고 이력 없음</label>
+        <label><input type="radio" name="c3has" data-k="c3.has" value="yes"> 사고 이력 있음</label>
+      </div>
+      <div class="grid" id="accDetail" style="margin-top:12px">
+        <div class="f"><label>사고 일자</label><input data-k="c3.date" type="date"></div>
+        <div class="f"><label>사고 유형</label>
+          <select data-k="c3.kind"><option value="">선택</option><option>충돌</option><option>좌초/좌주</option><option>화재/폭발</option><option>기관고장 (주기관/발전기)</option><option>정전 (Blackout)</option><option>침수/선체손상</option><option>하역설비 사고</option><option>인명사고 (사망/중상)</option><option>오염사고</option><option>기타</option></select></div>
+        <div class="f"><label>시정조치 완료 여부</label>
+          <select data-k="c3.fixed"><option value="">선택</option><option value="Y">완료 (증빙 확인)</option><option value="N">미완료/확인불가</option></select></div>
+        <div class="f spanall"><label>사고 내용</label><textarea data-k="c3.desc" placeholder="사고 개요, 원인, 조치 내용"></textarea></div>
+      </div>
+      <div class="res"><span class="msg" id="msg-c3"></span>
+        <span class="ov"><select data-k="ov.c3.v"><option value="auto">자동판정</option><option value="pass">수동: 합격</option><option value="fail">수동: 불합격</option></select>
+        <input data-k="ov.c3.r" placeholder="수동판정 사유"></span></div>
+    </div>
+
+    <!-- C4 -->
+    <div class="cat" id="cat-c4">
+      <div class="cat-h"><span class="num">4</span><h3>선박 검사 증빙</h3><span class="crit" id="crit-c4">최근 3년 이내 검사 + 증빙 첨부</span><span class="badge b-pend" id="bd-c4">대기</span></div>
+      <div class="grid">
+        <div class="f"><label>최근 검사일</label><input data-k="c4.date" type="date"></div>
+        <div class="f"><label>검사 종류</label>
+          <select data-k="c4.kind"><option value="">선택</option><option>선급 정기검사 (Special Survey)</option><option>선급 중간검사 (Intermediate)</option><option>선급 연차검사 (Annual)</option><option>PSC 검사</option><option>CAP / 상태평가</option><option>제3자 Vetting 검사</option><option>기타</option></select></div>
+        <div class="f"><label>검사기관</label><input data-k="c4.org" placeholder="예) KR, NK, USCG, AMSA"></div>
+        <div class="f"><label>지적 결함 건수</label><input data-k="c4.defects" type="number" min="0"></div>
+        <div class="f spanall"><label>증빙 파일 (검사증서·보고서, PDF/이미지)</label>
+          <div class="row-btns" style="align-items:center">
+            <label class="btn sm" style="margin:0;color:var(--brand2)">파일 선택<input type="file" id="c4file" accept=".pdf,image/*" hidden></label>
+            <span id="c4fileName" style="font-size:12.5px;color:var(--muted)">첨부된 파일 없음</span>
+          </div>
+        </div>
+      </div>
+      <div class="res"><span class="msg" id="msg-c4"></span>
+        <span class="ov"><select data-k="ov.c4.v"><option value="auto">자동판정</option><option value="pass">수동: 합격</option><option value="fail">수동: 불합격</option></select>
+        <input data-k="ov.c4.r" placeholder="수동판정 사유"></span></div>
+    </div>
+
+    <!-- C5 -->
+    <div class="cat" id="cat-c5">
+      <div class="cat-h"><span class="num">5</span><h3>선박 건조국</h3><span class="crit">승인 건조국 여부</span><span class="badge b-pend" id="bd-c5">대기</span></div>
+      <div class="grid">
+        <div class="f"><label>건조국</label><input data-k="c5.country" list="countryList" placeholder="목록에서 선택 또는 입력"></div>
+        <div class="f span2"><label>조선소</label><input data-k="c5.yard" placeholder="예) 현대미포조선, Oshima Shipbuilding"></div>
+      </div>
+      <div class="res"><span class="msg" id="msg-c5"></span>
+        <span class="ov"><select data-k="ov.c5.v"><option value="auto">자동판정</option><option value="pass">수동: 합격</option><option value="fail">수동: 불합격</option></select>
+        <input data-k="ov.c5.r" placeholder="수동판정 사유"></span></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>선박 사진</h2>
+    <p class="desc">사진을 클릭해 추가하거나 끌어다 놓으세요. 홀드 칸은 선박 타입의 홀드 수에 맞춰 자동 생성되며(선수 → 선미 순), 홀드 수를 직접 바꾸면 그에 맞게 조정됩니다.</p>
+    <div class="ph-sec">
+      <h4>① 외관 사진 <span class="badge b-pend" id="extCnt"></span></h4>
+      <div class="slots" id="extSlots"></div>
+      <h4>② 홀드별 사진 <span class="badge b-pend" id="holdCnt"></span></h4>
+      <div class="ship-diag" id="shipDiag"></div>
+      <div class="holds" id="holdSlots"></div>
+      <div id="craneSec">
+        <h4>③ 선박 크레인 / 하역장비 사진</h4>
+        <div class="slots" id="craneSlots"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>보조 점검 항목 (Advisory)</h2>
+    <p class="desc">해외 제철소·광산사(RightShip, BHP, Rio Tinto, Vale 등) Vetting 기준과 하역 안전 관점의 참고 항목입니다. 합격 개수에는 포함되지 않으나, <b>‘미흡’이 있는 상태로 최종 합격 처리 시 검토 의견이 필수</b>입니다.</p>
+    <div id="advList"></div>
+    <div class="f"><label>보조 점검 메모</label><textarea data-k="advNote"></textarea></div>
+  </div>
+</div>
+
+<!-- side panel -->
+<aside class="side">
+  <div class="card">
+    <h2>종합 판정</h2>
+    <div class="score"><b id="passN">0</b><span>/ 5 합격</span><span style="margin-left:auto;font-size:12px" id="needSide">기준 4개 이상</span></div>
+    <div class="bar" id="bar"></div>
+    <ul class="lights" id="lights"></ul>
+    <div class="reco" id="reco"></div>
+    <ul class="warns" id="warns"></ul>
+    <div id="finalArea">
+      <div class="f"><label>검토 의견 <span id="cmtReq" class="req"></span></label><textarea data-k="finalComment" rows="3" placeholder="최종 판정 근거, 조건부 사항, 선사 요청사항 등"></textarea></div>
+      <div class="final-btns">
+        <button class="ok" onclick="decide('pass')">✔ 최종 합격</button>
+        <button class="ng" onclick="decide('fail')">✖ 최종 불합격</button>
+      </div>
+    </div>
+    <div id="stampArea"></div>
+    <div class="row-btns" style="margin-top:8px">
+      <button class="btn pri" onclick="saveNow(true)">저장</button>
+      <button class="btn" onclick="openReport(cur)">보고서</button>
+      <button class="btn" onclick="newReview()">새 검토</button>
+    </div>
+    <div style="font-size:11.5px;color:var(--muted);margin-top:8px" id="saveInfo"></div>
+  </div>
+</aside>
+</div>
+</section>
+
+<!-- ================= 이력 ================= -->
+<section class="tab" id="tab-history">
+  <div class="card">
+    <h2>검토 이력</h2>
+    <p class="desc">이 브라우저에 저장된 검토 기록입니다. 백업·공유는 JSON 내보내기/가져오기를 사용하세요.</p>
+    <div class="toolbar">
+      <input type="search" id="hSearch" placeholder="선박명 / IMO 검색">
+      <select id="hFilter" style="width:auto"><option value="">전체</option><option value="pass">최종 합격</option><option value="fail">최종 불합격</option><option value="none">검토중</option></select>
+      <span style="flex:1"></span>
+      <button class="btn" onclick="exportAll()">JSON 내보내기</button>
+      <label class="btn" style="margin:0">JSON 가져오기<input type="file" accept=".json" hidden onchange="importAll(this)"></label>
+    </div>
+    <div class="tbl-wrap"><table>
+      <thead><tr><th>선박명</th><th>IMO</th><th>선박 타입</th><th>선령</th><th>ETA</th><th>합격 항목</th><th>시스템 권고</th><th>최종 판정</th><th>최종 수정</th><th></th></tr></thead>
+      <tbody id="hBody"></tbody>
+    </table></div>
+  </div>
+</section>
+
+<!-- ================= 설정 ================= -->
+<section class="tab" id="tab-settings">
+  <div class="card">
+    <h2>심사 기준 설정</h2>
+    <p class="desc">사내 기준에 맞게 조정하세요. 변경 사항은 이 브라우저에 저장되며 진행 중인 검토에 즉시 반영됩니다.</p>
+    <div class="grid" style="max-width:900px">
+      <div class="f"><label>최대 선령 (년 이내)</label><input type="number" id="sMaxAge" min="1"></div>
+      <div class="f"><label>검사 유효기간 (최근 N년)</label><input type="number" id="sInsp" min="1"></div>
+      <div class="f"><label>사고 조회기간 (최근 N년)</label><input type="number" id="sAcc" min="1"></div>
+      <div class="f"><label>최종 합격 필요 개수 (/5)</label><input type="number" id="sNeed" min="1" max="5"></div>
+    </div>
+    <h4 style="margin:20px 0 8px">입항 허용 선박 타입</h4>
+    <div class="chk" id="sTypes"></div>
+    <h4 style="margin:20px 0 8px">승인 건조국</h4>
+    <div class="chk" id="sCountries"></div>
+    <div class="row-btns" style="margin-top:10px;max-width:420px"><input id="sNewCountry" placeholder="건조국 추가 (예: 노르웨이)"><button class="btn" onclick="addCountry()">추가</button></div>
+    <div class="row-btns" style="margin-top:20px"><button class="btn pri" onclick="saveSettings()">설정 저장</button><button class="btn" onclick="resetSettings()">기본값 복원</button></div>
+  </div>
+</section>
+</main>
+
+<div id="modal" onclick="if(event.target===this)closeModal()"><div class="mbox" id="mbox"></div></div>
+<div class="toast" id="toast"></div>
+<div id="tip"></div>
+
+<datalist id="classList"><option>KR (한국선급)</option><option>NK (일본해사협회)</option><option>DNV</option><option>LR (Lloyd's Register)</option><option>ABS</option><option>BV (Bureau Veritas)</option><option>CCS (중국선급)</option><option>RINA</option><option>IRS</option><option>PRS</option><option>CRS</option></datalist>
+<datalist id="countryList"></datalist>
+
+<script src="fleet-data.js"></script>
+<script>
+/* ---------------- 상수 ---------------- */
+const TYPES = {
+  cape:     {label:'Bulk – Capesize (150k DWT 이상)',    holds:9, geared:'N'},
+  vloc:     {label:'Bulk – VLOC / Valemax (200k DWT 이상)', holds:7, geared:'N'},
+  kamsar:   {label:'Bulk – Kamsarmax / Post-Panamax',     holds:7, geared:'N'},
+  panamax:  {label:'Bulk – Panamax (65~80k DWT)',         holds:7, geared:'N'},
+  ultra:    {label:'Bulk – Ultramax / Supramax (50~65k)', holds:5, geared:'Y', cranes:4},
+  handy:    {label:'Bulk – Handysize / Handymax (~50k)',  holds:5, geared:'Y', cranes:4},
+  openhatch:{label:'Open Hatch Bulk / General',           holds:6, geared:'Y', cranes:2},
+  general:  {label:'General Cargo (일반화물선)',           holds:3, geared:'Y', cranes:2},
+  mpp:      {label:'Multi-Purpose (다목적선)',             holds:3, geared:'Y', cranes:2},
+  heavy:    {label:'Heavy Lift (중량물운반선)',            holds:2, geared:'Y', cranes:2},
+  container:{label:'Container (컨테이너선)',               holds:0, geared:'N'},
+  roro:     {label:'Ro-Ro / PCTC',                        holds:0, geared:'N'},
+  tanker:   {label:'Tanker (유조선/케미컬)',               holds:0, geared:'N'},
+  other:    {label:'기타',                                 holds:3, geared:''},
+};
+const COUNTRIES = ['대한민국','일본','중국','필리핀','대만','베트남','독일','네덜란드','노르웨이','덴마크','이탈리아','크로아티아','루마니아','폴란드','터키','인도','인도네시아','브라질','기타'];
+const DEFAULTS = {maxAge:15, inspYears:3, accYears:5, passNeed:4,
+  types:{cape:1,vloc:1,kamsar:1,panamax:1,ultra:1,handy:1,openhatch:1,general:1,mpp:1,heavy:1},
+  countries:['대한민국','일본','중국','필리핀','대만','베트남']};
+const CATS = [['c1','선박 타입'],['c2','선박 연령'],['c3','사고 유무'],['c4','선박 검사 증빙'],['c5','선박 건조국']];
+const EXT_SLOTS = [['bow','선수부 (Bow)'],['stern','선미부 (Stern)'],['port','좌현 전경 (Port)'],['stbd','우현 전경 (Stbd)'],
+  ['accom','거주구 · 브릿지'],['deck','갑판 전경 / 통로'],['hatch','해치커버 전체'],['gangway','현문사다리 (Gangway)'],['draft','흘수표 · 선체 외판']];
+const HOLD_SLOTS = [['inner','내부 전경'],['ladder','사다리·접근'],['cover','해치커버·코밍']];
+const ADV = [
+  ['선박 안전관리 (Vetting 공통)',[
+    ['psc','최근 12개월 PSC 출항정지(Detention) 이력 없음','Equasis / Tokyo·Paris MOU 조회'],
+    ['iacs','선급이 IACS 회원 선급','KR·NK·DNV·LR·ABS·BV·CCS 등'],
+    ['pi','P&I 보험 International Group 클럽 가입','Blue Card / Certificate of Entry'],
+    ['ism','ISM(DOC/SMC)·ISPS 증서 유효','만료일 ETA 이후'],
+    ['rs','RightShip Safety Score 3 이상 (조회 가능 시)','2 이하 시 고위험'],
+    ['flag','선적국 MOU White List 등재','Grey/Black List 선적 주의'],
+  ]],
+  ['기관 · 운항 신뢰성 (입항 후 고장 예방)',[
+    ['pms','주기관·발전기 정비기록(PMS) 최신','오버홀 지연 여부'],
+    ['eng','최근 12개월 기관고장·정전(Blackout) 없음','선장 확인서 / 선사 회신'],
+    ['emg','비상발전기·조타기·앵커 윈드라스 시험 기록','최근 3개월 이내'],
+    ['bunker','입항·출항에 충분한 연료/청수 확보',''],
+  ]],
+  ['하역 안전 (작업자 안전)',[
+    ['hc','해치커버 개폐 정상, 유압유 누유 없음',''],
+    ['ladder','홀드 사다리·난간·발판 부식/손상 없음','Australian ladder / 수직사다리'],
+    ['light','홀드 내부·갑판 야간 조명 충분',''],
+    ['walk','갑판 통로 장애물·미끄럼·추락 위험 없음','개구부 덮개, 안전 난간'],
+    ['gw','현문사다리·안전망 설치 상태 양호',''],
+    ['crane','선박 크레인/그랩 검사증명서 유효 (Geared선)','하중시험 5년, 연차검사 1년'],
+    ['enclosed','밀폐구역 진입절차·가스측정기 비치','홀드 산소농도 측정'],
+    ['comm','선원 영어 의사소통 가능',''],
+  ]],
+];
+
+/* ---------------- 유틸 ---------------- */
+const $ = s => document.querySelector(s);
+const $$ = s => [...document.querySelectorAll(s)];
+const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const getP = (o,p) => p.split('.').reduce((a,k) => a==null ? undefined : a[k], o);
+function setP(o,p,v){const ks=p.split('.');let a=o;ks.slice(0,-1).forEach(k=>{if(a[k]==null||typeof a[k]!=='object')a[k]={};a=a[k];});a[ks[ks.length-1]]=v;}
+const fmtD = d => d ? new Date(d).toLocaleString('ko-KR',{year:'numeric',month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit'}) : '';
+const ymd = d => `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;
+function toast(m){const t=$('#toast');t.textContent=m;t.classList.add('on');clearTimeout(t._h);t._h=setTimeout(()=>t.classList.remove('on'),2200);}
+const uid = () => Date.now().toString(36)+Math.random().toString(36).slice(2,7);
+
+/* ---------------- 설정 ---------------- */
+let S;
+function loadSettings(){try{S=Object.assign(structuredClone(DEFAULTS),JSON.parse(localStorage.getItem('hsv_settings')||'{}'));}catch{S=structuredClone(DEFAULTS);}}
+function renderSettings(){
+  $('#sMaxAge').value=S.maxAge;$('#sInsp').value=S.inspYears;$('#sAcc').value=S.accYears;$('#sNeed').value=S.passNeed;
+  $('#sTypes').innerHTML=Object.entries(TYPES).map(([k,t])=>`<label><input type="checkbox" value="${k}" ${S.types[k]?'checked':''}> ${esc(t.label)}</label>`).join('');
+  const all=[...new Set([...COUNTRIES.filter(c=>c!=='기타'),...S.countries])];
+  $('#sCountries').innerHTML=all.map(c=>`<label><input type="checkbox" value="${esc(c)}" ${S.countries.includes(c)?'checked':''}> ${esc(c)}</label>`).join('');
+  $('#countryList').innerHTML=[...new Set([...all,'기타'])].map(c=>`<option value="${esc(c)}">`).join('');
+  $('#typeSel').innerHTML='<option value="">선택</option>'+Object.entries(TYPES).map(([k,t])=>`<option value="${k}">${esc(t.label)}${S.types[k]?'':'  ✕ 비허용'}</option>`).join('');
+  $('#typeSel').value=cur?.c1?.type||'';
+  $('#crit-c2').textContent=`선령 ${S.maxAge}년 이내`;
+  $('#crit-c3').textContent=`최근 ${S.accYears}년 해양사고·기관고장·인명사고`;
+  $('#crit-c4').textContent=`최근 ${S.inspYears}년 이내 검사 + 증빙 첨부`;
+  $('#needTxt').textContent=`5개 중 ${S.passNeed}개 이상`;
+  $('#needSide').textContent=`기준 ${S.passNeed}개 이상`;
+}
+function readSettingsForm(){
+  return {maxAge:+$('#sMaxAge').value||DEFAULTS.maxAge, inspYears:+$('#sInsp').value||DEFAULTS.inspYears,
+    accYears:+$('#sAcc').value||DEFAULTS.accYears, passNeed:Math.min(5,Math.max(1,+$('#sNeed').value||DEFAULTS.passNeed)),
+    types:Object.fromEntries($$('#sTypes input:checked').map(i=>[i.value,1])),
+    countries:$$('#sCountries input:checked').map(i=>i.value)};
+}
+function saveSettings(){S=readSettingsForm();localStorage.setItem('hsv_settings',JSON.stringify(S));renderSettings();refresh();toast('심사 기준이 저장되었습니다.');}
+function resetSettings(){if(!confirm('기본 기준으로 되돌릴까요?'))return;S=structuredClone(DEFAULTS);localStorage.setItem('hsv_settings',JSON.stringify(S));renderSettings();refresh();toast('기본값으로 복원했습니다.');}
+// 체크박스만 추가 — '설정 저장'을 눌러야 기준에 반영된다
+function addCountry(){const v=$('#sNewCountry').value.trim();if(!v)return;$('#sNewCountry').value='';
+  const ex=$$('#sCountries input').find(i=>i.value===v);if(ex){ex.checked=true;return;}
+  $('#sCountries').insertAdjacentHTML('beforeend',`<label><input type="checkbox" value="${esc(v)}" checked> ${esc(v)}</label>`);toast(`'${v}' 추가 — 설정 저장을 눌러야 반영됩니다.`);}
+
+/* ---------------- 저장소 (IndexedDB: 사진 포함 저장) ----------------
+   records  : 검토 기록 (keyPath id)
+   findings : 지적사항 처리 내용 — fleet-data.js 원본 위에 덮어쓰는 변경분 (keyPath id = finding_id) */
+const DB = {
+  db:null,
+  open(){return new Promise((res,rej)=>{const r=indexedDB.open('hyundaiSteelVetting',2);
+    r.onupgradeneeded=()=>{const d=r.result;['records','findings'].forEach(s=>{if(!d.objectStoreNames.contains(s))d.createObjectStore(s,{keyPath:'id'});});};
+    r.onsuccess=()=>{this.db=r.result;res();};r.onerror=()=>rej(r.error);});},
+  req(mode,fn,store){return new Promise((res,rej)=>{const q=fn(this.db.transaction(store,mode).objectStore(store));q.onsuccess=()=>res(q.result);q.onerror=()=>rej(q.error);});},
+  all(store='records'){return this.req('readonly',s=>s.getAll(),store);},
+  get(id,store='records'){return this.req('readonly',s=>s.get(id),store);},
+  put(r,store='records'){return this.req('readwrite',s=>s.put(r),store);},
+  del(id,store='records'){return this.req('readwrite',s=>s.delete(id),store);},
+};
+
+/* ---------------- 레코드 ---------------- */
+let cur;
+function newRec(){
+  return {id:uid(),createdAt:new Date().toISOString(),updatedAt:null,
+    info:{reviewer:localStorage.getItem('hsv_reviewer')||''},
+    c1:{type:'',holds:'',geared:'',cranes:''},c2:{built:''},c3:{has:''},c4:{file:null},c5:{},
+    ov:{c1:{v:'auto'},c2:{v:'auto'},c3:{v:'auto'},c4:{v:'auto'},c5:{v:'auto'}},
+    photos:{ext:{},holds:[],cranes:[]},adv:{},advNote:'',finalComment:'',final:null};
+}
+// 저장·가져온 기록을 현재 구조로 보정 — 오래된 기록이나 JSON으로 가져온 기록에 없는 필드를 채우고, id·이미지 데이터를 검증한다
+const safeId = s => String(s??'').replace(/[^\w.-]/g,'');
+const safeData = s => typeof s==='string'&&/^data:(image\/|application\/pdf)/.test(s)?s:'';
+function normRec(r){
+  const b=newRec(); b.info.reviewer=''; r=r||{};
+  const o={...b,...r};
+  ['info','c1','c2','c3','c4','c5','adv'].forEach(k=>o[k]={...b[k],...(r[k]||{})});
+  o.ov=Object.fromEntries(CATS.map(([k])=>[k,{...b.ov[k],...(r.ov?.[k]||{})}]));
+  const P=r.photos||{}, ph=a=>Array.isArray(a)?a.filter(x=>x&&safeData(x.data)).map(x=>({...x,id:safeId(x.id)||uid()})):[];
+  o.photos={ext:Object.fromEntries(Object.entries(P.ext||{}).map(([k,a])=>[k,ph(a)])),
+    holds:(Array.isArray(P.holds)?[...P.holds]:[]).map(h=>Object.fromEntries(Object.entries(h||{}).map(([k,a])=>[k,ph(a)]))),
+    cranes:(Array.isArray(P.cranes)?[...P.cranes]:[]).map(ph)};
+  if(o.c4.file&&!safeData(o.c4.file.data)) o.c4.file=null;
+  o.id=safeId(r.id)||b.id;
+  return o;
+}
+function refDate(r){return r.info?.eta ? new Date(r.info.eta+'T00:00:00') : new Date(new Date().toDateString());}
+function shipAge(r){
+  if(!r.c2?.built) return null;
+  const [y,m]=r.c2.built.split('-').map(Number);
+  return (refDate(r)-new Date(y,m-1,1))/(365.2425*864e5);
+}
+
+/* ---------------- 판정 로직 ---------------- */
+function judge(r){
+  const out={}, ref=refDate(r);
+  const t=r.c1.type;
+  out.c1 = !t ? {auto:null,msg:'선박 타입을 선택하세요.'}
+    : !TYPES[t] ? {auto:false,msg:`알 수 없는 선박 타입 (${t})`}
+    : S.types[t] ? {auto:true,msg:`${TYPES[t].label} — 입항 허용 선종`} : {auto:false,msg:`${TYPES[t].label} — 입항 허용 선종이 아님`};
+
+  const age=shipAge(r);
+  out.c2 = age==null ? {auto:null,msg:'건조 년월을 입력하세요.'}
+    : age<0 ? {auto:false,msg:'건조 년월이 기준일 이후입니다. 입력값을 확인하세요.'}
+    : {auto:age<=S.maxAge,msg:`선령 ${age.toFixed(1)}년 (기준일 ${ymd(ref)}, 기준 ${S.maxAge}년 이내)`};
+
+  const h=r.c3.has;
+  const accLim=new Date(ref); accLim.setFullYear(accLim.getFullYear()-S.accYears);
+  const accDesc=`${r.c3.kind?' — '+r.c3.kind:''}${r.c3.date?' ('+r.c3.date+')':''}${r.c3.fixed==='Y'?' · 시정조치 완료':r.c3.fixed==='N'?' · 시정조치 미완료':''}`;
+  out.c3 = !h ? {auto:null,msg:'사고 이력 유무를 선택하세요.'}
+    : h==='no' ? {auto:true,msg:`최근 ${S.accYears}년 사고 이력 없음`}
+    : !r.c3.date ? {auto:false,msg:`사고 이력 있음${accDesc} — 사고 일자 미입력`}
+    : new Date(r.c3.date+'T00:00:00')<accLim ? {auto:true,msg:`사고 이력 있으나 조회기간(최근 ${S.accYears}년) 이전${accDesc}`}
+    : {auto:false,msg:`최근 ${S.accYears}년 내 사고 이력 있음${accDesc}`};
+
+  if(!r.c4.date) out.c4={auto:null,msg:'최근 검사일을 입력하세요.'};
+  else{
+    const d=new Date(r.c4.date+'T00:00:00'), lim=new Date(ref); lim.setFullYear(lim.getFullYear()-S.inspYears);
+    const yrs=((ref-d)/(365.2425*864e5));
+    if(d>ref) out.c4={auto:false,msg:'검사일이 기준일 이후입니다. 입력값을 확인하세요.'};
+    else if(d<lim) out.c4={auto:false,msg:`검사 후 ${yrs.toFixed(1)}년 경과 — ${S.inspYears}년 초과`};
+    else if(!r.c4.file) out.c4={auto:false,msg:`검사 후 ${yrs.toFixed(1)}년 경과 (유효) — 단, 증빙 파일 미첨부`};
+    else out.c4={auto:true,msg:`검사 후 ${yrs.toFixed(1)}년 경과 · 증빙 첨부 완료`};
+  }
+
+  const c=(r.c5.country||'').trim();
+  out.c5 = !c ? {auto:null,msg:'건조국을 입력하세요.'}
+    : S.countries.includes(c) ? {auto:true,msg:`${c} — 승인 건조국`} : {auto:false,msg:`${c} — 승인 건조국 목록에 없음`};
+
+  let pass=0,fail=0,pend=0;
+  for(const [k] of CATS){
+    const ov=r.ov?.[k]?.v||'auto';
+    out[k].manual = ov!=='auto';
+    out[k].final = ov==='pass' ? true : ov==='fail' ? false : out[k].auto;
+    out[k].final===true?pass++:out[k].final===false?fail++:pend++;
+  }
+  const reco = pend>0 ? null : pass>=S.passNeed;
+  return {cats:out,pass,fail,pend,reco};
+}
+
+function advStats(r){
+  let ng=[],ok=0,na=0,todo=0;
+  ADV.forEach(([,items])=>items.forEach(([k,l])=>{const v=r.adv?.[k];if(v==='ng')ng.push(l);else if(v==='ok')ok++;else if(v==='na')na++;else todo++;}));
+  return {ng,ok,na,todo};
+}
+function photoStats(r){
+  const ext=EXT_SLOTS.filter(([k])=>(r.photos.ext[k]||[]).length).length;
+  const holdsN=+r.c1.holds||0, missing=[];
+  for(let i=0;i<holdsN;i++){const h=r.photos.holds[i]||{};if(!HOLD_SLOTS.some(([k])=>(h[k]||[]).length))missing.push(i+1);}
+  return {ext,extTotal:EXT_SLOTS.length,holdsN,holdsDone:holdsN-missing.length,missing};
+}
+
+/* ---------------- 화면 렌더 ---------------- */
+const badge = v => v===true?'<span class="badge b-pass">합격</span>':v===false?'<span class="badge b-fail">불합격</span>':'<span class="badge b-pend">대기</span>';
+
+function fillForm(){
+  $$('#form [data-k], #finalArea [data-k]').forEach(el=>{
+    const v=getP(cur,el.dataset.k);
+    if(el.type==='radio') el.checked = v===el.value;
+    else el.value = v ?? (el.tagName==='SELECT' && el.dataset.k.startsWith('ov.') ? 'auto' : '');
+  });
+  $('#c4file').value='';
+  renderAdv();renderPhotos();refresh();
+}
+
+function refresh(){
+  const J=judge(cur);
+  renderSrcBanner();
+  $('#refDate').value=ymd(refDate(cur))+(cur.info.eta?' (ETA)':' (오늘)');
+  for(const [k] of CATS){
+    const c=J.cats[k], bd=$('#bd-'+k);
+    bd.className='badge '+(c.final===true?'b-pass':c.final===false?'b-fail':'b-pend');
+    bd.textContent=(c.final===true?'합격':c.final===false?'불합격':'대기')+(c.manual?' (수동)':'');
+    $('#msg-'+k).textContent='자동판정: '+(c.auto===true?'합격':c.auto===false?'불합격':'—')+' · '+c.msg;
+    $(`#cat-${k} .ov input`).classList.toggle('hidden',!c.manual);
+  }
+  $('#accDetail').classList.toggle('hidden',cur.c3.has!=='yes');
+  $('#craneWrap').classList.toggle('hidden',cur.c1.geared!=='Y');
+  $('#craneSec').classList.toggle('hidden',cur.c1.geared!=='Y');
+  $('#c4fileName').innerHTML = cur.c4.file
+    ? `📎 <a href="#" onclick="openFile(cur.c4.file);return false">${esc(cur.c4.file.name)}</a> <button class="btn sm danger" onclick="cur.c4.file=null;changed()">삭제</button>` : '첨부된 파일 없음';
+
+  // side
+  $('#passN').textContent=J.pass;
+  $('#bar').innerHTML=CATS.map(([k])=>`<i class="${J.cats[k].final===true?'p':J.cats[k].final===false?'f':''}"></i>`).join('');
+  $('#lights').innerHTML=CATS.map(([k,n])=>`<li>${n}<span>${badge(J.cats[k].final)}${J.cats[k].manual?'<span class="badge b-man">수동</span>':''}</span></li>`).join('');
+  const reco=$('#reco');
+  if(J.reco===null){reco.className='reco b-pend';reco.textContent=`판정 대기 — 미입력 ${J.pend}개 항목`;}
+  else if(J.reco){reco.className='reco b-pass';reco.textContent=`시스템 권고: 합격 (${J.pass}/5)`;}
+  else{reco.className='reco b-fail';reco.textContent=`시스템 권고: 불합격 (${J.pass}/5, 기준 ${S.passNeed}개)`;}
+
+  // warnings
+  const W=[], A=advStats(cur), P=photoStats(cur);
+  if(!cur.info.name||!cur.info.imo) W.push('선박명·IMO 번호 미입력');
+  else if(!/^\d{7}$/.test(String(cur.info.imo).replace(/\D/g,''))) W.push('IMO 번호 형식 확인 필요 (7자리)');
+  if(J.cats.c4.auto!==true && cur.c4.date && !cur.c4.file) W.push('선박 검사 증빙 파일 미첨부');
+  if(P.ext<P.extTotal) W.push(`외관 사진 ${P.extTotal-P.ext}개 구역 미등록`);
+  if(P.holdsN===0 && cur.c1.type) W.push('홀드 수 미입력 — 홀드 사진 칸이 생성되지 않음');
+  if(P.missing.length) W.push(`홀드 사진 없음: No.${P.missing.join(', No.')}`);
+  CATS.forEach(([k,n])=>{if(J.cats[k].manual && !cur.ov[k].r) W.push(`${n}: 수동판정 사유 미기재`);});
+  if(A.ng.length) W.push(`보조 점검 미흡 ${A.ng.length}건: ${A.ng.join(' / ')}`);
+  if(A.todo) W.push(`보조 점검 미확인 ${A.todo}건`);
+  $('#warns').innerHTML=W.map(w=>`<li>${esc(w)}</li>`).join('');
+
+  $('#extCnt').textContent=`${P.ext}/${P.extTotal}`;
+  $('#extCnt').className='badge '+(P.ext===P.extTotal?'b-pass':'b-pend');
+  $('#holdCnt').textContent=`${P.holdsDone}/${P.holdsN} 홀드`;
+  $('#holdCnt').className='badge '+(P.holdsN&&P.holdsDone===P.holdsN?'b-pass':'b-pend');
+  renderDiag(P);
+
+  // final
+  const F=cur.final;
+  $('#cmtReq').textContent = needComment('pass',J,A)||needComment('fail',J,A) ? '(권고와 다른 판정·미흡 항목이 있는 합격 시 필수)' : '';
+  $('#stampArea').innerHTML = F ? `<div class="stamp ${F.decision}"><b>${F.decision==='pass'?'최종 합격':'최종 불합격'}</b>
+      <small>${esc(F.by||'검토자 미기재')} · ${fmtD(F.at)}</small>
+      <small>판정 당시 ${F.passes}/5 합격 · 시스템 권고 ${F.reco?'합격':'불합격'}</small></div>
+      <button class="btn sm" onclick="undoFinal()">판정 취소 (재검토)</button>` : '';
+  $('#finalArea').classList.toggle('hidden',!!F);
+  // 최종 판정 후에는 입력 잠금 (판정 내용과 기록이 어긋나지 않도록). 해제는 '판정 취소'
+  $('#form').classList.toggle('locked',!!F); $('#lockNote').classList.toggle('hidden',!F);
+  $$('#form .card:not(.src) :is(input,select,textarea,button)').forEach(el=>el.disabled=!!F);
+  $('#saveInfo').textContent = cur.updatedAt ? '자동 저장됨 · '+fmtD(cur.updatedAt) : '아직 저장되지 않음';
+}
+function needComment(v,J,A){return (J.reco!==null && (v==='pass')!==J.reco) || (v==='pass' && A.ng.length>0);}
+
+function renderDiag(P){
+  const n=P.holdsN; if(!n){$('#shipDiag').innerHTML='';return;}
+  let h='<span class="lbl">선수</span><div class="bow"></div>';
+  for(let i=0;i<n;i++) h+=`<div class="h ${P.missing.includes(i+1)?'':'ok'}">${i+1}</div>`;
+  h+='<div class="acc"></div><span class="lbl">선미</span>';
+  $('#shipDiag').innerHTML=h;
+}
+
+function renderAdv(){
+  $('#advList').innerHTML=ADV.map(([g,items])=>`<div class="adv-g"><h4>${g}</h4>${items.map(([k,l,s])=>{
+    const v=cur.adv[k];
+    return `<div class="adv-r"><div class="t">${esc(l)}${s?`<small>${esc(s)}</small>`:''}</div>
+      <div class="seg" data-adv="${k}">
+        <button class="ok ${v==='ok'?'on':''}" data-v="ok">양호</button>
+        <button class="ng ${v==='ng'?'on':''}" data-v="ng">미흡</button>
+        <button class="na ${v==='na'?'on':''}" data-v="na">해당없음</button></div></div>`;}).join('')}</div>`).join('');
+}
+
+/* ---------------- 사진 ---------------- */
+function slotArr(key,create){
+  const [a,b,c]=key.split('.'); const P=cur.photos;
+  if(a==='ext'){if(create&&!P.ext[b])P.ext[b]=[];return P.ext[b]||[];}
+  if(a==='hold'){if(create){P.holds[b]=P.holds[b]||{};P.holds[b][c]=P.holds[b][c]||[];}return P.holds[b]?.[c]||[];}
+  if(a==='crane'){if(create&&!P.cranes[b])P.cranes[b]=[];return P.cranes[b]||[];}
+}
+function slotHTML(key,label){
+  const arr=slotArr(key);
+  return `<div class="slot ${arr.length?'has':''}" data-slot="${key}">
+    <div class="sl"><span>${esc(label)}</span><span style="color:var(--muted)">${arr.length||''}</span></div>
+    <div class="thumbs">${arr.map(p=>`<div class="thumb" data-id="${esc(p.id)}"><img src="${esc(safeData(p.data))}" alt=""><button title="삭제" data-del="${esc(p.id)}">✕</button></div>`).join('')}</div>
+    <label class="add">+ 사진 추가<input type="file" accept="image/*" multiple data-up="${key}"></label></div>`;
+}
+function renderPhotos(){
+  $('#extSlots').innerHTML=EXT_SLOTS.map(([k,l])=>slotHTML('ext.'+k,l)).join('');
+  const n=+cur.c1.holds||0;
+  $('#holdSlots').innerHTML = n ? Array.from({length:n},(_,i)=>{
+    const cnt=HOLD_SLOTS.reduce((s,[k])=>s+slotArr(`hold.${i}.${k}`).length,0);
+    const pos=i===0?' (선수측)':i===n-1?' (선미측)':'';
+    return `<div class="hold"><div class="hold-h"><span>No.${i+1} Hold${pos}</span>${cnt?`<span class="badge b-pass">${cnt}장</span>`:'<span class="badge b-pend">사진 없음</span>'}</div>
+      <div class="slots">${HOLD_SLOTS.map(([k,l])=>slotHTML(`hold.${i}.${k}`,l)).join('')}</div></div>`;}).join('')
+    : '<p class="desc">선박 타입을 선택하거나 홀드 수를 입력하면 홀드별 사진 칸이 생성됩니다.</p>';
+  const cn=+cur.c1.cranes||0;
+  $('#craneSlots').innerHTML = cn ? Array.from({length:cn},(_,i)=>slotHTML('crane.'+i,`Crane No.${i+1}`)).join('')+slotHTML('ext.grab','그랩 / 크레인 검사증명서')
+    : '<p class="desc">크레인 수를 입력하면 크레인별 사진 칸이 생성됩니다.</p>';
+}
+function compress(file,max=1400,q=.82){
+  return new Promise((res,rej)=>{const fr=new FileReader();fr.onerror=rej;fr.onload=()=>{const img=new Image();img.onerror=rej;img.onload=()=>{
+    const s=Math.min(1,max/Math.max(img.width,img.height)),c=document.createElement('canvas');
+    c.width=Math.round(img.width*s);c.height=Math.round(img.height*s);c.getContext('2d').drawImage(img,0,0,c.width,c.height);
+    res(c.toDataURL('image/jpeg',q));};img.src=fr.result;};fr.readAsDataURL(file);});
+}
+async function addPhotos(key,files){
+  if(cur.final) return;
+  const arr=slotArr(key,true); let n=0;
+  for(const f of files){ if(!f.type.startsWith('image/')) continue;
+    try{arr.push({id:uid(),name:f.name,data:await compress(f)});n++;}catch{toast(`${f.name}: 이미지를 읽을 수 없습니다.`);} }
+  if(n){renderPhotos();changed();toast(`사진 ${n}장 추가`);}
+}
+function findPhoto(id){
+  const all=[];const P=cur.photos;
+  Object.values(P.ext).forEach(a=>all.push(a));P.holds.forEach(h=>h&&Object.values(h).forEach(a=>all.push(a)));P.cranes.forEach(a=>a&&all.push(a));
+  for(const a of all){const i=a.findIndex(p=>p.id===id);if(i>=0)return [a,i];}
+  return [null,-1];
+}
+function resizeHolds(n){
+  const P=cur.photos.holds;
+  if(P.length>n && P.slice(n).some(h=>h&&Object.values(h).some(a=>a.length))){
+    if(!confirm(`홀드 수를 ${n}개로 줄이면 No.${n+1} 이후 홀드 사진이 삭제됩니다. 계속할까요?`)) return false;
+  }
+  P.length=Math.min(P.length,n); return true;
+}
+
+/* ---------------- 이벤트 ---------------- */
+let saveT=null;
+function changed(){refresh();clearTimeout(saveT);saveT=setTimeout(()=>{saveT=null;saveNow(false);},600);}
+// 다른 기록으로 바꾸기 전에 대기 중인 자동 저장을 먼저 끝낸다
+async function flushSave(){if(saveT){clearTimeout(saveT);saveT=null;await saveNow(false);}}
+async function saveNow(manual){
+  cur.updatedAt=new Date().toISOString();
+  if(cur.info.reviewer) localStorage.setItem('hsv_reviewer',cur.info.reviewer);
+  try{await DB.put(structuredClone(cur));if(manual)toast('저장되었습니다.');}
+  catch(e){toast('저장 실패: '+e.message);}
+  $('#saveInfo').textContent='자동 저장됨 · '+fmtD(cur.updatedAt);
+}
+
+document.addEventListener('input',onField);document.addEventListener('change',onField);
+function onField(e){
+  const el=e.target;
+  if(el.dataset.up && e.type==='change'){addPhotos(el.dataset.up,[...el.files]);el.value='';return;}
+  if(!el.dataset.k || !el.closest('#tab-review')) return;
+  if(cur.final && el.closest('#form')) return;
+  if(el.type==='radio' && !el.checked) return;
+  const k=el.dataset.k, prev=getP(cur,k);
+  if(k==='c1.holds' && e.type==='change'){
+    const n=Math.max(0,Math.min(12,parseInt(el.value)||0));
+    if(!resizeHolds(n)){el.value=prev;return;}
+    el.value=n; setP(cur,k,n); renderPhotos(); changed(); return;
+  }
+  if(k==='c1.holds' && e.type==='input') return;
+  setP(cur,k,el.value);
+  if(k==='c1.type' && e.type==='change'){
+    const t=TYPES[el.value];
+    if(t){
+      const n=t.holds;
+      if(resizeHolds(n)){cur.c1.holds=n;$('#holdsInp').value=n;}
+      cur.c1.geared=t.geared; cur.c1.cranes=t.cranes||(t.geared==='Y'?cur.c1.cranes:'');
+      $('[data-k="c1.geared"]').value=cur.c1.geared; $('[data-k="c1.cranes"]').value=cur.c1.cranes;
+    }
+    renderPhotos();
+  }
+  if((k==='c1.cranes'||k==='c1.geared') && e.type==='change') renderPhotos();
+  changed();
+}
+document.addEventListener('click',e=>{
+  const seg=e.target.closest('.seg button');
+  if(seg&&cur.final) return;
+  if(seg){const k=seg.parentElement.dataset.adv,v=seg.dataset.v;cur.adv[k]=cur.adv[k]===v?undefined:v;renderAdv();changed();return;}
+  const del=e.target.dataset.del;
+  if(del&&cur.final){e.stopPropagation();return;}
+  if(del){e.stopPropagation();const [a,i]=findPhoto(del);if(a&&confirm('이 사진을 삭제할까요?')){a.splice(i,1);renderPhotos();changed();}return;}
+  const th=e.target.closest('.thumb');
+  if(th){const [a,i]=findPhoto(th.dataset.id);if(a)showImg(a[i].data);}
+});
+['dragover','dragenter'].forEach(t=>document.addEventListener(t,e=>{const s=e.target.closest?.('.slot');if(s){e.preventDefault();s.classList.add('drag');}}));
+document.addEventListener('dragleave',e=>{const s=e.target.closest?.('.slot');if(s)s.classList.remove('drag');});
+document.addEventListener('drop',e=>{const s=e.target.closest?.('.slot');if(!s)return;e.preventDefault();s.classList.remove('drag');addPhotos(s.dataset.slot,[...e.dataTransfer.files]);});
+
+$('#c4file').addEventListener('change',async e=>{
+  const f=e.target.files[0]; if(!f||cur.final) return;
+  if(f.size>15*1024*1024){toast('15MB 이하 파일만 첨부할 수 있습니다.');return;}
+  const data = f.type.startsWith('image/') ? await compress(f,2000,.88)
+    : await new Promise(r=>{const fr=new FileReader();fr.onload=()=>r(fr.result);fr.readAsDataURL(f);});
+  cur.c4.file={name:f.name,type:f.type,data}; changed();
+});
+function openFile(f){fetch(f.data).then(r=>r.blob()).then(b=>window.open(URL.createObjectURL(b),'_blank'));}
+
+$$('nav button').forEach(b=>b.onclick=()=>{
+  $$('nav button').forEach(x=>x.classList.toggle('on',x===b));
+  $$('.tab').forEach(t=>t.classList.toggle('on',t.id==='tab-'+b.dataset.tab));
+  if(b.dataset.tab==='history') renderHistory();
+  if(b.dataset.tab==='arrivals') renderArrivals();
+  if(b.dataset.tab==='findings') renderFindings();
+  if(b.dataset.tab==='settings') renderSettings();
+});
+function goTab(t){$(`nav button[data-tab="${t}"]`).click();}
+
+/* ---------------- 최종 판정 ---------------- */
+async function decide(v){
+  const J=judge(cur), A=advStats(cur);
+  if(!cur.info.name||!cur.info.imo){alert('선박명과 IMO 번호를 입력하세요.');return;}
+  if(J.pend>0){alert(`미판정 카테고리가 ${J.pend}개 있습니다. 5개 카테고리를 모두 입력하세요.`);return;}
+  const miss=CATS.filter(([k])=>J.cats[k].manual&&!cur.ov[k].r).map(([,n])=>n);
+  if(miss.length){alert('수동판정 사유를 기재하세요: '+miss.join(', '));return;}
+  if(needComment(v,J,A) && !cur.finalComment?.trim()){
+    alert(v==='pass'&&A.ng.length&&J.reco ? `보조 점검 ‘미흡’ ${A.ng.length}건이 있어 합격 처리 시 검토 의견이 필요합니다.` : '시스템 권고와 다른 판정입니다. 검토 의견에 사유를 기재하세요.');
+    $('[data-k="finalComment"]').focus(); return;
+  }
+  if(!confirm(`${cur.info.name} — 최종 ${v==='pass'?'합격':'불합격'} 처리하시겠습니까?`)) return;
+  cur.final={decision:v,by:cur.info.reviewer||'',at:new Date().toISOString(),passes:J.pass,reco:J.reco};
+  await saveNow(false); refresh(); toast(`최종 ${v==='pass'?'합격':'불합격'} 처리되었습니다.`);
+}
+function undoFinal(){if(!confirm('최종 판정을 취소하고 재검토 상태로 돌릴까요?'))return;cur.final=null;changed();}
+async function newReview(){await flushSave();cur=newRec();fillForm();window.scrollTo(0,0);goTab('review');}
+
+/* ---------------- 이력 ---------------- */
+async function renderHistory(){
+  const q=$('#hSearch').value.trim().toLowerCase(), f=$('#hFilter').value;
+  const rows=(await DB.all()).sort((a,b)=>(b.updatedAt||b.createdAt).localeCompare(a.updatedAt||a.createdAt))
+    .filter(r=>!q||(r.info.name||'').toLowerCase().includes(q)||String(r.info.imo||'').includes(q))
+    .filter(r=>!f||(f==='none'?!r.final:r.final?.decision===f));
+  $('#hBody').innerHTML = rows.length ? rows.map(r0=>{try{const r=normRec(r0),J=judge(r),age=shipAge(r),rid=safeId(r0.id);
+    return `<tr><td><b>${esc(r.info.name||'(미입력)')}</b></td><td>${esc(r.info.imo)}</td><td>${esc(TYPES[r.c1.type]?.label||'')}</td>
+      <td>${age==null?'':age.toFixed(1)+'년'}</td><td>${esc(r.info.eta||'')}</td><td>${J.pass}/5</td>
+      <td>${J.reco===null?'<span class="badge b-pend">대기</span>':badge(J.reco)}</td>
+      <td>${r.final?(r.final.decision==='pass'?'<span class="badge b-pass">최종 합격</span>':'<span class="badge b-fail">최종 불합격</span>'):'<span class="badge b-warn">검토중</span>'}</td>
+      <td>${fmtD(r.updatedAt||r.createdAt)}</td>
+      <td style="white-space:nowrap"><button class="btn sm" onclick="loadRec('${rid}')">열기</button>
+        <button class="btn sm" onclick="DB.get('${rid}').then(openReport)">보고서</button>
+        <button class="btn sm danger" onclick="delRec('${rid}')">삭제</button></td></tr>`;}
+      catch(e){return `<tr><td colspan="10" class="warn-t">읽을 수 없는 기록 (${esc(r0?.id)}): ${esc(e.message)} <button class="btn sm danger" onclick="delRec('${safeId(r0?.id)}')">삭제</button></td></tr>`;}}).join('')
+    : '<tr><td colspan="10" style="text-align:center;color:var(--muted);padding:30px">검토 기록이 없습니다.</td></tr>';
+}
+$('#hSearch').addEventListener('input',renderHistory);$('#hFilter').addEventListener('change',renderHistory);
+async function loadRec(id){await flushSave();const r=await DB.get(id);if(!r)return;cur=normRec(r);fillForm();goTab('review');window.scrollTo(0,0);}
+async function delRec(id){const r=await DB.get(id);if(!confirm(`"${r.info.name||'미입력'}" 기록을 삭제할까요? 되돌릴 수 없습니다.`))return;await DB.del(id);if(cur.id===id){clearTimeout(saveT);saveT=null;cur=newRec();fillForm();}renderHistory();toast('삭제되었습니다.');}
+async function exportAll(){
+  const data=await DB.all(), fu=await DB.all('findings');
+  const b=new Blob([JSON.stringify({app:'hyundai-steel-vetting',version:2,exportedAt:new Date().toISOString(),records:data,findingUpdates:fu})],{type:'application/json'});
+  const a=document.createElement('a');a.href=URL.createObjectURL(b);a.download=`vetting_backup_${ymd(new Date())}.json`;a.click();
+}
+async function importAll(inp){
+  const f=inp.files[0];inp.value='';if(!f)return;
+  try{const j=JSON.parse(await f.text());const recs=Array.isArray(j)?j:j.records;if(!Array.isArray(recs))throw new Error('형식 오류');
+    await flushSave();
+    for(const r of recs) if(r&&safeId(r.id)) await DB.put(normRec(r));
+    const fu=(Array.isArray(j.findingUpdates)?j.findingUpdates:[]).filter(o=>o&&FX[o.id])
+      .map(o=>({...o,files:(o.files||[]).filter(f=>f&&safeData(f.data)).map(f=>({...f,id:safeId(f.id)||uid()}))}));
+    for(const o of fu) await DB.put(o,'findings');
+    if(recs.some(r=>r&&safeId(r.id)===cur.id)){const r=await DB.get(cur.id);if(r){cur=normRec(r);fillForm();}}
+    if(fu.length) await loadFU();
+    toast(`검토 ${recs.length}건${fu.length?` · 지적사항 처리 ${fu.length}건`:''} 가져오기 완료`);renderHistory();}
+  catch(e){alert('가져오기 실패: '+e.message);}
+}
+
+/* ---------------- 보고서 / 모달 ---------------- */
+function showImg(src){$('#mbox').className='mbox img';$('#mbox').innerHTML=`<img src="${src}" alt="">`;$('#modal').classList.add('on');}
+function closeModal(){$('#modal').classList.remove('on');document.body.classList.remove('printing');}
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal();});
+function openReport(r){
+  if(!r) return; r=normRec(r);
+  const J=judge(r),A=advStats(r),P=photoStats(r),i=r.info,age=shipAge(r);
+  const fig=(arr,cap)=>(arr||[]).map(p=>`<figure><img src="${esc(safeData(p.data))}" alt=""><figcaption>${esc(cap)}</figcaption></figure>`).join('');
+  let photos=EXT_SLOTS.map(([k,l])=>fig(r.photos.ext[k],l)).join('');
+  for(let h=0;h<(+r.c1.holds||0);h++) photos+=HOLD_SLOTS.map(([k,l])=>fig(r.photos.holds[h]?.[k],`No.${h+1} Hold – ${l}`)).join('');
+  (r.photos.cranes||[]).forEach((a,c)=>photos+=fig(a,`Crane No.${c+1}`)); photos+=fig(r.photos.ext.grab,'그랩/크레인 증명서');
+  const advRows=ADV.flatMap(([g,items])=>items.map(([k,l])=>{const v=r.adv?.[k];return `<tr><td>${esc(g)}</td><td>${esc(l)}</td><td>${v==='ok'?'양호':v==='ng'?'<b style="color:var(--fail)">미흡</b>':v==='na'?'해당없음':'미확인'}</td></tr>`;})).join('');
+  const F=r.final;
+  $('#mbox').className='mbox';
+  $('#mbox').innerHTML=`<div class="rep">
+    <div class="row-btns no-print" style="justify-content:flex-end;margin-bottom:10px"><button class="btn pri" onclick="document.body.classList.add('printing');print();document.body.classList.remove('printing')">인쇄 / PDF 저장</button><button class="btn" onclick="closeModal()">닫기</button></div>
+    <h1>입항선박 Vetting 검토 보고서</h1>
+    <div style="color:var(--muted);font-size:12px">현대제철 · 작성 ${fmtD(r.createdAt)} · 최종 수정 ${fmtD(r.updatedAt)}</div>
+    <h3>1. 선박 정보</h3>
+    <table><tr><th>선박명</th><td>${esc(i.name)}</td><th>IMO</th><td>${esc(i.imo)}</td><th>선적국</th><td>${esc(i.flag)}</td></tr>
+    <tr><th>선급</th><td>${esc(i.cls)}</td><th>DWT</th><td>${esc(i.dwt)}</td><th>ETA</th><td>${esc(i.eta)}</td></tr>
+    <tr><th>입항 부두</th><td>${esc(i.berth)}</td><th>작업/화물</th><td>${esc(i.cargo)}</td><th>선주/운항사</th><td>${esc(i.operator)}</td></tr>
+    <tr><th>공급사</th><td colspan="5">${esc(i.supplier)}</td></tr>
+    <tr><th>대리점</th><td>${esc(i.agent)}</td><th>검토자</th><td>${esc(i.reviewer)}</td><th>홀드/Gear</th><td>${esc(r.c1.holds)} 홀드 · ${r.c1.geared==='Y'?'Geared ('+esc(r.c1.cranes)+'기)':r.c1.geared==='N'?'Gearless':''}</td></tr></table>
+    <h3>2. 핵심 심사 결과 — ${J.pass}/5 합격 (기준 ${S.passNeed}개 이상)</h3>
+    <table><tr><th style="width:18%">카테고리</th><th>입력 / 판정 근거</th><th style="width:12%">판정</th></tr>
+    ${CATS.map(([k,n])=>`<tr><td>${n}</td><td>${esc(J.cats[k].msg)}${k==='c5'&&r.c5.yard?' · '+esc(r.c5.yard):''}${k==='c4'&&r.c4.kind?' · '+esc(r.c4.kind)+(r.c4.org?' ('+esc(r.c4.org)+')':''):''}${k==='c3'&&r.c3.has==='yes'&&r.c3.desc?'<br><small>'+esc(r.c3.desc)+'</small>':''}${J.cats[k].manual?`<br><small style="color:#2a4fb0">수동판정 사유: ${esc(r.ov[k].r)}</small>`:''}</td><td>${badge(J.cats[k].final)}</td></tr>`).join('')}</table>
+    <h3>3. 보조 점검 (양호 ${A.ok} · 미흡 ${A.ng.length} · 해당없음 ${A.na} · 미확인 ${A.todo})</h3>
+    <table>${advRows}</table>${r.advNote?`<p style="font-size:12.5px">메모: ${esc(r.advNote)}</p>`:''}
+    <h3>4. 최종 판정</h3>
+    <table><tr><th>시스템 권고</th><td>${J.reco===null?'판정 대기':J.reco?'합격':'불합격'}</td><th>최종 판정</th><td>${F?(F.decision==='pass'?'<b style="color:var(--pass)">최종 합격</b>':'<b style="color:var(--fail)">최종 불합격</b>'):'미판정 (검토중)'}</td></tr>
+    <tr><th>판정자 / 일시</th><td colspan="3">${F?esc(F.by)+' · '+fmtD(F.at):''}</td></tr>
+    <tr><th>검토 의견</th><td colspan="3">${esc(r.finalComment).replace(/\n/g,'<br>')}</td></tr></table>
+    <h3>5. 선박 사진 (외관 ${P.ext}/${P.extTotal} · 홀드 ${P.holdsDone}/${P.holdsN})</h3>
+    <div class="pg">${photos||'<p style="color:var(--muted)">등록된 사진 없음</p>'}</div></div>`;
+  $('#modal').classList.add('on');
+}
+
+/* ---------------- 선대 현황 (fleet-data.js → window.FLEET) ---------------- */
+const FLEET = window.FLEET || null;
+const DAY = 864e5;
+const today0 = () => new Date(new Date().toDateString());
+const dOf = s => new Date(s+'T00:00:00');
+const daysFrom = s => Math.round((dOf(s)-today0())/DAY);   // +미래, -과거
+const isPast = s => !!s && dOf(s) <= today0();
+// 조선소명(소문자 포함 검색) → 건조국. 구체적인 이름을 앞에 둔다.
+const YARD_COUNTRY = [['hyundai vinashin','베트남'],['tsuneishi cebu','필리핀'],['hanjin subic','필리핀'],
+  ['hyundai','대한민국'],['samsung','대한민국'],['daewoo','대한민국'],['hanwha','대한민국'],['sungdong','대한민국'],['stx','대한민국'],['dae sun','대한민국'],
+  ['oshima','일본'],['tsuneishi','일본'],['imabari','일본'],['namura','일본'],['mitsui','일본'],['japan marine','일본'],['kawasaki','일본'],['sanoyas','일본'],['iwagi','일본'],['shin kurushima','일본'],['mitsubishi','일본'],
+  ['yangzi','중국'],['waigaoqiao','중국'],['jinling','중국'],['chengxi','중국'],['dalian','중국'],['qingdao','중국'],['cosco','중국'],['zhoushan','중국'],['new times','중국'],['hudong','중국']];
+const CLASS_MAP = {'DNV':'DNV',"Lloyd's Register":"LR (Lloyd's Register)",'ClassNK':'NK (일본해사협회)','ABS':'ABS','Bureau Veritas':'BV (Bureau Veritas)','Korean Register':'KR (한국선급)','CCS':'CCS (중국선급)','RINA':'RINA'};
+const IACS = /dnv|lloyd|nk|abs|bureau|bv|korean|kr|ccs|rina|irs|prs|crs/i;
+const INC_KIND = {'Grounding':'좌초/좌주','Collision':'충돌','Fire':'화재/폭발','Explosion':'화재/폭발','Machinery Failure':'기관고장 (주기관/발전기)','Blackout':'정전 (Blackout)','Pollution Incident':'오염사고','Injury':'인명사고 (사망/중상)','Cargo Damage':'기타','Navigation Incident':'기타'};
+const NON_ACCIDENT = ['Near Miss'];
+const yardCountry = y => (YARD_COUNTRY.find(([k])=>(y||'').toLowerCase().includes(k))||[])[1]||'';
+function mapType(v){
+  const t=(v.vessel_type||'').toLowerCase(), d=v.dwt||0;
+  if(t.includes('capesize')) return 'cape';
+  if(t.includes('vloc')||t.includes('valemax')) return 'vloc';
+  if(t.includes('kamsarmax')||t.includes('post-panamax')) return 'kamsar';
+  if(t.includes('panamax')) return 'panamax';
+  if(t.includes('ultramax')||t.includes('supramax')) return 'ultra';
+  if(t.includes('handy')) return 'handy';
+  if(t.includes('bulk')) return d>=150000?'cape':d>=75000?'kamsar':d>=65000?'panamax':d>=50000?'ultra':'handy';
+  if(t.includes('open hatch')) return 'openhatch';
+  if(t.includes('general')) return 'general';
+  if(t.includes('multi')) return 'mpp';
+  if(t.includes('container')) return 'container';
+  if(t.includes('tanker')) return 'tanker';
+  return 'other';
+}
+const certState = c => { const d=daysFrom(c.expiry_date); return d<0?'expired':d<=90?'soon':'valid'; };
+
+let FI = null;   // imo → {v, risk, ins[], fnd[], psc[], cert[], inc[], img[]}
+function buildFleet(){
+  if(!FLEET) return;
+  FI={};
+  FLEET.vessels.forEach(v=>FI[v.imo]={v,risk:null,ins:[],fnd:[],psc:[],cert:[],inc:[],img:[]});
+  FLEET.risk.forEach(r=>FI[r.imo]&&(FI[r.imo].risk=r));
+  [['inspections','ins'],['findings','fnd'],['psc','psc'],['certificates','cert'],['incidents','inc'],['images','img']]
+    .forEach(([s,k])=>FLEET[s].forEach(r=>FI[r.imo]&&FI[r.imo][k].push(r)));
+  const desc=k=>(a,b)=>(b[k]||'').localeCompare(a[k]||'');
+  FLEET.findings.forEach(f=>{FX[f.finding_id]=f;applyFU(f);});
+  Object.values(FI).forEach(x=>{x.ins.sort(desc('inspection_date'));x.psc.sort(desc('inspection_date'));x.inc.sort(desc('incident_date'));
+    x.cert.sort((a,b)=>a.expiry_date.localeCompare(b.expiry_date));});
+}
+function metrics(x){
+  const open=x.fnd.filter(f=>f.status!=='Closed');
+  const psc12=x.psc.filter(p=>isPast(p.inspection_date)&&daysFrom(p.inspection_date)>=-365);
+  const acc=x.inc.filter(i=>isPast(i.incident_date)&&daysFrom(i.incident_date)>=-365.2425*S.accYears);
+  return {
+    lastIns:x.ins.find(i=>isPast(i.inspection_date)), futureIns:x.ins.filter(i=>!isPast(i.inspection_date)).length,
+    open:open.length, openHigh:open.filter(f=>f.severity==='High').length,
+    repeatOpen:open.filter(f=>f.repeat_finding).length,
+    overdue:open.filter(f=>f.due_date&&daysFrom(f.due_date)<0).length,
+    psc12:psc12.length, det12:psc12.filter(p=>p.detention==='Yes').length, def12:psc12.reduce((s,p)=>s+(p.deficiencies||0),0),
+    inc:acc.length, incReal:acc.filter(i=>!NON_ACCIDENT.includes(i.incident_type)).length,
+    expired:x.cert.filter(c=>certState(c)==='expired').length, soon:x.cert.filter(c=>certState(c)==='soon').length,
+    ddOver:isPast(x.v.next_drydock),
+  };
+}
+const ARR = FLEET?.arrivals || [];          // 공급사 제출 입항 일정 (data/arrivals.csv)
+const arrById = id => ARR.find(a=>a.arrival_id===id);
+function prefillRec(imo,arr){
+  const x=FI[imo], r=newRec();
+  r.source={type:'arrival',imo,arrivalId:arr?.arrival_id||'',at:new Date().toISOString(),db:FLEET.source,synthetic:!!arr?.synthetic};
+  if(arr) Object.assign(r.info,{name:arr.vessel_name,imo:arr.imo,eta:arr.eta,berth:arr.berth,cargo:arr.cargo,agent:arr.agent,supplier:arr.supplier});
+  // 선박 DB에 없는 IMO: 공급사 정보만 채우고 나머지는 담당자가 입력
+  if(!x){r.advNote=`[자동 입력 ${ymd(new Date())}] ${arr?`공급사 ${arr.supplier} 제출(${arr.submitted_at}) 입항 정보`:''}\n선박 DB에 없는 IMO입니다. 선박 정보·검사·사고 이력을 직접 입력하세요.`;return r;}
+  const v=x.v;
+  Object.assign(r.info,{name:v.vessel_name,imo:v.imo,flag:v.flag,cls:CLASS_MAP[v.class]||v.class,dwt:v.dwt,operator:[v.owner,v.operator].filter(Boolean).join(' / ')});
+  const t=mapType(v), T=TYPES[t];
+  r.c1={type:t,holds:T.holds,geared:T.geared,cranes:T.cranes||''};
+  if(v.built_year) r.c2.built=`${v.built_year}-01`;
+  const acc=x.inc.filter(i=>isPast(i.incident_date)&&!NON_ACCIDENT.includes(i.incident_type));
+  if(acc.length){
+    const a=acc[0];
+    r.c3={has:'yes',date:a.incident_date,kind:INC_KIND[a.incident_type]||'기타',fixed:a.root_cause_status==='Closed'?'Y':'N',
+      desc:x.inc.map(i=>`${i.incident_date} ${i.incident_type} (${i.severity}, ${i.location}, ${i.root_cause_status})${isPast(i.incident_date)?'':' [미래일자]'} - ${i.summary}`).join('\n')};
+  } else r.c3={has:'no'};
+  const li=x.ins.find(i=>isPast(i.inspection_date));
+  if(li) r.c4={date:li.inspection_date,kind:'제3자 Vetting 검사',org:`${li.inspection_type} · ${li.inspector} @ ${li.port}`,
+    defects:x.fnd.filter(f=>f.inspection_id===li.inspection_id).length,file:null};
+  r.c5={country:yardCountry(v.shipyard),yard:v.shipyard};
+  const ref=refDate(r), m=metrics(x);   // ref = ETA (없으면 오늘)
+  const certOk=type=>{const c=x.cert.find(c=>c.certificate_type===type);return c?(dOf(c.expiry_date)>=ref?'ok':'ng'):undefined;};
+  r.adv={iacs:IACS.test(v.class)?'ok':'ng',ism:certOk('Safety Management Certificate'),pi:certOk('P&I Certificate'),
+    eng:x.inc.some(i=>i.incident_type==='Machinery Failure'&&isPast(i.incident_date)&&daysFrom(i.incident_date)>=-365)?'ng':'ok'};
+  if(x.psc.length) r.adv.psc=m.det12?'ng':'ok';
+  const rk=x.risk, expAtEta=x.cert.filter(c=>dOf(c.expiry_date)<ref);
+  r.advNote=[`[자동 입력 ${ymd(new Date())}] ${arr?`공급사 ${arr.supplier} 제출(${arr.submitted_at}) 입항 정보 + `:''}선박 DB(${FLEET.source})`,
+    rk?`위험점수 ${rk.risk_score} (${rk.risk_level}) · 선령 ${rk.age_factor} / Vetting ${rk.vetting_factor} / PSC ${rk.psc_factor}`:'',
+    `미결 지적 ${m.open}건 (High ${m.openHigh}, 반복 ${m.repeatOpen}, 기한경과 ${m.overdue})`,
+    `PSC 12개월 ${m.psc12}회 · 결함 ${m.def12}건 · 출항정지 ${m.det12}회`,
+    `입항일(${ymd(ref)}) 기준 만료 증서 ${expAtEta.length}건${expAtEta.length?': '+expAtEta.map(c=>`${c.certificate_type}(${c.expiry_date})`).join(', '):''}`+(m.ddOver?` · 다음 도크(${v.next_drydock}) 경과`:''),
+    `관리사 ${v.manager} · 주기관 ${v.main_engine}`].filter(Boolean).join('\n');
+  return r;
+}
+// arr 없으면 오늘 기준으로 판정
+function prescreen(imo,arr){const r=prefillRec(imo,arr);if(r.c4.date)r.c4.file={name:'(DB)'};return judge(r);}
+// 해당 선박의 다음 입항(없으면 가장 최근 입항)
+const nextArrival=imo=>{const as=ARR.filter(a=>a.imo===imo).sort((p,q)=>p.eta.localeCompare(q.eta));return as.find(a=>daysFrom(a.eta)>=0)||as[as.length-1]||null;};
+
+const riskBadge = l => `<span class="badge ${l==='High'?'b-fail':l==='Medium'?'b-warn':'b-pass'}">${l==='High'?'▲ ':l==='Medium'?'● ':'▼ '}${esc(l||'-')}</span>`;
+const preCell = J => `<span class="dots">${CATS.map(([k,n])=>`<i class="${J.cats[k].final===true?'p':J.cats[k].final===false?'f':''}" data-tip="${esc(n+': '+J.cats[k].msg)}"></i>`).join('')}</span>${J.pass}/5 `
+  + (J.reco===null?'<span class="badge b-pend">판정불가</span>':J.reco?'<span class="badge b-pass">합격 권고</span>':'<span class="badge b-fail">불합격 권고</span>');
+function hbars(el,items){
+  const max=Math.max(1,...items.map(i=>i.value));
+  el.innerHTML=items.map(i=>`<div class="hb" data-tip="${esc(i.tip||i.label+': '+i.value)}"><span class="hl">${esc(i.label)}</span>
+    <span class="ht"><i style="width:${i.value/max*100}%;background:${i.color||'var(--brand2)'};${i.value?'':'min-width:0'}"></i></span><span class="hv">${i.value}</span></div>`).join('');
+}
+
+/* ---- 입항예정 선박 목록 ---- */
+let arrSort={k:'eta',dir:1};
+const A_COLS=[['eta','입항예정일'],['name','선박'],['state','심사 상태'],['pre','자동판정 (ETA 기준)'],['flag','주의사항'],['berth','부두 · 작업'],['sup','공급사 · 대리점'],['','']];
+const STATE_ORD={todo:0,doing:1,fail:2,pass:3};
+function arrFlags(a,x,m){
+  const f=[], exp=x.cert.filter(c=>c.expiry_date<a.eta).length;
+  if(exp) f.push(['b-fail',`ETA 시 증서 만료 ${exp}`]);
+  if(x.risk?.risk_level==='High') f.push(['b-fail','위험 High']);
+  if(m.det12) f.push(['b-fail',`출항정지 ${m.det12}`]);
+  if(m.openHigh) f.push(['b-warn',`미결 High ${m.openHigh}`]);
+  return f;
+}
+async function renderArrivals(){
+  const ok=!!FLEET&&ARR.length>0;
+  $('#arrEmpty').classList.toggle('hidden',ok);$('#arrBody').classList.toggle('hidden',!ok);
+  if(!ok) return;
+  const byArr={};
+  (await DB.all()).forEach(r=>{const k=r.source?.arrivalId;if(k&&(!byArr[k]||(r.updatedAt||'')>(byArr[k].updatedAt||'')))byArr[k]=r;});
+  const rows=ARR.map(a=>{const x=FI[a.imo]||null,m=x&&metrics(x),rec=byArr[a.arrival_id];
+    return {a,x,m,J:prescreen(a.imo,a),rec,d:daysFrom(a.eta),state:!rec?'todo':rec.final?rec.final.decision:'doing',
+      flags:x?arrFlags(a,x,m):[['b-warn','선박 DB 미등록']]};});
+  const syn=ARR.some(a=>a.synthetic);
+  $('#arrSrc').innerHTML=`입항 ${rows.length}건 · 선박 DB ${esc(FLEET.source)} · 기준일 ${ymd(today0())}${syn?' · <span class="badge b-pend">샘플 입항 일정 (data/arrivals.csv)</span>':''}`;
+  const up=rows.filter(r=>r.d>=0), cnt=f=>rows.filter(f).length, open=r=>r.state==='todo'||r.state==='doing';
+  const tiles=[
+    {l:'입항예정',v:up.length,s:`30일 내 ${cnt(r=>r.d>=0&&r.d<=30)}척`,f:{}},
+    {l:'7일 내 입항',v:cnt(r=>r.d>=0&&r.d<=7),s:`최종 판정 전 ${cnt(r=>r.d>=0&&r.d<=7&&open(r))}척`,f:{aPeriod:'7',aState:'open'},ic:cnt(r=>r.d>=0&&r.d<=7&&open(r))?'<span class="ic" style="color:var(--fail)">!</span>':''},
+    {l:'심사 미착수',v:cnt(r=>r.state==='todo'),s:`자동판정 불합격 권고 ${cnt(r=>r.state==='todo'&&r.J.reco===false)}척`,f:{aState:'todo'}},
+    {l:'심사중',v:cnt(r=>r.state==='doing'),f:{aState:'doing'},ic:'<span class="ic" style="color:var(--warn)">●</span>'},
+    {l:'최종 합격',v:cnt(r=>r.state==='pass'),f:{aState:'pass'},ic:'<span class="ic" style="color:var(--pass)">✔</span>'},
+    {l:'최종 불합격',v:cnt(r=>r.state==='fail'),f:{aState:'fail'},ic:'<span class="ic" style="color:var(--fail)">✖</span>'},
+  ];
+  $('#kpis').innerHTML=tiles.map((t,i)=>`<button class="tile" data-ti="${i}"><div class="l">${t.ic||''}${t.l}</div><div class="v">${t.v}</div><div class="s">${t.s||'&nbsp;'}</div></button>`).join('');
+  $$('#kpis .tile').forEach(b=>b.onclick=()=>{const t=tiles[b.dataset.ti];['aPeriod','aState','aPre','aBerth'].forEach(id=>$('#'+id).value=t.f[id]||'');$('#aSearch').value='';renderArrivalTable();});
+  if(!$('#aBerth').options.length) $('#aBerth').innerHTML='<option value="">부두 전체</option>'+[...new Set(ARR.map(a=>a.berth))].sort().map(b=>`<option>${esc(b)}</option>`).join('');
+  renderArrivals.rows=rows; renderArrivalTable();
+}
+function renderArrivalTable(){
+  const rows=renderArrivals.rows||[], q=$('#aSearch').value.trim().toLowerCase(), pd=$('#aPeriod').value, st=$('#aState').value, pr=$('#aPre').value, be=$('#aBerth').value;
+  const key={eta:r=>r.a.eta,name:r=>r.a.vessel_name,berth:r=>r.a.berth+r.a.cargo,sup:r=>r.a.supplier,
+    pre:r=>r.J.pass,flag:r=>r.flags.length,state:r=>STATE_ORD[r.state]};
+  const list=rows.filter(r=>{const a=r.a;
+    if(q&&!`${a.vessel_name} ${a.imo} ${a.supplier} ${a.agent}`.toLowerCase().includes(q))return false;
+    if(pd==='past'?r.d>=0:pd&&!(r.d>=0&&r.d<=+pd))return false;
+    if(st&&(st==='open'?!(r.state==='todo'||r.state==='doing'):r.state!==st))return false;
+    if(pr&&(pr==='pass'?r.J.reco!==true:pr==='fail'?r.J.reco!==false:r.J.reco!==null))return false;
+    if(be&&a.berth!==be)return false;
+    return true;});
+  const f=key[arrSort.k]; list.sort((a,b)=>{const A=f(a),B=f(b);return ((A<B?-1:A>B?1:0)*arrSort.dir)||a.a.eta.localeCompare(b.a.eta);});
+  $('#aCount').textContent=`${list.length} / ${rows.length}건`;
+  $('#aHead').innerHTML='<tr>'+A_COLS.map(([k,l])=>`<th data-sort="${k}" class="${k?'':'nosort'}">${l}${arrSort.k===k?(arrSort.dir>0?' ▲':' ▼'):''}</th>`).join('')+'</tr>';
+  const stCell=r=>r.state==='todo'?'<span class="badge b-pend">미착수</span>'
+    :r.state==='doing'?`<span class="badge b-warn">심사중</span><br><small class="muted">${esc(r.rec.info?.reviewer||'')} ${fmtD(r.rec.updatedAt).slice(6)}</small>`
+    :`<span class="badge ${r.state==='pass'?'b-pass':'b-fail'}">${r.state==='pass'?'최종 합격':'최종 불합격'}</span><br><small class="muted">${esc(r.rec.final.by||'')} ${fmtD(r.rec.final.at).slice(6)}</small>`;
+  $('#aBody').innerHTML=list.length?list.map(r=>{const {a,x}=r,v=x?.v,urgent=r.d>=0&&r.d<=7&&(r.state==='todo'||r.state==='doing');
+    return `<tr data-arr="${esc(a.arrival_id)}" class="${urgent?'urgent':''}" title="클릭하면 선박 검토 화면으로 이동합니다">
+      <td><b>${esc(a.eta)}</b><br>${r.d<0?'<span class="badge b-pend">입항일 경과</span>':`<span class="${urgent?'warn-t':'muted'}">D-${r.d}</span>`}</td>
+      <td class="nm"><b>${esc(v?.vessel_name||a.vessel_name)}</b><small>IMO ${esc(a.imo)} · ${v?`${esc(v.vessel_type)} · 선령 ${today0().getFullYear()-v.built_year}년`:'선박 DB 미등록 — 직접 입력'}</small></td>
+      <td>${stCell(r)}</td>
+      <td>${preCell(r.J)}</td>
+      <td style="white-space:normal;min-width:120px;max-width:200px">${r.flags.map(([c,t])=>`<span class="badge ${c}">${t}</span>`).join(' ')||'<span class="muted">-</span>'}</td>
+      <td>${esc(a.berth)}<br><small class="muted">${esc(a.cargo)}</small></td>
+      <td>${esc(a.supplier)}<br><small class="muted">${esc(a.agent)} · 제출 ${esc(a.submitted_at)}</small></td>
+      <td><button class="btn sm ${r.state==='todo'?'pri':''}">${r.state==='todo'?'심사하기':r.state==='doing'?'심사 계속':'결과 보기'}</button>
+        ${v?`<button class="btn sm" data-hist="${esc(v.imo)}" data-tip="선박 검사·지적·PSC·사고 이력 (참고)">이력</button>`:''}</td></tr>`;}).join('')
+    : `<tr><td colspan="${A_COLS.length}" style="text-align:center;color:var(--muted);padding:30px">조건에 맞는 입항예정 선박이 없습니다.</td></tr>`;
+}
+['aSearch','aPeriod','aState','aPre','aBerth'].forEach(id=>$('#'+id).addEventListener(id==='aSearch'?'input':'change',renderArrivalTable));
+$('#aHead').addEventListener('click',e=>{const k=e.target.closest('th')?.dataset.sort;if(!k)return;
+  arrSort=arrSort.k===k?{k,dir:-arrSort.dir}:{k,dir:['pre','flag'].includes(k)?-1:1};renderArrivalTable();});
+$('#aBody').addEventListener('click',e=>{const h=e.target.closest('[data-hist]');if(h){openVessel(h.dataset.hist);return;}
+  const tr=e.target.closest('tr[data-arr]');if(tr)startReview(tr.dataset.arr);});
+
+function tbl(head,rows){return `<div class="tbl-wrap"><table><thead><tr>${head.map(h=>`<th>${h}</th>`).join('')}</tr></thead><tbody>${rows.length?rows.join(''):`<tr><td colspan="${head.length}" class="muted">기록 없음</td></tr>`}</tbody></table></div>`;}
+const sevBadge=s=>`<span class="badge ${s==='High'?'b-fail':s==='Medium'?'b-warn':'b-pend'}">${esc(s)}</span>`;
+/* ---- 검사·이벤트 타임라인 ---- */
+const LANES=[['ins','검사'],['psc','PSC'],['inc','사고'],['cert','증서 만료'],['dd','도크'],['vet','사내 Vetting']];
+const ST_LABEL={p:'양호',w:'주의',f:'위험',n:'일반'};
+// 이미 일어난 일이어야 하는 기록 — 기준일 이후 날짜면 데이터 이상(미래일자)으로 표시. 증서 만료·도크는 원래 미래(예정)이다.
+const FACT_LANES=['ins','psc','inc'];
+const futTag = e => isPast(e.date) ? '' : FACT_LANES.includes(e.lane) ? '미래일자' : '예정';
+function vesselEvents(x,recs){
+  const ev=[], v=x.v;
+  x.ins.forEach(i=>ev.push({lane:'ins',date:i.inspection_date,title:i.inspection_type,sub:`${i.inspector} · ${i.port}, ${i.country} · ${i.duration_hours??'-'}h`,
+    st:i.overall_result==='Unsatisfactory'?'f':i.overall_result==='Satisfactory'?'p':'w',label:i.overall_result,ins:i}));
+  x.psc.forEach(p=>ev.push({lane:'psc',date:p.inspection_date,title:`PSC · ${p.authority}`,sub:`${p.port}, ${p.country}${p.deficiency_summary?' · '+p.deficiency_summary:''}`,
+    st:p.detention==='Yes'?'f':p.deficiencies?'w':'p',label:p.detention==='Yes'?`출항정지 · 결함 ${p.deficiencies}`:`결함 ${p.deficiencies}`}));
+  x.inc.forEach(i=>ev.push({lane:'inc',date:i.incident_date,title:i.incident_type,sub:`${i.location} · ${i.summary} · ${i.root_cause_status}`,
+    st:i.severity==='High'?'f':i.severity==='Medium'?'w':'n',label:i.severity}));
+  x.cert.forEach(c=>{const s=certState(c);ev.push({lane:'cert',date:c.expiry_date,title:`${c.certificate_type} 만료`,sub:`발급 ${c.issue_date} · ${c.issuing_authority}`,
+    st:s==='expired'?'f':s==='soon'?'w':'n',label:s==='expired'?'만료됨':s==='soon'?`D-${daysFrom(c.expiry_date)}`:'유효'});});
+  if(v.last_drydock) ev.push({lane:'dd',date:v.last_drydock,title:'최근 도크 (입거 수리)',sub:'',st:'n',label:'완료'});
+  if(v.next_drydock) ev.push({lane:'dd',date:v.next_drydock,title:'다음 도크 예정',sub:'',st:isPast(v.next_drydock)?'f':'n',label:isPast(v.next_drydock)?'예정일 경과':`D-${daysFrom(v.next_drydock)}`});
+  recs.forEach(r=>{
+    if(r.final) ev.push({lane:'vet',date:ymd(new Date(r.final.at)),title:'사내 Vetting 최종 판정',sub:`${r.final.by||'검토자 미기재'} · 판정 당시 ${r.final.passes}/5`,st:r.final.decision==='pass'?'p':'f',label:r.final.decision==='pass'?'최종 합격':'최종 불합격',recId:r.id});
+    else ev.push({lane:'vet',date:ymd(new Date(r.updatedAt||r.createdAt)),title:'사내 Vetting 검토중',sub:r.info?.reviewer||'',st:'w',label:'검토중',recId:r.id});
+  });
+  return ev.sort((a,b)=>b.date.localeCompare(a.date)||LANES.findIndex(l=>l[0]===a.lane)-LANES.findIndex(l=>l[0]===b.lane));
+}
+function inspStats(x){
+  const past=x.ins.filter(i=>isPast(i.inspection_date)), fut=x.ins.filter(i=>!isPast(i.inspection_date)).sort((a,b)=>a.inspection_date.localeCompare(b.inspection_date));
+  const gaps=past.slice(0,-1).map((i,k)=>(dOf(i.inspection_date)-dOf(past[k+1].inspection_date))/DAY);
+  return {last:past[0],since:past[0]?-daysFrom(past[0].inspection_date):null,avg:gaps.length?Math.round(gaps.reduce((s,g)=>s+g,0)/gaps.length):null,
+    maxGap:gaps.length?Math.round(Math.max(...gaps)):null,next:fut[0],recent:past.slice(0,3)};
+}
+function timelineHTML(ev){
+  if(!ev.length) return '<p class="muted">이벤트 없음</p>';
+  const ts=ev.map(e=>dOf(e.date).getTime()), now=today0().getTime();
+  let min=Math.min(...ts,now), max=Math.max(...ts,now); const pad=(max-min)*.03||DAY*30; min-=pad; max+=pad;
+  const pos=t=>((t-min)/(max-min)*100).toFixed(2)+'%';
+  const y0=new Date(min).getFullYear()+1, y1=new Date(max).getFullYear();
+  let ticks=''; for(let y=y0;y<=y1;y++) ticks+=`<span class="tl-tick" style="left:${pos(new Date(y,0,1).getTime())}">${y}</span>`;
+  const rows=LANES.map(([k,l])=>{const es=ev.map((e,i)=>[e,i]).filter(([e])=>e.lane===k);
+    return `<div class="tl-row"><span class="tl-lab">${l}<small>${es.length}</small></span><div class="tl-track">${es.map(([e,i])=>
+      `<i class="tl-m st-${e.st}${isPast(e.date)?'':' fut'}" style="left:${pos(dOf(e.date).getTime())}" data-ev="${i}" data-tip="${esc(`${e.date}${futTag(e)?` (${futTag(e)})`:''}\n${e.title} — ${e.label}${e.sub?'\n'+e.sub:''}`)}"></i>`).join('')}</div></div>`;}).join('');
+  return `<div class="tl">${rows}<div class="tl-row"><span class="tl-lab"></span><div class="tl-axis">${ticks}</div></div>
+    <div class="tl-today" style="left:calc(110px + (100% - 110px) * ${((now-min)/(max-min)).toFixed(4)})"><span>오늘</span></div></div>
+    <div class="tl-legend">${['p','w','f','n'].map(s=>`<span><i class="tl-m st-${s}"></i>${ST_LABEL[s]}</span>`).join('')}<span><i class="tl-m st-n fut"></i>기준일 이후 (예정·미래일자)</span></div>`;
+}
+function eventListHTML(x,ev,on){
+  const items=ev.map((e,i)=>[e,i]).filter(([e])=>on.has(e.lane));
+  if(!items.length) return '<p class="muted">선택한 종류의 이벤트가 없습니다.</p>';
+  let ym='';
+  return items.map(([e,i])=>{
+    const head=e.date.slice(0,7)!==ym?`<div class="ev-ym">${(ym=e.date.slice(0,7)).replace('-','년 ')}월</div>`:'';
+    const lane=LANES.find(l=>l[0]===e.lane)[1];
+    const fs=e.ins?x.fnd.filter(f=>f.inspection_id===e.ins.inspection_id):[];
+    const body=`<span class="ev-d">${esc(e.date.slice(5))}</span><span class="ev-lane l-${e.lane}">${lane}</span>
+      <span class="ev-t"><b>${esc(e.title)}</b>${futTag(e)==='미래일자'?' <span class="badge b-warn" data-tip="기준일 이후 날짜의 검사·PSC·사고 기록 (데이터 확인 필요)">미래일자</span>':''}<small>${esc(e.sub)}</small></span>
+      <span class="badge ${{p:'b-pass',w:'b-warn',f:'b-fail',n:'b-pend'}[e.st]}">${esc(e.label)}</span>
+      ${e.ins?`<span class="ev-f">지적 ${fs.length}${fs.filter(f=>f.severity==='High').length?` · <b class="warn-t">High ${fs.filter(f=>f.severity==='High').length}</b>`:''}</span>`:''}
+      ${e.recId?`<button class="btn sm" onclick="closeModal();loadRec('${safeId(e.recId)}')">열기</button>`:''}`;
+    return head+(e.ins&&fs.length
+      ? `<details class="ev" id="ev-${i}"><summary>${body}</summary>${tbl(['ID','분야','심각도','내용 / 시정조치','상태','기한'],fs.map(findingRow))}</details>`
+      : `<div class="ev" id="ev-${i}">${body}</div>`);
+  }).join('');
+}
+function findingRow(f){
+  return `<tr data-fid="${esc(f.finding_id)}" class="clk"><td>${esc(f.finding_id)}${f.touched?' <span data-tip="이 브라우저에서 처리한 이력 있음">✎</span>':''}<br><small class="muted">${esc(f.inspection_id)}</small></td><td>${esc(f.chapter)}</td><td>${sevBadge(f.severity)}${f.repeat_finding?' <span class="badge b-warn">반복</span>':''}</td>
+    <td>${esc(f.question)}<br><small class="muted">${esc(f.observation)}</small>${f.action?`<br><small>↳ 조치: ${esc(f.action.corrective_action)} (${esc(f.action.owner)}, ${esc(f.action.target_date)}, ${esc(f.action.status)})</small>`:''}</td>
+    <td>${esc(f.status)}</td><td>${esc(f.due_date)}${f.status!=='Closed'&&f.due_date&&daysFrom(f.due_date)<0?' <span class="badge b-fail">경과</span>':''}${f.close_out_date?`<br><small class="muted">종결 ${esc(f.close_out_date)}</small>`:''}</td></tr>`;
+}
+async function openVessel(imo){
+  const x=FI[imo]; if(!x) return;
+  const na=nextArrival(imo), v=x.v, m=metrics(x), J=prescreen(imo,na), rk=x.risk, IS=inspStats(x);
+  const recs=(await DB.all()).filter(r=>r.info?.imo===imo);
+  const ev=vesselEvents(x,recs), on=new Set(LANES.map(l=>l[0]));
+  const open=x.fnd.filter(f=>f.status!=='Closed').sort((a,b)=>({High:0,Medium:1,Low:2}[a.severity]-{High:0,Medium:1,Low:2}[b.severity])||a.due_date.localeCompare(b.due_date));
+  const closed=x.fnd.filter(f=>f.status==='Closed');
+  const fRow=findingRow;
+  $('#mbox').className='mbox';
+  $('#mbox').innerHTML=`<div class="vd">
+    <div class="row-btns" style="justify-content:space-between;align-items:flex-start">
+      <div><h1>${esc(v.vessel_name)}</h1><div class="muted">IMO ${esc(v.imo)} · ${esc(v.vessel_type)} · ${(v.dwt||0).toLocaleString()} DWT · ${esc(v.flag)} · ${esc(v.class)}</div></div>
+      <div class="row-btns"><button class="btn pri" onclick="startReviewByImo('${esc(v.imo)}')">심사하기</button><button class="btn" onclick="closeModal()">닫기</button></div>
+    </div>
+    <div class="meta">
+      <div><span>선주</span>${esc(v.owner)}</div><div><span>관리사</span>${esc(v.manager)}</div><div><span>운항사</span>${esc(v.operator)}</div>
+      <div><span>건조</span>${v.built_year} · ${esc(v.shipyard)} (${esc(yardCountry(v.shipyard)||'국가 미상')})</div><div><span>주기관</span>${esc(v.main_engine)}</div>
+      <div><span>도크</span>최근 ${esc(v.last_drydock)} · 다음 ${esc(v.next_drydock)}${m.ddOver?' <span class="badge b-fail">경과</span>':''}</div><div><span>항로</span>${esc(v.trading_area)}</div>
+    </div>
+    <div class="two">
+      <div><h3>위험점수</h3>${rk?`<div style="display:flex;align-items:baseline;gap:8px"><b style="font-size:30px">${rk.risk_score}</b>${riskBadge(rk.risk_level)}<small class="muted">갱신 ${esc(rk.last_updated)}</small></div>
+        <div id="rkBars"></div>`:'<p class="muted">점수 없음</p>'}</div>
+      <div><h3>사전 스크리닝 — ${J.pass}/5 ${J.reco===null?'(판정불가)':J.reco?'합격 권고':'불합격 권고'}</h3>
+        <table>${CATS.map(([k,n])=>`<tr><td style="width:30%">${n}</td><td>${badge(J.cats[k].final)} <small>${esc(J.cats[k].msg)}</small></td></tr>`).join('')}</table>
+        <small class="muted">${na?`입항예정일 ${esc(na.eta)} 기준`:'오늘 기준'} · 검사 증빙 파일은 있다고 가정한 결과입니다.</small></div>
+    </div>
+    <h3>검사·이벤트 타임라인</h3>
+    <div class="tl-stats">
+      <div><span>마지막 검사</span>${IS.last?`${esc(IS.last.inspection_date)} <small class="${IS.since>365?'warn-t':'muted'}">(${IS.since}일 경과)</small>`:'없음'}</div>
+      <div><span>평균 검사 간격</span>${IS.avg!=null?`${IS.avg}일 <small class="muted">(최장 ${IS.maxGap}일)</small>`:'-'}</div>
+      <div><span>예정 검사 (미래일자)</span>${IS.next?`${esc(IS.next.inspection_date)} <small class="muted">${esc(IS.next.inspection_type)} @ ${esc(IS.next.port)}</small>`:'없음'}</div>
+      <div><span>최근 3회 결과</span>${IS.recent.map(i=>`<span class="badge ${i.overall_result==='Unsatisfactory'?'b-fail':i.overall_result==='Satisfactory'?'b-pass':'b-warn'}" data-tip="${esc(i.inspection_date+' '+i.inspection_type+' — '+i.overall_result)}">${i.overall_result==='Unsatisfactory'?'✖':i.overall_result==='Satisfactory'?'✔':'!'}</span>`).join(' ')||'-'}</div>
+    </div>
+    <div id="vTl">${timelineHTML(ev)}</div>
+    <div class="ev-chips" id="evChips">${LANES.map(([k,l])=>`<label><input type="checkbox" value="${k}" checked> ${l} (${ev.filter(e=>e.lane===k).length})</label>`).join('')}</div>
+    <div class="ev-list" id="evList">${eventListHTML(x,ev,on)}</div>
+    <h3>증서 (만료 ${m.expired} · 90일 내 ${m.soon})</h3>
+    ${tbl(['증서','발급','만료','발급기관','상태'],x.cert.map(c=>{const s=certState(c);return `<tr><td>${esc(c.certificate_type)}</td><td>${esc(c.issue_date)}</td><td>${esc(c.expiry_date)}</td><td>${esc(c.issuing_authority)}</td>
+      <td>${s==='expired'?'<span class="badge b-fail">만료</span>':s==='soon'?`<span class="badge b-warn">D-${daysFrom(c.expiry_date)}</span>`:'<span class="badge b-pass">유효</span>'}</td></tr>`;}))}
+    <h3>미결 지적사항 (${open.length}건 · High ${m.openHigh} · 반복 ${m.repeatOpen} · 기한경과 ${m.overdue})</h3>
+    ${tbl(['ID','분야','심각도','내용 / 시정조치','상태','기한'],open.map(fRow))}
+    ${closed.length?`<details style="margin-top:8px"><summary class="muted" style="cursor:pointer">종결된 지적사항 ${closed.length}건</summary>${tbl(['ID','분야','심각도','내용 / 시정조치','상태','기한'],closed.map(fRow))}</details>`:''}
+    ${x.img.length?`<h3>검사 사진 (${x.img.length})</h3><div class="imgs">${x.img.map(i=>`<figure><img src="${esc(i.src)}" alt="${esc(i.caption)}" onclick="showImg(this.src)"><figcaption>${esc(i.category)} · ${esc(i.caption)}${i.synthetic?' (합성 이미지)':''}</figcaption></figure>`).join('')}</div>`:''}
+  </div>`;
+  if(rk) hbars($('#rkBars'),[['선령 요인',rk.age_factor],['Vetting 요인',rk.vetting_factor],['PSC 요인',rk.psc_factor]].map(([l,v])=>({label:l,value:v})));
+  $('#evChips').onchange=e=>{e.target.checked?on.add(e.target.value):on.delete(e.target.value);$('#evList').innerHTML=eventListHTML(x,ev,on);};
+  $('#vTl').onclick=e=>{const i=e.target.dataset.ev;if(i==null)return;
+    const lane=ev[i].lane;if(!on.has(lane)){on.add(lane);$(`#evChips input[value="${lane}"]`).checked=true;$('#evList').innerHTML=eventListHTML(x,ev,on);}
+    const el=$('#ev-'+i);if(!el)return;if(el.tagName==='DETAILS')el.open=true;
+    $$('.ev.hl').forEach(n=>n.classList.remove('hl'));el.classList.add('hl');el.scrollIntoView({behavior:'smooth',block:'center'});};
+  $('#modal').classList.add('on'); $('#modal').scrollTop=0;
+}
+// 입항 1건 = 검토 기록 1건. 이미 있으면 그 기록을 연다.
+async function startReview(id){
+  closeModal(); await flushSave();
+  const a=arrById(id); if(!a) return;
+  const recs=(await DB.all()).filter(r=>r.source?.arrivalId===id).sort((p,q)=>(q.updatedAt||'').localeCompare(p.updatedAt||''));
+  if(recs.length){
+    await loadRec(recs[0].id);
+    // 공급사가 입항 정보를 바꿔 다시 제출한 경우 진행 중인 검토에 반영 (최종 판정 후에는 그대로 둔다)
+    const ch=cur.final?[]:['eta','berth','cargo','agent','supplier'].filter(k=>(cur.info[k]||'')!==(a[k]||''));
+    if(ch.length){ch.forEach(k=>cur.info[k]=a[k]);fillForm();changed();toast(`공급사 입항 정보 변경 반영: ${ch.join(', ')}`);}
+    return;
+  }
+  cur=prefillRec(a.imo,a); fillForm(); goTab('review'); window.scrollTo(0,0); await saveNow(false);
+  toast('공급사 제출 정보와 선박 DB로 자동 입력했습니다. 증빙·사진을 첨부하고 최종 판정하세요.');
+}
+// 선박 이력 화면에서 심사: 가장 가까운 입항 일정으로, 없으면 입항 정보 없이 시작
+async function startReviewByImo(imo){
+  const a=nextArrival(imo);
+  if(a) return startReview(a.arrival_id);
+  closeModal(); await flushSave();
+  const prev=(await DB.all()).filter(r=>r.source?.imo===imo&&!r.source?.arrivalId&&!r.final).sort((p,q)=>(q.updatedAt||'').localeCompare(p.updatedAt||''));
+  if(prev.length) return loadRec(prev[0].id);
+  cur=prefillRec(imo); fillForm(); goTab('review'); window.scrollTo(0,0); await saveNow(false);
+}
+function renderSrcBanner(){
+  const s=cur.source, x=s&&FI?.[s.imo], a=s?.arrivalId?arrById(s.arrivalId):null, el=$('#srcBanner');
+  el.classList.toggle('hidden',!x&&!a); if(!x&&!a) return;
+  const m=x&&metrics(x), d=a?daysFrom(a.eta):null;
+  el.innerHTML=`<span>${a?`🚢 <b>입항예정 ${esc(a.eta)}</b> ${d<0?'(입항일 경과)':`(D-${d})`} · ${esc(a.berth)} · ${esc(a.cargo)} · 공급사 ${esc(a.supplier)} 제출 ${esc(a.submitted_at)}${a.synthetic?' <span class="badge b-pend">샘플</span>':''}<br>`:''}
+      📋 자동 입력 (${fmtD(s.at)}) — ${x?`위험점수 ${x.risk?`<b>${x.risk.risk_score}</b> ${riskBadge(x.risk.risk_level)}`:'-'} · 미결 지적 ${m.open}건 (High ${m.openHigh}) · 증서 만료 ${m.expired}/임박 ${m.soon}`:'<span class="badge b-warn">선박 DB 미등록</span> 선박 정보를 직접 입력하세요'}
+      <br><span class="muted" style="font-size:12px">건조월은 1월로 가정 · 검사 증빙 파일과 사진은 직접 첨부</span></span>
+    <span class="row-btns" style="margin-left:auto"><button class="btn sm" onclick="goTab('arrivals')">← 입항예정 목록</button>${x?`<button class="btn sm" onclick="openVessel('${esc(s.imo)}')">선박 이력</button>`:''}</span>`;
+}
+
+/* ---------------- 지적사항 · 시정조치 워크플로 ----------------
+   원본(fleet-data.js)은 f._orig에 보관하고, IndexedDB 'findings'의 변경분(FU)을 덮어써서
+   f.status / due_date / close_out_date / action / files / history 를 만든다. 모든 화면은 이 f를 그대로 읽는다. */
+let FX={}, FU={};
+const STATUS_KO={'Open':'미결','Under Review':'검토 대기','Closed':'종결'};
+const statusBadge=s=>`<span class="badge ${s==='Closed'?'b-pass':s==='Under Review'?'b-warn':'b-fail'}">${STATUS_KO[s]||esc(s)}</span>`;
+const FD_KIND={save:'조치 내용 저장',report:'조치 완료 보고',close:'검증 후 종결',reject:'반려',reopen:'재오픈',extend:'기한 연장',file:'증빙 첨부',unfile:'증빙 삭제'};
+function applyFU(f){
+  if(!f._orig) f._orig={status:f.status,due_date:f.due_date,close_out_date:f.close_out_date,action:f.action};
+  const o=FU[f.finding_id], b=f._orig;
+  Object.assign(f,{status:o?.status??b.status,due_date:o?.due_date??b.due_date,close_out_date:o?.close_out_date??b.close_out_date,
+    action:o?.action??b.action,files:o?.files||[],history:o?.history||[],updatedAt:o?.updatedAt||'',touched:!!o});
+}
+async function loadFU(){FU={};(await DB.all('findings')).forEach(o=>FU[o.id]=o);FLEET?.findings.forEach(applyFU);}
+const dueTag=f=>{
+  if(f.status==='Closed') return `<small class="muted">종결 ${esc(f.close_out_date||'')}</small>`;
+  if(!f.due_date) return '-';
+  const d=daysFrom(f.due_date);
+  return `${esc(f.due_date)}<br>${d<0?`<span class="badge b-fail">${-d}일 경과</span>`:d<=14?`<span class="badge b-warn">D-${d}</span>`:`<small class="muted">D-${d}</small>`}`;
+};
+const SEV_ORD={High:0,Medium:1,Low:2};
+let fdLimit=50;
+
+function renderFindings(){
+  $('#fdEmpty').classList.toggle('hidden',!!FLEET);$('#fdBody').classList.toggle('hidden',!FLEET);
+  if(!FLEET) return;
+  const all=FLEET.findings, act=all.filter(f=>f.status!=='Closed'), ym=ymd(today0()).slice(0,7);
+  if(!$('#fdChapter').options.length) $('#fdChapter').innerHTML='<option value="">분야 전체</option>'+[...new Set(all.map(f=>f.chapter))].sort().map(c=>`<option>${esc(c)}</option>`).join('');
+  const tiles=[
+    {l:'미결 (Open)',v:act.filter(f=>f.status==='Open').length,f:{fdStatus:'Open'},ic:'<span class="ic" style="color:var(--fail)">●</span>'},
+    {l:'검토 대기',v:act.filter(f=>f.status==='Under Review').length,s:`증빙 없음 ${act.filter(f=>f.status==='Under Review'&&!f.files.length).length}`,f:{fdStatus:'Under Review'},ic:'<span class="ic" style="color:var(--warn)">●</span>'},
+    {l:'기한 경과',v:act.filter(f=>f.due_date&&daysFrom(f.due_date)<0).length,s:`14일 내 ${act.filter(f=>f.due_date&&daysFrom(f.due_date)>=0&&daysFrom(f.due_date)<=14).length}`,f:{fdFlag:'overdue'},ic:'<span class="ic" style="color:var(--fail)">!</span>'},
+    {l:'High 미종결',v:act.filter(f=>f.severity==='High').length,s:`반복 ${act.filter(f=>f.repeat_finding).length}`,f:{fdSev:'High'}},
+    {l:'시정조치 미등록',v:act.filter(f=>!f.action?.corrective_action).length,f:{fdFlag:'noaction'}},
+    {l:'이번 달 종결',v:all.filter(f=>f.status==='Closed'&&(f.close_out_date||'').startsWith(ym)).length,s:`전체 종결 ${all.length-act.length}`,f:{fdStatus:'Closed'}},
+  ];
+  $('#fdKpis').innerHTML=tiles.map((t,i)=>`<button class="tile" data-ti="${i}"><div class="l">${t.ic||''}${t.l}</div><div class="v">${t.v}</div><div class="s">${t.s||'&nbsp;'}</div></button>`).join('');
+  $$('#fdKpis .tile').forEach(b=>b.onclick=()=>{const t=tiles[b.dataset.ti];
+    $('#fdSearch').value='';$('#fdStatus').value=t.f.fdStatus||'active';$('#fdSev').value=t.f.fdSev||'';$('#fdChapter').value='';$('#fdFlag').value=t.f.fdFlag||'';
+    fdLimit=50;renderFindingRows();});
+  renderFindingRows();
+}
+function renderFindingRows(){
+  const q=$('#fdSearch').value.trim().toLowerCase(), st=$('#fdStatus').value, sv=$('#fdSev').value, ch=$('#fdChapter').value, fl=$('#fdFlag').value, so=$('#fdSort').value;
+  let list=FLEET.findings.filter(f=>{
+    if(st==='active'?f.status==='Closed':st&&f.status!==st) return false;
+    if(sv&&f.severity!==sv) return false;
+    if(ch&&f.chapter!==ch) return false;
+    const d=f.due_date?daysFrom(f.due_date):null, open=f.status!=='Closed';
+    if(fl==='overdue'&&!(open&&d!=null&&d<0)) return false;
+    if(fl==='soon'&&!(open&&d!=null&&d>=0&&d<=14)) return false;
+    if(fl==='repeat'&&!f.repeat_finding) return false;
+    if(fl==='noaction'&&!(open&&!f.action?.corrective_action)) return false;
+    if(fl==='noevid'&&!(f.status==='Under Review'&&!f.files.length)) return false;
+    if(fl==='touched'&&!f.touched) return false;
+    if(q){const v=FI[f.imo]?.v;if(!`${v?.vessel_name} ${f.finding_id} ${f.question} ${f.observation} ${f.action?.owner||''} ${f.action?.corrective_action||''}`.toLowerCase().includes(q)) return false;}
+    return true;});
+  const dueKey=f=>f.status==='Closed'?'9999':(f.due_date||'9998');
+  list.sort(so==='sev'?(a,b)=>SEV_ORD[a.severity]-SEV_ORD[b.severity]||dueKey(a).localeCompare(dueKey(b))
+    :so==='recent'?(a,b)=>(b.updatedAt||'').localeCompare(a.updatedAt||'')||dueKey(a).localeCompare(dueKey(b))
+    :(a,b)=>dueKey(a).localeCompare(dueKey(b))||SEV_ORD[a.severity]-SEV_ORD[b.severity]);
+  $('#fdCount').textContent=`${list.length}건`;
+  $('#fdRows').innerHTML=list.length?list.slice(0,fdLimit).map(f=>{const v=FI[f.imo]?.v,a=f.action||{};
+    return `<tr data-fid="${esc(f.finding_id)}">
+      <td><b>${esc(f.finding_id)}</b>${f.touched?' <span data-tip="처리 이력 있음">✎</span>':''}<br><small class="muted">${esc(f.inspection_id)}</small></td>
+      <td>${esc(v?.vessel_name||f.imo)}<br><small class="muted">IMO ${esc(f.imo)}</small></td>
+      <td>${sevBadge(f.severity)}${f.repeat_finding?' <span class="badge b-warn">반복</span>':''}<br><small class="muted">${esc(f.chapter)}</small></td>
+      <td>${statusBadge(f.status)}</td><td>${dueTag(f)}</td>
+      <td style="white-space:normal;min-width:240px">${esc(f.question)}<br><small class="muted">${esc(f.observation)}</small></td>
+      <td style="white-space:normal;min-width:200px">${a.corrective_action?`${esc(a.corrective_action)}<br><small class="muted">${esc(a.owner||'담당자 미정')} · 목표 ${esc(a.target_date||'-')}${f.files.length?` · 📎${f.files.length}`:''}</small>`:'<span class="badge b-pend">미등록</span>'}</td></tr>`;}).join('')
+    :'<tr><td colspan="7" style="text-align:center;color:var(--muted);padding:30px">조건에 맞는 지적사항이 없습니다.</td></tr>';
+  $('#fdMore').classList.toggle('hidden',list.length<=fdLimit);
+  $('#fdMore').textContent=`더 보기 (${Math.min(fdLimit,list.length)} / ${list.length})`;
+}
+['fdSearch','fdStatus','fdSev','fdChapter','fdFlag','fdSort'].forEach(id=>$('#'+id).addEventListener(id==='fdSearch'?'input':'change',()=>{fdLimit=50;renderFindingRows();}));
+$('#fdMore').onclick=()=>{fdLimit+=50;renderFindingRows();};
+$('#fdRows').addEventListener('click',e=>{const tr=e.target.closest('tr[data-fid]');if(tr)openFinding(tr.dataset.fid);});
+// 선박 상세(모달) 안의 지적사항 행 → 지적사항 상세, 뒤로가기는 선박 상세
+$('#mbox').addEventListener('click',e=>{const tr=e.target.closest('tr[data-fid]');if(tr&&$('#mbox .vd')){const f=FX[tr.dataset.fid];if(f)openFinding(f.finding_id,f.imo);}});
+
+let fdBack=null;
+function openFinding(id,back){
+  const f=FX[id]; if(!f) return;
+  const sid=safeId(id);
+  fdBack=back??null;
+  const x=FI[f.imo], v=x?.v, ins=x?.ins.find(i=>i.inspection_id===f.inspection_id), a=f.action||{};
+  const me=localStorage.getItem('hsv_reviewer')||'', closed=f.status==='Closed';
+  const order=['Open','Under Review','Closed'], cur_i=order.indexOf(f.status);
+  const steps=order.map((s,i)=>`<span class="step ${i===cur_i?'on':i<cur_i?'done':''}">${i<cur_i?'✔ ':''}${STATUS_KO[s]}</span>`).join('<span class="arr">→</span>');
+  const hist=[...f.history].reverse().map(h=>`<li><b>${esc(FD_KIND[h.kind]||h.kind)}</b>${h.from!==h.to?` · ${STATUS_KO[h.from]||h.from} → ${STATUS_KO[h.to]||h.to}`:''}
+      <span class="muted"> — ${esc(h.by)} · ${fmtD(h.at)}</span>${h.detail?`<br><small>${esc(h.detail)}</small>`:''}${h.note?`<br><small>💬 ${esc(h.note)}</small>`:''}</li>`).join('')
+    + (f._orig.close_out_date?`<li><b>원본 데이터 종결</b> <span class="muted">— ${esc(f._orig.close_out_date)}</span></li>`:'')
+    + `<li><b>지적 발행</b> <span class="muted">— ${esc(ins?.inspection_date||'')} ${esc(ins?.inspection_type||'')} (원본 데이터) · 최초 기한 ${esc(f._orig.due_date||'-')}</span></li>`;
+  const btns = f.status==='Open'
+      ? `<button class="btn" onclick="fdAct('${sid}','save')">조치 내용 저장</button><button class="btn pri" onclick="fdAct('${sid}','report')">조치 완료 보고 →</button>`
+    : f.status==='Under Review'
+      ? `<button class="btn" onclick="fdAct('${sid}','save')">조치 내용 저장</button><button class="btn danger" onclick="fdAct('${sid}','reject')">← 반려</button><button class="btn ok" onclick="fdAct('${sid}','close')">검증 후 종결 ✔</button>`
+      : `<button class="btn danger" onclick="fdAct('${sid}','reopen')">재오픈</button>`;
+  $('#mbox').className='mbox';
+  $('#mbox').innerHTML=`<div class="fd">
+    <div class="row-btns" style="justify-content:space-between;align-items:flex-start">
+      <div><h1>${esc(f.finding_id)} ${sevBadge(f.severity)}${f.repeat_finding?' <span class="badge b-warn">반복 지적</span>':''}</h1>
+        <div class="muted">${v?`<a href="#" onclick="openVessel('${esc(f.imo)}');return false">${esc(v.vessel_name)}</a> · IMO ${esc(f.imo)}`:esc(f.imo)} · ${esc(f.inspection_id)}${ins?` · ${esc(ins.inspection_date)} ${esc(ins.inspection_type)} @ ${esc(ins.port)} (${esc(ins.inspector)})`:''}</div></div>
+      <div class="row-btns">${fdBack?`<button class="btn" onclick="openVessel('${esc(fdBack)}')">← 선박 상세</button>`:''}<button class="btn" onclick="closeModal()">닫기</button></div>
+    </div>
+    <div class="steps">${steps}</div>
+    <div class="fd-q"><span class="muted">${esc(f.chapter)} · ${esc(f.question_id)}</span><b>${esc(f.question)}</b><p>${esc(f.observation)}</p></div>
+    <div class="two">
+      <div>
+        <h3>시정조치</h3>
+        <div class="f"><label>조치 내용</label><textarea id="faText" rows="3" ${closed?'disabled':''}>${esc(a.corrective_action||'')}</textarea></div>
+        <div class="grid" style="margin-top:8px">
+          <div class="f"><label>담당자</label><input id="faOwner" value="${esc(a.owner||'')}" ${closed?'disabled':''} placeholder="예) Chief Engineer"></div>
+          <div class="f"><label>조치 목표일</label><input id="faTarget" type="date" value="${esc(a.target_date||'')}" ${closed?'disabled':''}></div>
+        </div>
+        <h3>기한</h3>
+        <div style="font-size:13px">현재 기한 <b>${esc(f.due_date||'-')}</b> ${f.status!=='Closed'?dueTag(f).replace(/^[^<]*<br>/,''):''}${f.due_date!==f._orig.due_date?` <small class="muted">(최초 ${esc(f._orig.due_date)})</small>`:''}</div>
+        ${closed?'':`<div class="row-btns" style="margin-top:6px;align-items:center"><input id="fdNewDue" type="date" style="width:auto"><button class="btn sm" onclick="fdAct('${sid}','extend')">기한 연장</button></div>`}
+        <h3>증빙 (${f.files.length})${f.severity==='High'&&!closed?' <small class="warn-t">High: 보고 시 1건 이상 필수</small>':''}</h3>
+        <div class="fd-files">${f.files.map(fl=>`<div><a href="#" onclick="fdOpenFile('${sid}','${safeId(fl.id)}');return false">📎 ${esc(fl.name)}</a> <small class="muted">${esc(fl.by)} · ${fmtD(fl.at)}</small>${closed?'':` <button class="btn sm danger" onclick="fdDelFile('${sid}','${safeId(fl.id)}')">삭제</button>`}</div>`).join('')||'<span class="muted">첨부 없음</span>'}</div>
+        ${closed?'':`<label class="btn sm" style="margin-top:6px;color:var(--brand2)">+ 증빙 첨부 (사진·PDF)<input type="file" accept="image/*,.pdf" multiple hidden onchange="fdAddFiles('${sid}',this)"></label>`}
+      </div>
+      <div>
+        <h3>처리</h3>
+        <div class="f"><label>처리자 <span class="req">*</span></label><input id="fdBy" value="${esc(me)}" placeholder="이름"></div>
+        <div class="f" style="margin-top:8px"><label>의견 / 사유 <small class="muted">(반려·재오픈·기한 연장 시 필수)</small></label><textarea id="fdNote" rows="3"></textarea></div>
+        <div class="row-btns" style="margin-top:10px">${btns}</div>
+        <h3>처리 이력</h3>
+        <ul class="hist">${hist}</ul>
+      </div>
+    </div>
+  </div>`;
+  $('#modal').classList.add('on'); $('#modal').scrollTop=0;
+}
+async function fdCommit(f,kind,patch,note,detail){
+  const by=$('#fdBy').value.trim();
+  const o=FU[f.finding_id]?structuredClone(FU[f.finding_id]):{id:f.finding_id,imo:f.imo,history:[],files:[]};
+  const from=f.status;
+  Object.assign(o,patch);
+  o.history=[...(o.history||[]),{at:new Date().toISOString(),by,kind,from,to:o.status??from,note:note||'',detail:detail||''}];
+  o.updatedAt=new Date().toISOString();
+  await DB.put(o,'findings'); FU[f.finding_id]=o; applyFU(f);
+  localStorage.setItem('hsv_reviewer',by);
+  // 다시 그리면 입력란이 초기화되므로, 시정조치를 저장하지 않는 처리(증빙·기한)에서는 작성 중인 값을 되살린다
+  const keep=!('action' in patch), ids=['faText','faOwner','faTarget',...(['file','unfile'].includes(kind)?['fdNote']:[])];
+  const draft=keep?Object.fromEntries(ids.map(i=>[i,$('#'+i)?.value])):{};
+  openFinding(f.finding_id,fdBack);
+  Object.entries(draft).forEach(([i,v])=>{const el=$('#'+i);if(el&&!el.disabled&&v!=null)el.value=v;});
+  if($('#tab-findings').classList.contains('on')) renderFindings();
+  if($('#tab-arrivals').classList.contains('on')) renderArrivals();
+  toast(`${f.finding_id}: ${FD_KIND[kind]} 완료`);
+}
+async function fdAct(id,kind){
+  const f=FX[id], by=$('#fdBy').value.trim(), note=$('#fdNote').value.trim();
+  if(!by){alert('처리자 이름을 입력하세요.');$('#fdBy').focus();return;}
+  const act=()=>({corrective_action:$('#faText').value.trim(),owner:$('#faOwner').value.trim(),target_date:$('#faTarget').value});
+  const A=f.status!=='Closed'?act():f.action;
+  const changes=()=>{const o=f.action||{};return ['corrective_action','owner','target_date'].filter(k=>(o[k]||'')!==(A[k]||'')).map(k=>({corrective_action:'조치 내용',owner:'담당자',target_date:'목표일'}[k])).join(', ');};
+  if(kind==='save'){
+    const c=changes(); if(!c&&!note){toast('변경된 내용이 없습니다.');return;}
+    return fdCommit(f,'save',{action:{...A,status:f.status}},note,c?`변경: ${c}`:'');
+  }
+  if(kind==='report'){
+    const miss=[!A.corrective_action&&'조치 내용',!A.owner&&'담당자',!A.target_date&&'조치 목표일'].filter(Boolean);
+    if(miss.length){alert('조치 완료 보고 전에 입력하세요: '+miss.join(', '));return;}
+    if(f.severity==='High'&&!f.files.length){alert('High 지적사항은 증빙 파일을 1건 이상 첨부해야 보고할 수 있습니다.');return;}
+    return fdCommit(f,'report',{status:'Under Review',action:{...A,status:'Under Review'}},note,changes()?`변경: ${changes()}`:'');
+  }
+  if(kind==='close'){
+    if(f.status!=='Under Review') return;
+    const rep=[...f.history].reverse().find(h=>h.kind==='report');
+    if(rep&&rep.by===by&&!confirm(`조치 완료 보고자(${rep.by})와 검증자가 같습니다.\n독립 검증 원칙에 어긋날 수 있습니다. 그래도 종결할까요?`)) return;
+    if(!confirm(`${id}을(를) 종결 처리할까요?`)) return;
+    return fdCommit(f,'close',{status:'Closed',close_out_date:ymd(today0()),action:{...A,status:'Closed'}},note,`종결일 ${ymd(today0())}`);
+  }
+  if(kind==='reject'||kind==='reopen'){
+    if(!note){alert(`${FD_KIND[kind]} 사유를 '의견 / 사유'에 입력하세요.`);$('#fdNote').focus();return;}
+    return fdCommit(f,kind,{status:'Open',close_out_date:'',action:{...(A||{}),status:'Open'}},note);
+  }
+  if(kind==='extend'){
+    const nd=$('#fdNewDue').value;
+    if(!nd){alert('새 기한을 선택하세요.');return;}
+    if(f.due_date&&nd<=f.due_date){alert(`새 기한은 현재 기한(${f.due_date})보다 뒤여야 합니다.`);return;}
+    if(!note){alert('기한 연장 사유를 입력하세요.');$('#fdNote').focus();return;}
+    const n=f.history.filter(h=>h.kind==='extend').length+1;
+    return fdCommit(f,'extend',{due_date:nd},note,`${f.due_date||'-'} → ${nd} (${n}회차 연장)`);
+  }
+}
+async function fdAddFiles(id,inp){
+  const f=FX[id], by=$('#fdBy').value.trim(), files=[...inp.files]; inp.value='';
+  if(!by){alert('처리자 이름을 먼저 입력하세요.');return;}
+  const add=[];
+  for(const fl of files){
+    if(fl.size>15*1024*1024){toast(`${fl.name}: 15MB 초과`);continue;}
+    const data=fl.type.startsWith('image/')?await compress(fl,1600,.85):await new Promise(r=>{const fr=new FileReader();fr.onload=()=>r(fr.result);fr.readAsDataURL(fl);});
+    add.push({id:uid(),name:fl.name,type:fl.type,data,by,at:new Date().toISOString()});
+  }
+  if(add.length) fdCommit(f,'file',{files:[...f.files,...add]},'',add.map(a=>a.name).join(', '));
+}
+function fdDelFile(id,fid){
+  const f=FX[id], fl=f.files.find(x=>x.id===fid);
+  if(!$('#fdBy').value.trim()){alert('처리자 이름을 먼저 입력하세요.');return;}
+  if(!fl||!confirm(`증빙 "${fl.name}"을(를) 삭제할까요?`)) return;
+  fdCommit(f,'unfile',{files:f.files.filter(x=>x.id!==fid)},'',fl.name);
+}
+function fdOpenFile(id,fid){const fl=FX[id].files.find(x=>x.id===fid);if(fl)fl.type.startsWith('image/')?showImg(fl.data):openFile(fl);}
+
+// 차트·스크리닝 점 툴팁
+document.addEventListener('mouseover',e=>{const t=e.target.closest?.('[data-tip]'),tip=$('#tip');if(!t){tip.style.display='none';return;}tip.textContent=t.dataset.tip;tip.style.display='block';});
+document.addEventListener('mousemove',e=>{const tip=$('#tip');if(tip.style.display==='block'){tip.style.left=Math.min(e.clientX+12,innerWidth-tip.offsetWidth-8)+'px';tip.style.top=(e.clientY+14)+'px';}});
+
+/* ---------------- 시작 ---------------- */
+(async()=>{
+  loadSettings(); cur=newRec(); buildFleet(); renderSettings();
+  try{await DB.open();await loadFU();}catch(e){alert('브라우저 저장소를 열 수 없습니다: '+e.message);}
+  fillForm();
+  if(ARR.length) goTab('arrivals');
+})();
+</script>
+</body>
+</html>

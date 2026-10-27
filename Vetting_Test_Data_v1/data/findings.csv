@@ -1,0 +1,402 @@
+﻿finding_id,inspection_id,imo,chapter,question_id,question,severity,observation,repeat_finding,status,due_date,close_out_date
+FND-000001,INS-00002,9300001,Mooring,MOO-02,Mooring lines and associated fittings are in satisfactory condition,High,A training record required additional supporting documentation.,False,Open,2024-03-11,
+FND-000002,INS-00004,9300002,Safety,SAF-02,Enclosed-space entry controls are consistently followed,Medium,Mooring line inspection interval was not consistently recorded.,False,Closed,2024-07-07,2024-06-22
+FND-000003,INS-00004,9300002,Navigation,NAV-02,Passage planning and appraisal records are complete,High,Housekeeping standard in the inspected area was below company target.,False,Closed,2024-06-23,2024-06-04
+FND-000004,INS-00004,9300002,Navigation,NAV-01,Bridge watchkeeping arrangements are adequately maintained,High,Maintenance record was not updated after completion of work.,True,Closed,2024-06-20,2024-06-02
+FND-000005,INS-00004,9300002,ISM,ISM-01,Corrective action close-out is timely and evidence based,High,A training record required additional supporting documentation.,False,Closed,2024-07-14,2024-06-30
+FND-000006,INS-00004,9300002,Navigation,NAV-03,Navigation equipment maintenance records are current,Medium,Housekeeping standard in the inspected area was below company target.,False,Closed,2024-07-04,2024-07-02
+FND-000007,INS-00005,9300002,Mooring,MOO-02,Mooring lines and associated fittings are in satisfactory condition,High,Housekeeping standard in the inspected area was below company target.,True,Closed,2025-07-27,2025-07-13
+FND-000008,INS-00005,9300002,Cargo,CAR-01,Cargo hold preparation and inspection records are complete,Low,Housekeeping standard in the inspected area was below company target.,False,Closed,2025-07-25,2025-07-08
+FND-000009,INS-00005,9300002,Cargo,CAR-02,Cargo securing and loading procedures are properly implemented,High,Corrective action evidence did not clearly demonstrate close-out.,False,Closed,2025-08-25,2025-08-05
+FND-000010,INS-00007,9300002,Navigation,NAV-02,Passage planning and appraisal records are complete,Low,A training record required additional supporting documentation.,False,Open,2025-01-14,
+FND-000011,INS-00007,9300002,Engine Room,ENG-02,Emergency generator testing is documented and effective,High,Housekeeping standard in the inspected area was below company target.,False,Under Review,2025-01-03,
+FND-000012,INS-00007,9300002,Cargo,CAR-02,Cargo securing and loading procedures are properly implemented,High,Minor oil residue was observed around a machinery component.,False,Open,2024-12-21,
+FND-000013,INS-00008,9300003,Engine Room,ENG-02,Emergency generator testing is documented and effective,High,Corrective action evidence did not clearly demonstrate close-out.,False,Closed,2026-01-27,2026-01-15
+FND-000014,INS-00008,9300003,Environmental,ENV-01,Garbage and pollution-prevention records are complete,Low,Emergency equipment test evidence was not readily available.,False,Closed,2026-01-17,2026-01-10
+FND-000015,INS-00008,9300003,Navigation,NAV-01,Bridge watchkeeping arrangements are adequately maintained,Medium,Housekeeping standard in the inspected area was below company target.,False,Under Review,2026-02-04,
+FND-000016,INS-00009,9300003,Safety,SAF-02,Enclosed-space entry controls are consistently followed,High,Minor oil residue was observed around a machinery component.,False,Open,2024-11-02,
+FND-000017,INS-00009,9300003,Safety,SAF-01,Firefighting equipment inspections are current,Medium,Housekeeping standard in the inspected area was below company target.,False,Under Review,2024-11-12,
+FND-000018,INS-00010,9300004,Navigation,NAV-03,Navigation equipment maintenance records are current,Medium,Maintenance record was not updated after completion of work.,True,Open,2026-12-14,
+FND-000019,INS-00010,9300004,Cargo,CAR-01,Cargo hold preparation and inspection records are complete,Low,Housekeeping standard in the inspected area was below company target.,False,Closed,2027-01-06,2027-01-01
+FND-000020,INS-00010,9300004,Navigation,NAV-03,Navigation equipment maintenance records are current,Medium,Emergency equipment test evidence was not readily available.,False,Under Review,2026-12-31,
+FND-000021,INS-00010,9300004,Safety,SAF-01,Firefighting equipment inspections are current,Medium,Maintenance record was not updated after completion of work.,False,Under Review,2026-12-12,
+FND-000022,INS-00010,9300004,Cargo,CAR-01,Cargo hold preparation and inspection records are complete,Medium,Mooring line inspection interval was not consistently recorded.,False,Closed,2026-12-21,2026-12-13
+FND-000023,INS-00011,9300004,Safety,SAF-02,Enclosed-space entry controls are consistently followed,High,Housekeeping standard in the inspected area was below company target.,True,Under Review,2025-04-27,
+FND-000024,INS-00011,9300004,ISM,ISM-01,Corrective action close-out is timely and evidence based,High,Corrective action evidence did not clearly demonstrate close-out.,False,Open,2025-06-06,
+FND-000025,INS-00012,9300004,Navigation,NAV-02,Passage planning and appraisal records are complete,High,Corrective action evidence did not clearly demonstrate close-out.,False,Closed,2026-04-02,2026-03-28
+FND-000026,INS-00013,9300005,Safety,SAF-02,Enclosed-space entry controls are consistently followed,High,One inspection checklist contained an incomplete sign-off.,False,Under Review,2026-07-05,
+FND-000027,INS-00013,9300005,ISM,ISM-02,Near-miss reporting and follow-up are effective,Medium,Corrective action evidence did not clearly demonstrate close-out.,True,Open,2026-07-26,
+FND-000028,INS-00013,9300005,Engine Room,ENG-01,Planned maintenance records reflect actual equipment condition,High,Mooring line inspection interval was not consistently recorded.,False,Closed,2026-07-25,2026-07-05
+FND-000029,INS-00013,9300005,Navigation,NAV-02,Passage planning and appraisal records are complete,High,A training record required additional supporting documentation.,False,Open,2026-08-09,
+FND-000030,INS-00015,9300005,Cargo,CAR-01,Cargo hold preparation and inspection records are complete,Medium,Housekeeping standard in the inspected area was below company target.,False,Closed,2025-10-03,2025-09-29
+FND-000031,INS-00015,9300005,Safety,SAF-01,Firefighting equipment inspections are current,Medium,Housekeeping standard in the inspected area was below company target.,False,Under Review,2025-08-20,
+FND-000032,INS-00015,9300005,Engine Room,ENG-01,Planned maintenance records reflect actual equipment condition,High,Corrective action evidence did not clearly demonstrate close-out.,False,Open,2025-09-30,
+FND-000033,INS-00016,9300006,ISM,ISM-01,Corrective action close-out is timely and evidence based,Low,Emergency equipment test evidence was not readily available.,False,Open,2025-05-23,
+FND-000034,INS-00016,9300006,Cargo,CAR-01,Cargo hold preparation and inspection records are complete,Medium,Maintenance record was not updated after completion of work.,False,Under Review,2025-04-27,
+FND-000035,INS-00018,9300006,Engine Room,ENG-01,Planned maintenance records reflect actual equipment condition,High,One inspection checklist contained an incomplete sign-off.,False,Under Review,2024-06-17,
+FND-000036,INS-00018,9300006,Engine Room,ENG-01,Planned maintenance records reflect actual equipment condition,High,Maintenance record was not updated after completion of work.,False,Open,2024-06-15,
+FND-000037,INS-00018,9300006,Engine Room,ENG-01,Planned maintenance records reflect actual equipment condition,High,A training record required additional supporting documentation.,False,Open,2024-05-21,
+FND-000038,INS-00018,9300006,Navigation,NAV-03,Navigation equipment maintenance records are current,High,Corrective action evidence did not clearly demonstrate close-out.,False,Under Review,2024-06-23,
+FND-000039,INS-00018,9300006,Navigation,NAV-02,Passage planning and appraisal records are complete,High,One inspection checklist contained an incomplete sign-off.,False,Closed,2024-06-26,2024-06-09
+FND-000040,INS-00021,9300007,Engine Room,ENG-02,Emergency generator testing is documented and effective,High,One inspection checklist contained an incomplete sign-off.,False,Under Review,2024-08-09,
+FND-000041,INS-00021,9300007,Engine Room,ENG-03,Oil leakage control and housekeeping are satisfactory,Low,Emergency equipment test evidence was not readily available.,False,Open,2024-08-29,
+FND-000042,INS-00021,9300007,Cargo,CAR-01,Cargo hold preparation and inspection records are complete,Medium,Corrective action evidence did not clearly demonstrate close-out.,False,Open,2024-08-04,
+FND-000043,INS-00021,9300007,Engine Room,ENG-03,Oil leakage control and housekeeping are satisfactory,Medium,Mooring line inspection interval was not consistently recorded.,False,Open,2024-07-29,
+FND-000044,INS-00021,9300007,Cargo,CAR-01,Cargo hold preparation and inspection records are complete,Low,Housekeeping standard in the inspected area was below company target.,True,Open,2024-07-27,
+FND-000045,INS-00021,9300007,Cargo,CAR-02,Cargo securing and loading procedures are properly implemented,Medium,Minor oil residue was observed around a machinery component.,False,Under Review,2024-08-06,
+FND-000046,INS-00022,9300007,Engine Room,ENG-01,Planned maintenance records reflect actual equipment condition,High,Housekeeping standard in the inspected area was below company target.,True,Under Review,2024-04-21,
+FND-000047,INS-00022,9300007,Navigation,NAV-02,Passage planning and appraisal records are complete,High,A training record required additional supporting documentation.,True,Closed,2024-05-20,2024-05-11
+FND-000048,INS-00022,9300007,Mooring,MOO-01,Mooring equipment inspection and maintenance are documented,High,Maintenance record was not updated after completion of work.,False,Open,2024-04-21,
+FND-000049,INS-00023,9300008,Engine Room,ENG-02,Emergency generator testing is documented and effective,High,Corrective action evidence did not clearly demonstrate close-out.,True,Open,2025-07-13,
+FND-000050,INS-00023,9300008,Engine Room,ENG-01,Planned maintenance records reflect actual equipment condition,High,Corrective action evidence did not clearly demonstrate close-out.,False,Closed,2025-07-15,2025-06-27
+FND-000051,INS-00023,9300008,Safety,SAF-02,Enclosed-space entry controls are consistently followed,High,Mooring line inspection interval was not consistently recorded.,True,Open,2025-07-13,
+FND-000052,INS-00024,9300008,Cargo,CAR-02,Cargo securing and loading procedures are properly implemented,High,One inspection checklist contained an incomplete sign-off.,False,Under Review,2026-09-29,
+FND-000053,INS-00024,9300008,ISM,ISM-01,Corrective action close-out is timely and evidence based,High,One inspection checklist contained an incomplete sign-off.,False,Closed,2026-10-12,2026-10-06
+FND-000054,INS-00024,9300008,Cargo,CAR-01,Cargo hold preparation and inspection records are complete,Medium,Minor oil residue was observed around a machinery component.,False,Open,2026-09-16,
+FND-000055,INS-00025,9300008,ISM,ISM-01,Corrective action close-out is timely and evidence based,High,A training record required additional supporting documentation.,False,Closed,2024-11-24,2024-11-04
+FND-000056,INS-00025,9300008,ISM,ISM-02,Near-miss reporting and follow-up are effective,Medium,Corrective action evidence did not clearly demonstrate close-out.,True,Open,2024-11-16,
+FND-000057,INS-00025,9300008,Safety,SAF-01,Firefighting equipment inspections are current,Medium,Maintenance record was not updated after completion of work.,True,Under Review,2024-11-20,
+FND-000058,INS-00025,9300008,Engine Room,ENG-01,Planned maintenance records reflect actual equipment condition,Medium,Mooring line inspection interval was not consistently recorded.,True,Open,2024-11-29,
+FND-000059,INS-00025,9300008,Engine Room,ENG-03,Oil leakage control and housekeeping are satisfactory,Medium,Maintenance record was not updated after completion of work.,False,Under Review,2024-11-24,
+FND-000060,INS-00027,9300009,Cargo,CAR-02,Cargo securing and loading procedures are properly implemented,Medium,Maintenance record was not updated after completion of work.,True,Closed,2026-10-09,2026-09-29
+FND-000061,INS-00027,9300009,Cargo,CAR-01,Cargo hold preparation and inspection records are complete,High,Housekeeping standard in the inspected area was below company target.,False,Under Review,2026-09-14,
+FND-000062,INS-00029,9300009,Safety,SAF-01,Firefighting equipment inspections are current,Medium,Maintenance record was not updated after completion of work.,False,Under Review,2025-10-16,
+FND-000063,INS-00029,9300009,ISM,ISM-01,Corrective action close-out is timely and evidence based,High,Emergency equipment test evidence was not readily available.,True,Open,2025-10-06,
+FND-000064,INS-00029,9300009,Engine Room,ENG-02,Emergency generator testing is documented and effective,High,Maintenance record was not updated after completion of work.,False,Closed,2025-10-18,2025-09-29
+FND-000065,INS-00029,9300009,Engine Room,ENG-03,Oil leakage control and housekeeping are satisfactory,Low,Minor oil residue was observed around a machinery component.,False,Closed,2025-11-05,2025-10-31
+FND-000066,INS-00029,9300009,Navigation,NAV-01,Bridge watchkeeping arrangements are adequately maintained,High,Emergency equipment test evidence was not readily available.,False,Under Review,2025-11-05,
+FND-000067,INS-00029,9300009,Engine Room,ENG-02,Emergency generator testing is documented and effective,Medium,Emergency equipment test evidence was not readily available.,False,Under Review,2025-11-09,
+FND-000068,INS-00029,9300009,ISM,ISM-01,Corrective action close-out is timely and evidence based,High,Housekeeping standard in the inspected area was below company target.,False,Open,2025-10-09,
+FND-000069,INS-00030,9300010,Mooring,MOO-02,Mooring lines and associated fittings are in satisfactory condition,High,Minor oil residue was observed around a machinery component.,False,Under Review,2025-09-23,
+FND-000070,INS-00030,9300010,Environmental,ENV-01,Garbage and pollution-prevention records are complete,Low,Housekeeping standard in the inspected area was below company target.,False,Closed,2025-10-11,2025-10-04
+FND-000071,INS-00030,9300010,Navigation,NAV-02,Passage planning and appraisal records are complete,Low,Corrective action evidence did not clearly demonstrate close-out.,False,Open,2025-11-02,
+FND-000072,INS-00032,9300010,ISM,ISM-01,Corrective action close-out is timely and evidence based,Medium,One inspection checklist contained an incomplete sign-off.,False,Open,2024-02-07,
+FND-000073,INS-00032,9300010,Navigation,NAV-02,Passage planning and appraisal records are complete,High,A training record required additional supporting documentation.,False,Closed,2024-02-26,2024-02-26
+FND-000074,INS-00033,9300010,Safety,SAF-01,Firefighting equipment inspections are current,High,Corrective action evidence did not clearly demonstrate close-out.,True,Open,2026-04-26,
+FND-000075,INS-00034,9300010,Mooring,MOO-01,Mooring equipment inspection and maintenance are documented,High,One inspection checklist contained an incomplete sign-off.,True,Closed,2024-12-18,2024-12-14
+FND-000076,INS-00034,9300010,Cargo,CAR-01,Cargo hold preparation and inspection records are complete,Medium,Minor oil residue was observed around a machinery component.,False,Closed,2024-12-26,2024-12-11
+FND-000077,INS-00036,9300011,ISM,ISM-01,Corrective action close-out is timely and evidence based,High,Mooring line inspection interval was not consistently recorded.,False,Under Review,2025-06-03,
+FND-000078,INS-00036,9300011,ISM,ISM-01,Corrective action close-out is timely and evidence based,Medium,A training record required additional supporting documentation.,False,Under Review,2025-06-21,
+FND-000079,INS-00037,9300011,Engine Room,ENG-02,Emergency generator testing is documented and effective,Low,One inspection checklist contained an incomplete sign-off.,False,Under Review,2025-11-04,
+FND-000080,INS-00038,9300012,Safety,SAF-01,Firefighting equipment inspections are current,High,Maintenance record was not updated after completion of work.,False,Open,2025-02-09,
+FND-000081,INS-00038,9300012,Navigation,NAV-01,Bridge watchkeeping arrangements are adequately maintained,High,A training record required additional supporting documentation.,True,Open,2025-01-06,
+FND-000082,INS-00039,9300012,Engine Room,ENG-01,Planned maintenance records reflect actual equipment condition,High,Minor oil residue was observed around a machinery component.,False,Closed,2025-08-25,2025-08-13
+FND-000083,INS-00039,9300012,Safety,SAF-01,Firefighting equipment inspections are current,Low,Maintenance record was not updated after completion of work.,False,Closed,2025-08-13,2025-07-29
+FND-000084,INS-00040,9300012,Mooring,MOO-01,Mooring equipment inspection and maintenance are documented,Low,A training record required additional supporting documentation.,False,Open,2026-04-09,
+FND-000085,INS-00040,9300012,Safety,SAF-01,Firefighting equipment inspections are current,Low,Mooring line inspection interval was not consistently recorded.,False,Under Review,2026-03-05,
+FND-000086,INS-00040,9300012,Navigation,NAV-02,Passage planning and appraisal records are complete,High,Minor oil residue was observed around a machinery component.,True,Open,2026-03-26,
+FND-000087,INS-00041,9300012,Safety,SAF-02,Enclosed-space entry controls are consistently followed,High,Housekeeping standard in the inspected area was below company target.,True,Under Review,2025-10-25,
+FND-000088,INS-00041,9300012,Safety,SAF-01,Firefighting equipment inspections are current,Medium,Corrective action evidence did not clearly demonstrate close-out.,False,Open,2025-10-24,
+FND-000089,INS-00041,9300012,Engine Room,ENG-02,Emergency generator testing is documented and effective,High,Maintenance record was not updated after completion of work.,False,Open,2025-10-22,
+FND-000090,INS-00041,9300012,Navigation,NAV-03,Navigation equipment maintenance records are current,High,Emergency equipment test evidence was not readily available.,False,Under Review,2025-10-22,
+FND-000091,INS-00041,9300012,Mooring,MOO-01,Mooring equipment inspection and maintenance are documented,High,Mooring line inspection interval was not consistently recorded.,False,Open,2025-10-29,
+FND-000092,INS-00041,9300012,Engine Room,ENG-03,Oil leakage control and housekeeping are satisfactory,Medium,Minor oil residue was observed around a machinery component.,False,Open,2025-10-31,
+FND-000093,INS-00041,9300012,Navigation,NAV-02,Passage planning and appraisal records are complete,High,Mooring line inspection interval was not consistently recorded.,False,Closed,2025-10-02,2025-09-14
+FND-000094,INS-00042,9300012,Mooring,MOO-01,Mooring equipment inspection and maintenance are documented,High,Housekeeping standard in the inspected area was below company target.,True,Under Review,2026-12-14,
+FND-000095,INS-00042,9300012,Engine Room,ENG-01,Planned maintenance records reflect actual equipment condition,Medium,Emergency equipment test evidence was not readily available.,False,Under Review,2026-12-23,
+FND-000096,INS-00042,9300012,Safety,SAF-02,Enclosed-space entry controls are consistently followed,High,Corrective action evidence did not clearly demonstrate close-out.,False,Under Review,2026-11-23,
+FND-000097,INS-00042,9300012,Mooring,MOO-01,Mooring equipment inspection and maintenance are documented,High,Mooring line inspection interval was not consistently recorded.,False,Under Review,2026-11-30,
+FND-000098,INS-00042,9300012,Mooring,MOO-02,Mooring lines and associated fittings are in satisfactory condition,High,Housekeeping standard in the inspected area was below company target.,False,Open,2026-11-25,
+FND-000099,INS-00043,9300013,Engine Room,ENG-02,Emergency generator testing is documented and effective,High,Emergency equipment test evidence was not readily available.,False,Open,2025-11-05,
+FND-000100,INS-00043,9300013,Mooring,MOO-02,Mooring lines and associated fittings are in satisfactory condition,High,A training record required additional supporting documentation.,True,Under Review,2025-11-02,
+FND-000101,INS-00043,9300013,Navigation,NAV-03,Navigation equipment maintenance records are current,Medium,Corrective action evidence did not clearly demonstrate close-out.,True,Under Review,2025-10-22,
+FND-000102,INS-00043,9300013,Engine Room,ENG-03,Oil leakage control and housekeeping are satisfactory,Medium,Corrective action evidence did not clearly demonstrate close-out.,False,Closed,2025-10-17,2025-10-15
+FND-000103,INS-00043,9300013,Engine Room,ENG-02,Emergency generator testing is documented and effective,High,Mooring line inspection interval was not consistently recorded.,True,Closed,2025-11-11,2025-10-23
+FND-000104,INS-00044,9300013,Mooring,MOO-01,Mooring equipment inspection and maintenance are documented,High,Housekeeping standard in the inspected area was below company target.,True,Closed,2024-02-29,2024-02-28
+FND-000105,INS-00044,9300013,Navigation,NAV-03,Navigation equipment maintenance records are current,Medium,A training record required additional supporting documentation.,False,Closed,2024-03-27,2024-03-23
+FND-000106,INS-00044,9300013,Cargo,CAR-01,Cargo hold preparation and inspection records are complete,Medium,Corrective action evidence did not clearly demonstrate close-out.,False,Open,2024-03-23,
+FND-000107,INS-00045,9300013,Engine Room,ENG-03,Oil leakage control and housekeeping are satisfactory,High,Maintenance record was not updated after completion of work.,False,Closed,2026-11-23,2026-11-15
+FND-000108,INS-00045,9300013,Safety,SAF-02,Enclosed-space entry controls are consistently followed,Medium,Minor oil residue was observed around a machinery component.,False,Closed,2026-12-03,2026-11-14
+FND-000109,INS-00045,9300013,Navigation,NAV-03,Navigation equipment maintenance records are current,Medium,Emergency equipment test evidence was not readily available.,True,Open,2026-11-29,
+FND-000110,INS-00045,9300013,Engine Room,ENG-01,Planned maintenance records reflect actual equipment condition,Low,Housekeeping standard in the inspected area was below company target.,False,Closed,2026-11-06,2026-10-24
+FND-000111,INS-00045,9300013,ISM,ISM-02,Near-miss reporting and follow-up are effective,Medium,Maintenance record was not updated after completion of work.,False,Closed,2026-11-01,2026-10-16
+FND-000112,INS-00046,9300014,Safety,SAF-01,Firefighting equipment inspections are current,High,Mooring line inspection interval was not consistently recorded.,False,Closed,2026-09-30,2026-09-24
+FND-000113,INS-00046,9300014,Mooring,MOO-02,Mooring lines and associated fittings are in satisfactory condition,High,Emergency equipment test evidence was not readily available.,False,Under Review,2026-09-18,
+FND-000114,INS-00047,9300014,Engine Room,ENG-03,Oil leakage control and housekeeping are satisfactory,Medium,Housekeeping standard in the inspected area was below company target.,False,Under Review,2025-07-24,
+FND-000115,INS-00047,9300014,Mooring,MOO-02,Mooring lines and associated fittings are in satisfactory condition,High,One inspection checklist contained an incomplete sign-off.,False,Under Review,2025-07-30,
+FND-000116,INS-00048,9300014,Mooring,MOO-01,Mooring equipment inspection and maintenance are documented,High,Emergency equipment test evidence was not readily available.,True,Closed,2024-10-07,2024-10-06
+FND-000117,INS-00049,9300014,Safety,SAF-01,Firefighting equipment inspections are current,High,A training record required additional supporting documentation.,False,Under Review,2025-08-17,
+FND-000118,INS-00049,9300014,Mooring,MOO-02,Mooring lines and associated fittings are in satisfactory condition,High,One inspection checklist contained an incomplete sign-off.,True,Closed,2025-08-12,2025-08-05
+FND-000119,INS-00049,9300014,Environmental,ENV-01,Garbage and pollution-prevention records are complete,Medium,Housekeeping standard in the inspected area was below company target.,False,Open,2025-07-09,
+FND-000120,INS-00050,9300015,Environmental,ENV-01,Garbage and pollution-prevention records are complete,Medium,A training record required additional supporting documentation.,True,Under Review,2024-02-05,
+FND-000121,INS-00050,9300015,Safety,SAF-02,Enclosed-space entry controls are consistently followed,High,Mooring line inspection interval was not consistently recorded.,False,Closed,2024-02-04,2024-02-04
+FND-000122,INS-00050,9300015,ISM,ISM-01,Corrective action close-out is timely and evidence based,High,Emergency equipment test evidence was not readily available.,False,Open,2024-03-03,
+FND-000123,INS-00051,9300015,Navigation,NAV-01,Bridge watchkeeping arrangements are adequately maintained,Low,A training record required additional supporting documentation.,False,Under Review,2024-08-26,
+FND-000124,INS-00052,9300015,Cargo,CAR-02,Cargo securing and loading procedures are properly implemented,High,Mooring line inspection interval was not consistently recorded.,False,Closed,2026-07-14,2026-06-24
+FND-000125,INS-00053,9300015,Engine Room,ENG-03,Oil leakage control and housekeeping are satisfactory,High,A training record required additional supporting documentation.,False,Closed,2025-12-03,2025-11-27
+FND-000126,INS-00053,9300015,Safety,SAF-01,Firefighting equipment inspections are current,High,One inspection checklist contained an incomplete sign-off.,False,Closed,2025-11-19,2025-11-03
+FND-000127,INS-00053,9300015,Navigation,NAV-02,Passage planning and appraisal records are complete,High,One inspection checklist contained an incomplete sign-off.,False,Open,2025-11-26,
+FND-000128,INS-00053,9300015,Cargo,CAR-01,Cargo hold preparation and inspection records are complete,Medium,A training record required additional supporting documentation.,False,Open,2025-12-04,
+FND-000129,INS-00053,9300015,Environmental,ENV-01,Garbage and pollution-prevention records are complete,Medium,Maintenance record was not updated after completion of work.,False,Under Review,2025-10-30,
+FND-000130,INS-00053,9300015,Engine Room,ENG-02,Emergency generator testing is documented and effective,High,Mooring line inspection interval was not consistently recorded.,False,Closed,2025-10-23,2025-10-11
+FND-000131,INS-00053,9300015,ISM,ISM-02,Near-miss reporting and follow-up are effective,Low,One inspection checklist contained an incomplete sign-off.,False,Open,2025-11-18,
+FND-000132,INS-00054,9300016,Engine Room,ENG-01,Planned maintenance records reflect actual equipment condition,High,Housekeeping standard in the inspected area was below company target.,False,Under Review,2025-01-29,
+FND-000133,INS-00054,9300016,Navigation,NAV-03,Navigation equipment maintenance records are current,Medium,Housekeeping standard in the inspected area was below company target.,True,Closed,2025-02-01,2025-01-25
+FND-000134,INS-00054,9300016,ISM,ISM-01,Corrective action close-out is timely and evidence based,Medium,A training record required additional supporting documentation.,False,Closed,2025-03-11,2025-02-22
+FND-000135,INS-00055,9300016,Environmental,ENV-01,Garbage and pollution-prevention records are complete,Medium,One inspection checklist contained an incomplete sign-off.,False,Open,2026-09-21,
+FND-000136,INS-00057,9300017,ISM,ISM-02,Near-miss reporting and follow-up are effective,Medium,Corrective action evidence did not clearly demonstrate close-out.,False,Closed,2025-09-29,2025-09-19
+FND-000137,INS-00058,9300017,Safety,SAF-01,Firefighting equipment inspections are current,High,A training record required additional supporting documentation.,False,Open,2025-04-27,
+FND-000138,INS-00059,9300018,ISM,ISM-02,Near-miss reporting and follow-up are effective,Medium,A training record required additional supporting documentation.,False,Open,2024-07-01,
+FND-000139,INS-00059,9300018,Cargo,CAR-02,Cargo securing and loading procedures are properly implemented,Low,Corrective action evidence did not clearly demonstrate close-out.,False,Closed,2024-06-01,2024-05-18
+FND-000140,INS-00059,9300018,Navigation,NAV-02,Passage planning and appraisal records are complete,High,Emergency equipment test evidence was not readily available.,False,Open,2024-06-13,
+FND-000141,INS-00059,9300018,Mooring,MOO-01,Mooring equipment inspection and maintenance are documented,High,Emergency equipment test evidence was not readily available.,False,Under Review,2024-06-09,
+FND-000142,INS-00060,9300018,Environmental,ENV-01,Garbage and pollution-prevention records are complete,Medium,Mooring line inspection interval was not consistently recorded.,False,Under Review,2024-06-06,
+FND-000143,INS-00060,9300018,Cargo,CAR-01,Cargo hold preparation and inspection records are complete,Medium,A training record required additional supporting documentation.,False,Under Review,2024-05-14,
+FND-000144,INS-00060,9300018,Cargo,CAR-01,Cargo hold preparation and inspection records are complete,Low,Emergency equipment test evidence was not readily available.,False,Closed,2024-05-17,2024-05-17
+FND-000145,INS-00060,9300018,Engine Room,ENG-02,Emergency generator testing is documented and effective,High,Housekeeping standard in the inspected area was below company target.,False,Under Review,2024-05-17,
+FND-000146,INS-00060,9300018,Cargo,CAR-02,Cargo securing and loading procedures are properly implemented,High,Emergency equipment test evidence was not readily available.,False,Under Review,2024-06-12,
+FND-000147,INS-00061,9300018,Safety,SAF-02,Enclosed-space entry controls are consistently followed,High,Minor oil residue was observed around a machinery component.,True,Closed,2027-01-18,2027-01-17
+FND-000148,INS-00062,9300018,Navigation,NAV-01,Bridge watchkeeping arrangements are adequately maintained,Medium,Corrective action evidence did not clearly demonstrate close-out.,False,Open,2024-12-25,
+FND-000149,INS-00064,9300019,Mooring,MOO-02,Mooring lines and associated fittings are in satisfactory condition,High,One inspection checklist contained an incomplete sign-off.,False,Under Review,2024-03-14,
+FND-000150,INS-00064,9300019,Mooring,MOO-02,Mooring lines and associated fittings are in satisfactory condition,High,One inspection checklist contained an incomplete sign-off.,True,Closed,2024-03-30,2024-03-29
+FND-000151,INS-00066,9300019,Mooring,MOO-01,Mooring equipment inspection and maintenance are documented,High,A training record required additional supporting documentation.,True,Under Review,2025-08-06,
+FND-000152,INS-00067,9300019,Navigation,NAV-03,Navigation equipment maintenance records are current,Medium,Housekeeping standard in the inspected area was below company target.,False,Closed,2024-07-19,2024-07-09
+FND-000153,INS-00067,9300019,ISM,ISM-01,Corrective action close-out is timely and evidence based,High,One inspection checklist contained an incomplete sign-off.,True,Closed,2024-07-07,2024-07-06
+FND-000154,INS-00068,9300019,Navigation,NAV-01,Bridge watchkeeping arrangements are adequately maintained,High,A training record required additional supporting documentation.,False,Under Review,2025-05-25,
+FND-000155,INS-00068,9300019,Navigation,NAV-03,Navigation equipment maintenance records are current,Medium,Housekeeping standard in the inspected area was below company target.,False,Open,2025-06-19,
+FND-000156,INS-00069,9300020,Navigation,NAV-02,Passage planning and appraisal records are complete,Medium,A training record required additional supporting documentation.,True,Under Review,2025-04-13,
+FND-000157,INS-00069,9300020,Navigation,NAV-03,Navigation equipment maintenance records are current,High,Housekeeping standard in the inspected area was below company target.,True,Open,2025-03-28,
+FND-000158,INS-00069,9300020,Engine Room,ENG-03,Oil leakage control and housekeeping are satisfactory,Medium,Corrective action evidence did not clearly demonstrate close-out.,False,Under Review,2025-03-27,
+FND-000159,INS-00069,9300020,ISM,ISM-01,Corrective action close-out is timely and evidence based,High,Emergency equipment test evidence was not readily available.,False,Closed,2025-04-29,2025-04-24
+FND-000160,INS-00070,9300020,Mooring,MOO-02,Mooring lines and associated fittings are in satisfactory condition,Medium,One inspection checklist contained an incomplete sign-off.,False,Under Review,2024-04-08,
+FND-000161,INS-00070,9300020,Engine Room,ENG-01,Planned maintenance records reflect actual equipment condition,Medium,Maintenance record was not updated after completion of work.,False,Under Review,2024-04-13,
+FND-000162,INS-00070,9300020,Cargo,CAR-01,Cargo hold preparation and inspection records are complete,High,Minor oil residue was observed around a machinery component.,False,Under Review,2024-04-12,
+FND-000163,INS-00071,9300021,Cargo,CAR-02,Cargo securing and loading procedures are properly implemented,Medium,Corrective action evidence did not clearly demonstrate close-out.,False,Open,2025-07-30,
+FND-000164,INS-00071,9300021,Safety,SAF-02,Enclosed-space entry controls are consistently followed,High,Emergency equipment test evidence was not readily available.,True,Under Review,2025-07-12,
+FND-000165,INS-00073,9300021,Safety,SAF-02,Enclosed-space entry controls are consistently followed,High,One inspection checklist contained an incomplete sign-off.,False,Open,2025-11-14,
+FND-000166,INS-00073,9300021,Engine Room,ENG-03,Oil leakage control and housekeeping are satisfactory,Medium,Housekeeping standard in the inspected area was below company target.,True,Under Review,2025-11-26,
+FND-000167,INS-00074,9300022,Cargo,CAR-01,Cargo hold preparation and inspection records are complete,High,Minor oil residue was observed around a machinery component.,False,Under Review,2024-10-09,
+FND-000168,INS-00074,9300022,Cargo,CAR-02,Cargo securing and loading procedures are properly implemented,High,One inspection checklist contained an incomplete sign-off.,False,Open,2024-11-23,
+FND-000169,INS-00074,9300022,Cargo,CAR-01,Cargo hold preparation and inspection records are complete,Medium,Emergency equipment test evidence was not readily available.,False,Closed,2024-11-07,2024-10-27
+FND-000170,INS-00076,9300022,Cargo,CAR-01,Cargo hold preparation and inspection records are complete,Medium,A training record required additional supporting documentation.,False,Open,2024-07-30,
+FND-000171,INS-00077,9300022,Navigation,NAV-01,Bridge watchkeeping arrangements are adequately maintained,High,Emergency equipment test evidence was not readily available.,True,Under Review,2025-03-24,
+FND-000172,INS-00077,9300022,Cargo,CAR-01,Cargo hold preparation and inspection records are complete,Medium,One inspection checklist contained an incomplete sign-off.,False,Under Review,2025-03-21,
+FND-000173,INS-00077,9300022,Engine Room,ENG-03,Oil leakage control and housekeeping are satisfactory,Low,Corrective action evidence did not clearly demonstrate close-out.,False,Under Review,2025-03-08,
+FND-000174,INS-00077,9300022,Safety,SAF-01,Firefighting equipment inspections are current,Low,Emergency equipment test evidence was not readily available.,False,Under Review,2025-02-14,
+FND-000175,INS-00077,9300022,Engine Room,ENG-02,Emergency generator testing is documented and effective,High,Minor oil residue was observed around a machinery component.,False,Closed,2025-03-03,2025-02-18
+FND-000176,INS-00078,9300023,Mooring,MOO-02,Mooring lines and associated fittings are in satisfactory condition,Medium,A training record required additional supporting documentation.,True,Closed,2026-10-10,2026-09-29
+FND-000177,INS-00078,9300023,Engine Room,ENG-01,Planned maintenance records reflect actual equipment condition,Medium,A training record required additional supporting documentation.,False,Under Review,2026-11-19,
+FND-000178,INS-00078,9300023,Engine Room,ENG-01,Planned maintenance records reflect actual equipment condition,High,Maintenance record was not updated after completion of work.,True,Open,2026-10-25,
+FND-000179,INS-00080,9300023,Navigation,NAV-02,Passage planning and appraisal records are complete,High,Emergency equipment test evidence was not readily available.,False,Under Review,2025-10-13,
+FND-000180,INS-00080,9300023,ISM,ISM-02,Near-miss reporting and follow-up are effective,Medium,A training record required additional supporting documentation.,False,Open,2025-10-26,
+FND-000181,INS-00080,9300023,Navigation,NAV-03,Navigation equipment maintenance records are current,Medium,Emergency equipment test evidence was not readily available.,False,Open,2025-10-14,
+FND-000182,INS-00081,9300023,Environmental,ENV-01,Garbage and pollution-prevention records are complete,Medium,Minor oil residue was observed around a machinery component.,False,Closed,2026-01-01,2025-12-25
+FND-000183,INS-00081,9300023,Safety,SAF-02,Enclosed-space entry controls are consistently followed,Low,Housekeeping standard in the inspected area was below company target.,False,Under Review,2026-01-02,
+FND-000184,INS-00081,9300023,Engine Room,ENG-01,Planned maintenance records reflect actual equipment condition,Low,Housekeeping standard in the inspected area was below company target.,False,Closed,2026-01-10,2025-12-30
+FND-000185,INS-00082,9300023,Safety,SAF-01,Firefighting equipment inspections are current,High,One inspection checklist contained an incomplete sign-off.,False,Closed,2025-07-28,2025-07-22
+FND-000186,INS-00082,9300023,ISM,ISM-02,Near-miss reporting and follow-up are effective,Medium,Corrective action evidence did not clearly demonstrate close-out.,False,Under Review,2025-07-24,
+FND-000187,INS-00082,9300023,Environmental,ENV-01,Garbage and pollution-prevention records are complete,Medium,Maintenance record was not updated after completion of work.,False,Open,2025-07-09,
+FND-000188,INS-00082,9300023,Environmental,ENV-01,Garbage and pollution-prevention records are complete,Medium,A training record required additional supporting documentation.,False,Under Review,2025-07-03,
+FND-000189,INS-00082,9300023,Environmental,ENV-01,Garbage and pollution-prevention records are complete,Medium,Minor oil residue was observed around a machinery component.,False,Under Review,2025-07-08,
+FND-000190,INS-00082,9300023,Cargo,CAR-01,Cargo hold preparation and inspection records are complete,Medium,Minor oil residue was observed around a machinery component.,False,Open,2025-07-28,
+FND-000191,INS-00082,9300023,Safety,SAF-01,Firefighting equipment inspections are current,Low,Maintenance record was not updated after completion of work.,True,Open,2025-08-02,
+FND-000192,INS-00083,9300024,Mooring,MOO-01,Mooring equipment inspection and maintenance are documented,High,One inspection checklist contained an incomplete sign-off.,False,Open,2024-02-26,
+FND-000193,INS-00083,9300024,Cargo,CAR-02,Cargo securing and loading procedures are properly implemented,High,Minor oil residue was observed around a machinery component.,True,Closed,2024-03-20,2024-03-16
+FND-000194,INS-00084,9300024,Environmental,ENV-01,Garbage and pollution-prevention records are complete,High,A training record required additional supporting documentation.,True,Open,2026-10-20,
+FND-000195,INS-00085,9300024,Safety,SAF-01,Firefighting equipment inspections are current,High,Mooring line inspection interval was not consistently recorded.,False,Closed,2026-12-28,2026-12-19
+FND-000196,INS-00085,9300024,Engine Room,ENG-02,Emergency generator testing is documented and effective,High,Emergency equipment test evidence was not readily available.,True,Closed,2027-01-21,2027-01-12
+FND-000197,INS-00085,9300024,ISM,ISM-01,Corrective action close-out is timely and evidence based,High,Emergency equipment test evidence was not readily available.,True,Under Review,2027-01-20,
+FND-000198,INS-00085,9300024,Safety,SAF-01,Firefighting equipment inspections are current,High,Maintenance record was not updated after completion of work.,False,Under Review,2027-01-16,
+FND-000199,INS-00086,9300024,Mooring,MOO-02,Mooring lines and associated fittings are in satisfactory condition,Low,Housekeeping standard in the inspected area was below company target.,False,Closed,2025-10-24,2025-10-04
+FND-000200,INS-00086,9300024,Cargo,CAR-02,Cargo securing and loading procedures are properly implemented,High,One inspection checklist contained an incomplete sign-off.,False,Closed,2025-11-09,2025-10-23
+FND-000201,INS-00087,9300024,Engine Room,ENG-03,Oil leakage control and housekeeping are satisfactory,Medium,One inspection checklist contained an incomplete sign-off.,False,Under Review,2025-04-09,
+FND-000202,INS-00087,9300024,Mooring,MOO-01,Mooring equipment inspection and maintenance are documented,Medium,One inspection checklist contained an incomplete sign-off.,True,Under Review,2025-04-04,
+FND-000203,INS-00087,9300024,Navigation,NAV-02,Passage planning and appraisal records are complete,Low,Maintenance record was not updated after completion of work.,False,Open,2025-03-27,
+FND-000204,INS-00088,9300025,Mooring,MOO-02,Mooring lines and associated fittings are in satisfactory condition,High,Mooring line inspection interval was not consistently recorded.,True,Closed,2025-02-13,2025-01-24
+FND-000205,INS-00088,9300025,Engine Room,ENG-01,Planned maintenance records reflect actual equipment condition,High,Corrective action evidence did not clearly demonstrate close-out.,False,Open,2025-02-08,
+FND-000206,INS-00088,9300025,Mooring,MOO-02,Mooring lines and associated fittings are in satisfactory condition,High,One inspection checklist contained an incomplete sign-off.,True,Open,2025-02-09,
+FND-000207,INS-00089,9300025,Mooring,MOO-01,Mooring equipment inspection and maintenance are documented,Medium,Corrective action evidence did not clearly demonstrate close-out.,False,Under Review,2024-02-03,
+FND-000208,INS-00089,9300025,Navigation,NAV-03,Navigation equipment maintenance records are current,High,Maintenance record was not updated after completion of work.,False,Under Review,2024-02-03,
+FND-000209,INS-00089,9300025,Cargo,CAR-01,Cargo hold preparation and inspection records are complete,Medium,Maintenance record was not updated after completion of work.,False,Under Review,2024-02-11,
+FND-000210,INS-00090,9300025,Navigation,NAV-01,Bridge watchkeeping arrangements are adequately maintained,High,Maintenance record was not updated after completion of work.,False,Open,2025-08-06,
+FND-000211,INS-00090,9300025,Navigation,NAV-01,Bridge watchkeeping arrangements are adequately maintained,High,Housekeeping standard in the inspected area was below company target.,True,Closed,2025-08-18,2025-08-09
+FND-000212,INS-00090,9300025,Mooring,MOO-01,Mooring equipment inspection and maintenance are documented,High,Emergency equipment test evidence was not readily available.,True,Under Review,2025-08-03,
+FND-000213,INS-00091,9300025,Navigation,NAV-02,Passage planning and appraisal records are complete,High,Minor oil residue was observed around a machinery component.,True,Closed,2024-02-16,2024-02-14
+FND-000214,INS-00091,9300025,Cargo,CAR-02,Cargo securing and loading procedures are properly implemented,High,Minor oil residue was observed around a machinery component.,False,Open,2024-02-09,
+FND-000215,INS-00091,9300025,Safety,SAF-02,Enclosed-space entry controls are consistently followed,High,Corrective action evidence did not clearly demonstrate close-out.,False,Under Review,2024-02-19,
+FND-000216,INS-00091,9300025,Mooring,MOO-01,Mooring equipment inspection and maintenance are documented,High,One inspection checklist contained an incomplete sign-off.,False,Open,2024-01-28,
+FND-000217,INS-00091,9300025,Cargo,CAR-01,Cargo hold preparation and inspection records are complete,High,Corrective action evidence did not clearly demonstrate close-out.,False,Open,2024-02-19,
+FND-000218,INS-00091,9300025,ISM,ISM-02,Near-miss reporting and follow-up are effective,Low,Mooring line inspection interval was not consistently recorded.,True,Closed,2024-03-06,2024-02-16
+FND-000219,INS-00091,9300025,Mooring,MOO-01,Mooring equipment inspection and maintenance are documented,High,Corrective action evidence did not clearly demonstrate close-out.,False,Open,2024-01-27,
+FND-000220,INS-00092,9300026,Safety,SAF-02,Enclosed-space entry controls are consistently followed,High,One inspection checklist contained an incomplete sign-off.,False,Under Review,2026-05-29,
+FND-000221,INS-00092,9300026,Navigation,NAV-01,Bridge watchkeeping arrangements are adequately maintained,High,Emergency equipment test evidence was not readily available.,False,Open,2026-06-04,
+FND-000222,INS-00092,9300026,Engine Room,ENG-03,Oil leakage control and housekeeping are satisfactory,Medium,One inspection checklist contained an incomplete sign-off.,False,Open,2026-05-27,
+FND-000223,INS-00092,9300026,Navigation,NAV-02,Passage planning and appraisal records are complete,High,Corrective action evidence did not clearly demonstrate close-out.,False,Open,2026-05-25,
+FND-000224,INS-00092,9300026,Environmental,ENV-01,Garbage and pollution-prevention records are complete,Medium,Housekeeping standard in the inspected area was below company target.,False,Under Review,2026-05-24,
+FND-000225,INS-00092,9300026,Cargo,CAR-01,Cargo hold preparation and inspection records are complete,Low,Mooring line inspection interval was not consistently recorded.,False,Under Review,2026-06-20,
+FND-000226,INS-00093,9300026,Cargo,CAR-02,Cargo securing and loading procedures are properly implemented,Low,Emergency equipment test evidence was not readily available.,False,Closed,2026-07-03,2026-07-03
+FND-000227,INS-00093,9300026,ISM,ISM-01,Corrective action close-out is timely and evidence based,High,A training record required additional supporting documentation.,False,Closed,2026-06-30,2026-06-19
+FND-000228,INS-00093,9300026,Cargo,CAR-02,Cargo securing and loading procedures are properly implemented,Low,Corrective action evidence did not clearly demonstrate close-out.,False,Closed,2026-06-13,2026-06-13
+FND-000229,INS-00093,9300026,Navigation,NAV-01,Bridge watchkeeping arrangements are adequately maintained,High,A training record required additional supporting documentation.,False,Closed,2026-06-21,2026-06-03
+FND-000230,INS-00094,9300027,Cargo,CAR-01,Cargo hold preparation and inspection records are complete,Medium,Minor oil residue was observed around a machinery component.,False,Open,2024-05-21,
+FND-000231,INS-00094,9300027,Safety,SAF-02,Enclosed-space entry controls are consistently followed,High,Minor oil residue was observed around a machinery component.,False,Closed,2024-05-18,2024-05-03
+FND-000232,INS-00094,9300027,Navigation,NAV-03,Navigation equipment maintenance records are current,Medium,One inspection checklist contained an incomplete sign-off.,False,Open,2024-05-20,
+FND-000233,INS-00095,9300027,Navigation,NAV-01,Bridge watchkeeping arrangements are adequately maintained,High,Minor oil residue was observed around a machinery component.,False,Open,2024-08-06,
+FND-000234,INS-00095,9300027,Safety,SAF-02,Enclosed-space entry controls are consistently followed,High,Housekeeping standard in the inspected area was below company target.,False,Closed,2024-07-10,2024-06-30
+FND-000235,INS-00096,9300027,Safety,SAF-02,Enclosed-space entry controls are consistently followed,High,Corrective action evidence did not clearly demonstrate close-out.,False,Open,2025-05-01,
+FND-000236,INS-00096,9300027,Safety,SAF-02,Enclosed-space entry controls are consistently followed,High,Minor oil residue was observed around a machinery component.,True,Open,2025-05-05,
+FND-000237,INS-00096,9300027,Navigation,NAV-03,Navigation equipment maintenance records are current,Medium,Emergency equipment test evidence was not readily available.,False,Closed,2025-04-25,2025-04-22
+FND-000238,INS-00097,9300028,Engine Room,ENG-01,Planned maintenance records reflect actual equipment condition,Low,Emergency equipment test evidence was not readily available.,False,Closed,2025-12-21,2025-12-10
+FND-000239,INS-00097,9300028,ISM,ISM-01,Corrective action close-out is timely and evidence based,Low,Maintenance record was not updated after completion of work.,False,Under Review,2026-01-14,
+FND-000240,INS-00098,9300028,Engine Room,ENG-01,Planned maintenance records reflect actual equipment condition,Low,Mooring line inspection interval was not consistently recorded.,False,Open,2025-08-15,
+FND-000241,INS-00099,9300028,Engine Room,ENG-03,Oil leakage control and housekeeping are satisfactory,Medium,Maintenance record was not updated after completion of work.,False,Under Review,2025-05-07,
+FND-000242,INS-00099,9300028,Navigation,NAV-01,Bridge watchkeeping arrangements are adequately maintained,Low,Emergency equipment test evidence was not readily available.,False,Under Review,2025-05-10,
+FND-000243,INS-00099,9300028,Mooring,MOO-01,Mooring equipment inspection and maintenance are documented,Medium,A training record required additional supporting documentation.,False,Open,2025-03-30,
+FND-000244,INS-00099,9300028,Navigation,NAV-02,Passage planning and appraisal records are complete,High,A training record required additional supporting documentation.,True,Open,2025-04-02,
+FND-000245,INS-00099,9300028,Safety,SAF-01,Firefighting equipment inspections are current,Low,A training record required additional supporting documentation.,False,Open,2025-04-15,
+FND-000246,INS-00099,9300028,Environmental,ENV-01,Garbage and pollution-prevention records are complete,Medium,One inspection checklist contained an incomplete sign-off.,False,Closed,2025-04-30,2025-04-18
+FND-000247,INS-00100,9300029,ISM,ISM-02,Near-miss reporting and follow-up are effective,Low,Minor oil residue was observed around a machinery component.,True,Closed,2025-08-01,2025-07-29
+FND-000248,INS-00101,9300029,ISM,ISM-02,Near-miss reporting and follow-up are effective,Medium,A training record required additional supporting documentation.,False,Closed,2026-07-25,2026-07-10
+FND-000249,INS-00101,9300029,Navigation,NAV-02,Passage planning and appraisal records are complete,High,Maintenance record was not updated after completion of work.,False,Closed,2026-08-15,2026-07-30
+FND-000250,INS-00101,9300029,Navigation,NAV-02,Passage planning and appraisal records are complete,High,A training record required additional supporting documentation.,False,Open,2026-07-20,
+FND-000251,INS-00102,9300029,Environmental,ENV-01,Garbage and pollution-prevention records are complete,Medium,One inspection checklist contained an incomplete sign-off.,False,Open,2024-08-10,
+FND-000252,INS-00102,9300029,Engine Room,ENG-02,Emergency generator testing is documented and effective,High,Maintenance record was not updated after completion of work.,False,Closed,2024-08-25,2024-08-07
+FND-000253,INS-00105,9300030,Environmental,ENV-01,Garbage and pollution-prevention records are complete,Medium,Emergency equipment test evidence was not readily available.,False,Open,2024-06-26,
+FND-000254,INS-00105,9300030,Cargo,CAR-01,Cargo hold preparation and inspection records are complete,Medium,Mooring line inspection interval was not consistently recorded.,False,Under Review,2024-06-13,
+FND-000255,INS-00105,9300030,Navigation,NAV-03,Navigation equipment maintenance records are current,High,A training record required additional supporting documentation.,False,Under Review,2024-06-13,
+FND-000256,INS-00106,9300030,ISM,ISM-01,Corrective action close-out is timely and evidence based,Medium,Housekeeping standard in the inspected area was below company target.,True,Open,2025-06-13,
+FND-000257,INS-00106,9300030,Environmental,ENV-01,Garbage and pollution-prevention records are complete,Medium,Maintenance record was not updated after completion of work.,False,Open,2025-05-13,
+FND-000258,INS-00106,9300030,Safety,SAF-02,Enclosed-space entry controls are consistently followed,Medium,A training record required additional supporting documentation.,True,Closed,2025-06-05,2025-05-16
+FND-000259,INS-00106,9300030,Safety,SAF-01,Firefighting equipment inspections are current,Medium,A training record required additional supporting documentation.,False,Closed,2025-06-08,2025-06-03
+FND-000260,INS-00106,9300030,Engine Room,ENG-03,Oil leakage control and housekeeping are satisfactory,Medium,Corrective action evidence did not clearly demonstrate close-out.,True,Open,2025-05-27,
+FND-000261,INS-00106,9300030,Cargo,CAR-02,Cargo securing and loading procedures are properly implemented,High,Emergency equipment test evidence was not readily available.,False,Open,2025-06-21,
+FND-000262,INS-00107,9300030,Safety,SAF-01,Firefighting equipment inspections are current,Low,Emergency equipment test evidence was not readily available.,False,Under Review,2026-09-07,
+FND-000263,INS-00107,9300030,Environmental,ENV-01,Garbage and pollution-prevention records are complete,Medium,A training record required additional supporting documentation.,False,Under Review,2026-08-13,
+FND-000264,INS-00107,9300030,Engine Room,ENG-03,Oil leakage control and housekeeping are satisfactory,High,Corrective action evidence did not clearly demonstrate close-out.,False,Closed,2026-09-10,2026-08-22
+FND-000265,INS-00108,9300031,Safety,SAF-01,Firefighting equipment inspections are current,High,Mooring line inspection interval was not consistently recorded.,False,Open,2026-03-11,
+FND-000266,INS-00108,9300031,Safety,SAF-01,Firefighting equipment inspections are current,Low,Maintenance record was not updated after completion of work.,False,Closed,2026-04-02,2026-03-24
+FND-000267,INS-00109,9300031,Safety,SAF-02,Enclosed-space entry controls are consistently followed,High,A training record required additional supporting documentation.,False,Closed,2025-08-18,2025-08-02
+FND-000268,INS-00109,9300031,ISM,ISM-02,Near-miss reporting and follow-up are effective,High,Minor oil residue was observed around a machinery component.,False,Under Review,2025-08-02,
+FND-000269,INS-00110,9300031,Cargo,CAR-01,Cargo hold preparation and inspection records are complete,Medium,Housekeeping standard in the inspected area was below company target.,False,Under Review,2026-11-01,
+FND-000270,INS-00111,9300031,Environmental,ENV-01,Garbage and pollution-prevention records are complete,Low,Housekeeping standard in the inspected area was below company target.,True,Closed,2024-09-04,2024-08-22
+FND-000271,INS-00111,9300031,ISM,ISM-02,Near-miss reporting and follow-up are effective,Medium,Minor oil residue was observed around a machinery component.,False,Open,2024-09-06,
+FND-000272,INS-00111,9300031,Cargo,CAR-01,Cargo hold preparation and inspection records are complete,Medium,Minor oil residue was observed around a machinery component.,False,Open,2024-09-16,
+FND-000273,INS-00112,9300032,ISM,ISM-01,Corrective action close-out is timely and evidence based,High,One inspection checklist contained an incomplete sign-off.,False,Open,2024-10-01,
+FND-000274,INS-00112,9300032,Cargo,CAR-02,Cargo securing and loading procedures are properly implemented,High,Housekeeping standard in the inspected area was below company target.,False,Open,2024-08-25,
+FND-000275,INS-00112,9300032,Environmental,ENV-01,Garbage and pollution-prevention records are complete,High,Emergency equipment test evidence was not readily available.,True,Open,2024-10-05,
+FND-000276,INS-00112,9300032,Safety,SAF-02,Enclosed-space entry controls are consistently followed,High,Mooring line inspection interval was not consistently recorded.,False,Open,2024-08-29,
+FND-000277,INS-00112,9300032,Navigation,NAV-02,Passage planning and appraisal records are complete,High,Mooring line inspection interval was not consistently recorded.,False,Under Review,2024-09-21,
+FND-000278,INS-00113,9300032,Safety,SAF-02,Enclosed-space entry controls are consistently followed,High,Emergency equipment test evidence was not readily available.,False,Closed,2025-08-27,2025-08-09
+FND-000279,INS-00115,9300033,Cargo,CAR-02,Cargo securing and loading procedures are properly implemented,Medium,A training record required additional supporting documentation.,True,Closed,2026-03-16,2026-03-10
+FND-000280,INS-00115,9300033,Mooring,MOO-02,Mooring lines and associated fittings are in satisfactory condition,Low,Mooring line inspection interval was not consistently recorded.,False,Closed,2026-04-14,2026-04-10
+FND-000281,INS-00115,9300033,ISM,ISM-02,Near-miss reporting and follow-up are effective,Medium,One inspection checklist contained an incomplete sign-off.,True,Under Review,2026-03-14,
+FND-000282,INS-00116,9300034,Environmental,ENV-01,Garbage and pollution-prevention records are complete,Medium,Corrective action evidence did not clearly demonstrate close-out.,True,Open,2025-09-21,
+FND-000283,INS-00116,9300034,ISM,ISM-02,Near-miss reporting and follow-up are effective,Medium,A training record required additional supporting documentation.,True,Open,2025-09-26,
+FND-000284,INS-00116,9300034,Safety,SAF-01,Firefighting equipment inspections are current,Medium,Mooring line inspection interval was not consistently recorded.,True,Under Review,2025-09-24,
+FND-000285,INS-00119,9300035,ISM,ISM-01,Corrective action close-out is timely and evidence based,Low,One inspection checklist contained an incomplete sign-off.,True,Open,2025-05-01,
+FND-000286,INS-00119,9300035,Cargo,CAR-02,Cargo securing and loading procedures are properly implemented,High,A training record required additional supporting documentation.,False,Closed,2025-04-30,2025-04-16
+FND-000287,INS-00119,9300035,Engine Room,ENG-03,Oil leakage control and housekeeping are satisfactory,Medium,Maintenance record was not updated after completion of work.,False,Closed,2025-05-03,2025-04-29
+FND-000288,INS-00120,9300035,Safety,SAF-01,Firefighting equipment inspections are current,High,One inspection checklist contained an incomplete sign-off.,False,Under Review,2025-04-11,
+FND-000289,INS-00122,9300035,Cargo,CAR-01,Cargo hold preparation and inspection records are complete,Medium,Maintenance record was not updated after completion of work.,False,Closed,2026-04-14,2026-03-28
+FND-000290,INS-00122,9300035,Cargo,CAR-02,Cargo securing and loading procedures are properly implemented,High,One inspection checklist contained an incomplete sign-off.,False,Under Review,2026-04-28,
+FND-000291,INS-00122,9300035,Engine Room,ENG-01,Planned maintenance records reflect actual equipment condition,Medium,Maintenance record was not updated after completion of work.,False,Open,2026-04-25,
+FND-000292,INS-00123,9300036,Cargo,CAR-01,Cargo hold preparation and inspection records are complete,Medium,Emergency equipment test evidence was not readily available.,False,Under Review,2026-11-25,
+FND-000293,INS-00123,9300036,Navigation,NAV-02,Passage planning and appraisal records are complete,High,Emergency equipment test evidence was not readily available.,False,Open,2026-11-25,
+FND-000294,INS-00123,9300036,Safety,SAF-02,Enclosed-space entry controls are consistently followed,Low,A training record required additional supporting documentation.,False,Open,2026-12-19,
+FND-000295,INS-00123,9300036,Engine Room,ENG-03,Oil leakage control and housekeeping are satisfactory,Low,Housekeeping standard in the inspected area was below company target.,False,Open,2026-12-03,
+FND-000296,INS-00124,9300036,Engine Room,ENG-01,Planned maintenance records reflect actual equipment condition,High,Maintenance record was not updated after completion of work.,False,Closed,2025-03-03,2025-02-13
+FND-000297,INS-00125,9300037,Environmental,ENV-01,Garbage and pollution-prevention records are complete,High,Emergency equipment test evidence was not readily available.,False,Under Review,2026-11-14,
+FND-000298,INS-00125,9300037,ISM,ISM-01,Corrective action close-out is timely and evidence based,Medium,Mooring line inspection interval was not consistently recorded.,False,Closed,2026-11-24,2026-11-14
+FND-000299,INS-00125,9300037,Mooring,MOO-01,Mooring equipment inspection and maintenance are documented,High,Mooring line inspection interval was not consistently recorded.,False,Closed,2026-11-11,2026-11-07
+FND-000300,INS-00125,9300037,Engine Room,ENG-02,Emergency generator testing is documented and effective,High,Corrective action evidence did not clearly demonstrate close-out.,False,Closed,2026-10-27,2026-10-16
+FND-000301,INS-00125,9300037,Engine Room,ENG-03,Oil leakage control and housekeeping are satisfactory,Medium,Housekeeping standard in the inspected area was below company target.,False,Closed,2026-11-23,2026-11-14
+FND-000302,INS-00125,9300037,ISM,ISM-01,Corrective action close-out is timely and evidence based,Low,Maintenance record was not updated after completion of work.,True,Under Review,2026-10-29,
+FND-000303,INS-00127,9300037,Safety,SAF-01,Firefighting equipment inspections are current,High,Emergency equipment test evidence was not readily available.,True,Closed,2025-10-01,2025-09-22
+FND-000304,INS-00127,9300037,Environmental,ENV-01,Garbage and pollution-prevention records are complete,Medium,Corrective action evidence did not clearly demonstrate close-out.,False,Closed,2025-08-21,2025-08-21
+FND-000305,INS-00127,9300037,Mooring,MOO-01,Mooring equipment inspection and maintenance are documented,High,A training record required additional supporting documentation.,False,Open,2025-09-27,
+FND-000306,INS-00127,9300037,Mooring,MOO-02,Mooring lines and associated fittings are in satisfactory condition,High,One inspection checklist contained an incomplete sign-off.,True,Open,2025-08-29,
+FND-000307,INS-00127,9300037,Cargo,CAR-02,Cargo securing and loading procedures are properly implemented,Medium,Minor oil residue was observed around a machinery component.,False,Open,2025-09-24,
+FND-000308,INS-00127,9300037,Engine Room,ENG-01,Planned maintenance records reflect actual equipment condition,High,Minor oil residue was observed around a machinery component.,False,Open,2025-08-27,
+FND-000309,INS-00127,9300037,Engine Room,ENG-01,Planned maintenance records reflect actual equipment condition,High,Corrective action evidence did not clearly demonstrate close-out.,False,Open,2025-10-02,
+FND-000310,INS-00128,9300038,Safety,SAF-01,Firefighting equipment inspections are current,Medium,Mooring line inspection interval was not consistently recorded.,False,Open,2026-05-06,
+FND-000311,INS-00129,9300038,Safety,SAF-01,Firefighting equipment inspections are current,High,Housekeeping standard in the inspected area was below company target.,False,Open,2026-07-23,
+FND-000312,INS-00129,9300038,Environmental,ENV-01,Garbage and pollution-prevention records are complete,Medium,Corrective action evidence did not clearly demonstrate close-out.,False,Closed,2026-07-31,2026-07-17
+FND-000313,INS-00131,9300039,Engine Room,ENG-02,Emergency generator testing is documented and effective,High,Housekeeping standard in the inspected area was below company target.,True,Closed,2024-12-09,2024-12-05
+FND-000314,INS-00132,9300040,Environmental,ENV-01,Garbage and pollution-prevention records are complete,Medium,A training record required additional supporting documentation.,False,Closed,2026-07-11,2026-06-28
+FND-000315,INS-00134,9300040,ISM,ISM-01,Corrective action close-out is timely and evidence based,High,Housekeeping standard in the inspected area was below company target.,True,Under Review,2026-04-09,
+FND-000316,INS-00134,9300040,Engine Room,ENG-02,Emergency generator testing is documented and effective,High,Housekeeping standard in the inspected area was below company target.,False,Closed,2026-03-16,2026-02-24
+FND-000317,INS-00135,9300040,Navigation,NAV-01,Bridge watchkeeping arrangements are adequately maintained,High,Housekeeping standard in the inspected area was below company target.,False,Closed,2026-01-14,2026-01-12
+FND-000318,INS-00135,9300040,Mooring,MOO-01,Mooring equipment inspection and maintenance are documented,High,Corrective action evidence did not clearly demonstrate close-out.,False,Open,2026-01-05,
+FND-000319,INS-00136,9300040,Safety,SAF-01,Firefighting equipment inspections are current,High,Mooring line inspection interval was not consistently recorded.,True,Closed,2024-11-14,2024-11-06
+FND-000320,INS-00136,9300040,Mooring,MOO-01,Mooring equipment inspection and maintenance are documented,High,A training record required additional supporting documentation.,False,Under Review,2024-12-02,
+FND-000321,INS-00136,9300040,Mooring,MOO-02,Mooring lines and associated fittings are in satisfactory condition,High,Emergency equipment test evidence was not readily available.,False,Under Review,2024-12-11,
+FND-000322,INS-00137,9300041,Mooring,MOO-01,Mooring equipment inspection and maintenance are documented,High,Housekeeping standard in the inspected area was below company target.,False,Under Review,2026-11-18,
+FND-000323,INS-00137,9300041,Engine Room,ENG-01,Planned maintenance records reflect actual equipment condition,Medium,A training record required additional supporting documentation.,True,Closed,2026-11-01,2026-10-27
+FND-000324,INS-00140,9300042,Safety,SAF-02,Enclosed-space entry controls are consistently followed,High,Minor oil residue was observed around a machinery component.,True,Under Review,2026-11-01,
+FND-000325,INS-00140,9300042,Engine Room,ENG-02,Emergency generator testing is documented and effective,Low,Minor oil residue was observed around a machinery component.,False,Closed,2026-10-08,2026-09-24
+FND-000326,INS-00140,9300042,Navigation,NAV-03,Navigation equipment maintenance records are current,Medium,Minor oil residue was observed around a machinery component.,False,Closed,2026-11-15,2026-10-31
+FND-000327,INS-00140,9300042,Navigation,NAV-01,Bridge watchkeeping arrangements are adequately maintained,Medium,Emergency equipment test evidence was not readily available.,False,Open,2026-10-16,
+FND-000328,INS-00140,9300042,Safety,SAF-01,Firefighting equipment inspections are current,Medium,Housekeeping standard in the inspected area was below company target.,True,Under Review,2026-10-29,
+FND-000329,INS-00140,9300042,Navigation,NAV-02,Passage planning and appraisal records are complete,High,Mooring line inspection interval was not consistently recorded.,False,Closed,2026-10-16,2026-09-28
+FND-000330,INS-00141,9300042,Environmental,ENV-01,Garbage and pollution-prevention records are complete,Medium,Corrective action evidence did not clearly demonstrate close-out.,False,Under Review,2025-12-28,
+FND-000331,INS-00141,9300042,Engine Room,ENG-01,Planned maintenance records reflect actual equipment condition,Low,Mooring line inspection interval was not consistently recorded.,False,Open,2025-12-06,
+FND-000332,INS-00141,9300042,Engine Room,ENG-03,Oil leakage control and housekeeping are satisfactory,Medium,One inspection checklist contained an incomplete sign-off.,False,Closed,2025-12-11,2025-11-28
+FND-000333,INS-00142,9300042,Navigation,NAV-01,Bridge watchkeeping arrangements are adequately maintained,Low,Minor oil residue was observed around a machinery component.,True,Open,2026-04-11,
+FND-000334,INS-00142,9300042,Navigation,NAV-03,Navigation equipment maintenance records are current,Low,Housekeeping standard in the inspected area was below company target.,True,Closed,2026-04-07,2026-03-18
+FND-000335,INS-00142,9300042,Environmental,ENV-01,Garbage and pollution-prevention records are complete,Medium,Mooring line inspection interval was not consistently recorded.,False,Open,2026-03-15,
+FND-000336,INS-00143,9300042,Safety,SAF-02,Enclosed-space entry controls are consistently followed,High,A training record required additional supporting documentation.,False,Closed,2024-06-17,2024-06-15
+FND-000337,INS-00146,9300043,ISM,ISM-02,Near-miss reporting and follow-up are effective,High,Housekeeping standard in the inspected area was below company target.,False,Open,2025-12-19,
+FND-000338,INS-00146,9300043,Cargo,CAR-02,Cargo securing and loading procedures are properly implemented,Medium,Emergency equipment test evidence was not readily available.,False,Open,2025-12-07,
+FND-000339,INS-00147,9300043,Safety,SAF-01,Firefighting equipment inspections are current,Medium,Housekeeping standard in the inspected area was below company target.,False,Under Review,2025-01-13,
+FND-000340,INS-00147,9300043,Mooring,MOO-02,Mooring lines and associated fittings are in satisfactory condition,High,Housekeeping standard in the inspected area was below company target.,False,Closed,2025-01-30,2025-01-11
+FND-000341,INS-00147,9300043,Safety,SAF-01,Firefighting equipment inspections are current,Low,Housekeeping standard in the inspected area was below company target.,False,Closed,2025-02-11,2025-01-27
+FND-000342,INS-00148,9300043,Safety,SAF-02,Enclosed-space entry controls are consistently followed,High,One inspection checklist contained an incomplete sign-off.,False,Closed,2025-10-16,2025-10-02
+FND-000343,INS-00148,9300043,Navigation,NAV-02,Passage planning and appraisal records are complete,Medium,Corrective action evidence did not clearly demonstrate close-out.,False,Closed,2025-11-10,2025-11-09
+FND-000344,INS-00148,9300043,Cargo,CAR-02,Cargo securing and loading procedures are properly implemented,High,Maintenance record was not updated after completion of work.,False,Open,2025-10-11,
+FND-000345,INS-00149,9300044,Safety,SAF-02,Enclosed-space entry controls are consistently followed,High,Maintenance record was not updated after completion of work.,False,Open,2025-06-05,
+FND-000346,INS-00149,9300044,Mooring,MOO-01,Mooring equipment inspection and maintenance are documented,High,Mooring line inspection interval was not consistently recorded.,False,Open,2025-04-28,
+FND-000347,INS-00150,9300044,Safety,SAF-01,Firefighting equipment inspections are current,High,Emergency equipment test evidence was not readily available.,True,Closed,2025-05-05,2025-05-03
+FND-000348,INS-00150,9300044,Engine Room,ENG-02,Emergency generator testing is documented and effective,High,Corrective action evidence did not clearly demonstrate close-out.,False,Under Review,2025-05-22,
+FND-000349,INS-00150,9300044,Environmental,ENV-01,Garbage and pollution-prevention records are complete,Low,Mooring line inspection interval was not consistently recorded.,True,Open,2025-05-31,
+FND-000350,INS-00150,9300044,Cargo,CAR-01,Cargo hold preparation and inspection records are complete,Medium,Mooring line inspection interval was not consistently recorded.,False,Closed,2025-06-10,2025-06-02
+FND-000351,INS-00151,9300045,Navigation,NAV-02,Passage planning and appraisal records are complete,Medium,Emergency equipment test evidence was not readily available.,False,Closed,2026-10-22,2026-10-15
+FND-000352,INS-00151,9300045,Cargo,CAR-02,Cargo securing and loading procedures are properly implemented,High,Maintenance record was not updated after completion of work.,False,Closed,2026-09-24,2026-09-17
+FND-000353,INS-00151,9300045,Navigation,NAV-02,Passage planning and appraisal records are complete,High,Corrective action evidence did not clearly demonstrate close-out.,False,Open,2026-10-13,
+FND-000354,INS-00151,9300045,Cargo,CAR-01,Cargo hold preparation and inspection records are complete,High,Mooring line inspection interval was not consistently recorded.,False,Open,2026-10-21,
+FND-000355,INS-00151,9300045,Mooring,MOO-01,Mooring equipment inspection and maintenance are documented,High,Mooring line inspection interval was not consistently recorded.,False,Open,2026-09-22,
+FND-000356,INS-00153,9300045,ISM,ISM-01,Corrective action close-out is timely and evidence based,High,Mooring line inspection interval was not consistently recorded.,False,Under Review,2025-07-18,
+FND-000357,INS-00156,9300046,Cargo,CAR-01,Cargo hold preparation and inspection records are complete,Medium,Emergency equipment test evidence was not readily available.,False,Under Review,2025-12-06,
+FND-000358,INS-00156,9300046,Mooring,MOO-02,Mooring lines and associated fittings are in satisfactory condition,High,Minor oil residue was observed around a machinery component.,True,Closed,2025-12-05,2025-11-28
+FND-000359,INS-00157,9300046,Engine Room,ENG-01,Planned maintenance records reflect actual equipment condition,High,Minor oil residue was observed around a machinery component.,False,Under Review,2026-07-10,
+FND-000360,INS-00159,9300046,Cargo,CAR-01,Cargo hold preparation and inspection records are complete,Medium,Mooring line inspection interval was not consistently recorded.,False,Under Review,2024-05-31,
+FND-000361,INS-00159,9300046,ISM,ISM-02,Near-miss reporting and follow-up are effective,Medium,Emergency equipment test evidence was not readily available.,False,Closed,2024-07-05,2024-06-15
+FND-000362,INS-00160,9300047,Engine Room,ENG-03,Oil leakage control and housekeeping are satisfactory,High,Minor oil residue was observed around a machinery component.,False,Open,2025-08-15,
+FND-000363,INS-00160,9300047,ISM,ISM-02,Near-miss reporting and follow-up are effective,Medium,One inspection checklist contained an incomplete sign-off.,False,Open,2025-07-27,
+FND-000364,INS-00160,9300047,Safety,SAF-01,Firefighting equipment inspections are current,Medium,Housekeeping standard in the inspected area was below company target.,False,Under Review,2025-08-03,
+FND-000365,INS-00161,9300047,Navigation,NAV-03,Navigation equipment maintenance records are current,Low,One inspection checklist contained an incomplete sign-off.,True,Under Review,2024-04-19,
+FND-000366,INS-00161,9300047,Engine Room,ENG-02,Emergency generator testing is documented and effective,High,One inspection checklist contained an incomplete sign-off.,False,Open,2024-03-31,
+FND-000367,INS-00161,9300047,Mooring,MOO-02,Mooring lines and associated fittings are in satisfactory condition,High,Mooring line inspection interval was not consistently recorded.,False,Under Review,2024-04-24,
+FND-000368,INS-00162,9300047,Environmental,ENV-01,Garbage and pollution-prevention records are complete,Medium,Minor oil residue was observed around a machinery component.,False,Closed,2024-03-10,2024-03-05
+FND-000369,INS-00162,9300047,Safety,SAF-01,Firefighting equipment inspections are current,High,Housekeeping standard in the inspected area was below company target.,False,Closed,2024-03-16,2024-02-25
+FND-000370,INS-00162,9300047,Environmental,ENV-01,Garbage and pollution-prevention records are complete,High,Emergency equipment test evidence was not readily available.,False,Open,2024-03-04,
+FND-000371,INS-00162,9300047,Mooring,MOO-02,Mooring lines and associated fittings are in satisfactory condition,Low,Maintenance record was not updated after completion of work.,False,Closed,2024-02-13,2024-02-02
+FND-000372,INS-00162,9300047,Engine Room,ENG-01,Planned maintenance records reflect actual equipment condition,High,A training record required additional supporting documentation.,True,Under Review,2024-02-24,
+FND-000373,INS-00162,9300047,Engine Room,ENG-03,Oil leakage control and housekeeping are satisfactory,Low,Corrective action evidence did not clearly demonstrate close-out.,False,Open,2024-03-02,
+FND-000374,INS-00164,9300048,Safety,SAF-02,Enclosed-space entry controls are consistently followed,High,Mooring line inspection interval was not consistently recorded.,True,Under Review,2026-05-13,
+FND-000375,INS-00164,9300048,Mooring,MOO-02,Mooring lines and associated fittings are in satisfactory condition,Medium,A training record required additional supporting documentation.,False,Under Review,2026-06-14,
+FND-000376,INS-00164,9300048,Navigation,NAV-01,Bridge watchkeeping arrangements are adequately maintained,High,Maintenance record was not updated after completion of work.,False,Open,2026-05-07,
+FND-000377,INS-00164,9300048,Safety,SAF-02,Enclosed-space entry controls are consistently followed,Low,Emergency equipment test evidence was not readily available.,True,Open,2026-05-10,
+FND-000378,INS-00164,9300048,Cargo,CAR-01,Cargo hold preparation and inspection records are complete,Medium,Corrective action evidence did not clearly demonstrate close-out.,True,Under Review,2026-06-14,
+FND-000379,INS-00164,9300048,ISM,ISM-02,Near-miss reporting and follow-up are effective,Medium,Minor oil residue was observed around a machinery component.,False,Open,2026-05-18,
+FND-000380,INS-00164,9300048,Navigation,NAV-03,Navigation equipment maintenance records are current,Medium,Housekeeping standard in the inspected area was below company target.,False,Open,2026-05-08,
+FND-000381,INS-00165,9300048,Cargo,CAR-02,Cargo securing and loading procedures are properly implemented,High,Mooring line inspection interval was not consistently recorded.,True,Under Review,2024-12-26,
+FND-000382,INS-00165,9300048,Engine Room,ENG-01,Planned maintenance records reflect actual equipment condition,High,Emergency equipment test evidence was not readily available.,False,Under Review,2024-12-19,
+FND-000383,INS-00165,9300048,Safety,SAF-01,Firefighting equipment inspections are current,Low,Minor oil residue was observed around a machinery component.,True,Under Review,2025-01-22,
+FND-000384,INS-00166,9300048,ISM,ISM-01,Corrective action close-out is timely and evidence based,Low,A training record required additional supporting documentation.,False,Open,2024-03-16,
+FND-000385,INS-00166,9300048,Cargo,CAR-01,Cargo hold preparation and inspection records are complete,Medium,One inspection checklist contained an incomplete sign-off.,False,Open,2024-03-04,
+FND-000386,INS-00168,9300048,Engine Room,ENG-02,Emergency generator testing is documented and effective,High,A training record required additional supporting documentation.,False,Under Review,2026-02-05,
+FND-000387,INS-00169,9300049,Environmental,ENV-01,Garbage and pollution-prevention records are complete,Medium,Emergency equipment test evidence was not readily available.,True,Under Review,2025-07-17,
+FND-000388,INS-00170,9300049,Safety,SAF-01,Firefighting equipment inspections are current,Low,One inspection checklist contained an incomplete sign-off.,False,Open,2026-12-08,
+FND-000389,INS-00170,9300049,Navigation,NAV-02,Passage planning and appraisal records are complete,High,One inspection checklist contained an incomplete sign-off.,False,Open,2027-01-05,
+FND-000390,INS-00170,9300049,Navigation,NAV-01,Bridge watchkeeping arrangements are adequately maintained,High,One inspection checklist contained an incomplete sign-off.,False,Open,2026-12-13,
+FND-000391,INS-00171,9300049,Mooring,MOO-02,Mooring lines and associated fittings are in satisfactory condition,High,One inspection checklist contained an incomplete sign-off.,False,Under Review,2026-01-30,
+FND-000392,INS-00171,9300049,Safety,SAF-02,Enclosed-space entry controls are consistently followed,Medium,Emergency equipment test evidence was not readily available.,False,Open,2026-02-28,
+FND-000393,INS-00171,9300049,Safety,SAF-02,Enclosed-space entry controls are consistently followed,High,Corrective action evidence did not clearly demonstrate close-out.,True,Closed,2026-02-24,2026-02-11
+FND-000394,INS-00171,9300049,Navigation,NAV-03,Navigation equipment maintenance records are current,Medium,Housekeeping standard in the inspected area was below company target.,False,Closed,2026-02-16,2026-02-11
+FND-000395,INS-00171,9300049,Environmental,ENV-01,Garbage and pollution-prevention records are complete,Medium,Corrective action evidence did not clearly demonstrate close-out.,False,Under Review,2026-02-21,
+FND-000396,INS-00171,9300049,Engine Room,ENG-03,Oil leakage control and housekeeping are satisfactory,Medium,Housekeeping standard in the inspected area was below company target.,False,Closed,2026-02-11,2026-01-31
+FND-000397,INS-00172,9300049,Environmental,ENV-01,Garbage and pollution-prevention records are complete,Medium,Emergency equipment test evidence was not readily available.,True,Open,2025-08-04,
+FND-000398,INS-00173,9300049,Mooring,MOO-02,Mooring lines and associated fittings are in satisfactory condition,High,One inspection checklist contained an incomplete sign-off.,False,Closed,2024-02-23,2024-02-05
+FND-000399,INS-00174,9300050,Navigation,NAV-01,Bridge watchkeeping arrangements are adequately maintained,High,Housekeeping standard in the inspected area was below company target.,False,Open,2026-07-13,
+FND-000400,INS-00174,9300050,Cargo,CAR-02,Cargo securing and loading procedures are properly implemented,High,One inspection checklist contained an incomplete sign-off.,True,Open,2026-08-20,
+FND-000401,INS-00175,9300050,Navigation,NAV-01,Bridge watchkeeping arrangements are adequately maintained,High,Housekeeping standard in the inspected area was below company target.,True,Under Review,2025-10-24,

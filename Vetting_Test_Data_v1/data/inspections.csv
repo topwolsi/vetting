@@ -1,0 +1,176 @@
+﻿inspection_id,imo,vessel_name,inspection_date,inspection_type,inspector,port,country,duration_hours,overall_result
+INS-00001,9300001,OCEAN MERIDIAN 01,2024-11-07,Vetting Inspection,J. Smith,Kaohsiung,Taiwan,7,Satisfactory
+INS-00002,9300001,OCEAN MERIDIAN 01,2024-01-14,Follow-up Inspection,M. Tan,Visakhapatnam,India,5,Satisfactory
+INS-00003,9300002,ATLAS MERIDIAN 02,2024-09-08,Follow-up Inspection,J. Smith,Rotterdam,Netherlands,6,Satisfactory
+INS-00004,9300002,ATLAS MERIDIAN 02,2024-05-20,Follow-up Inspection,R. Patel,Hamburg,Germany,6,Satisfactory with Conditions
+INS-00005,9300002,ATLAS MERIDIAN 02,2025-07-11,Vetting Inspection,M. Tan,Port Klang,Malaysia,11,Satisfactory
+INS-00006,9300002,ATLAS MERIDIAN 02,2024-04-09,Follow-up Inspection,R. Patel,Mundra,India,12,Satisfactory
+INS-00007,9300002,ATLAS MERIDIAN 02,2024-11-20,Vetting Inspection,M. Tan,Newcastle,Australia,5,Satisfactory
+INS-00008,9300003,MERIDIAN MERIDIAN 03,2025-12-10,Focused Inspection,R. Patel,Port Hedland,Australia,7,Satisfactory
+INS-00009,9300003,MERIDIAN MERIDIAN 03,2024-09-19,Follow-up Inspection,A. Kim,Port Klang,Malaysia,12,Satisfactory with Conditions
+INS-00010,9300004,ATLAS TRADER 04,2026-11-10,Follow-up Inspection,A. Kim,Yokohama,Japan,6,Satisfactory with Conditions
+INS-00011,9300004,ATLAS TRADER 04,2025-04-13,Vetting Inspection,R. Patel,Port Hedland,Australia,10,Satisfactory
+INS-00012,9300004,ATLAS TRADER 04,2026-02-21,Follow-up Inspection,A. Kim,Rotterdam,Netherlands,10,Satisfactory
+INS-00013,9300005,EASTERN SPIRIT 05,2026-06-17,Vetting Inspection,M. Tan,Mundra,India,12,Satisfactory with Conditions
+INS-00014,9300005,EASTERN SPIRIT 05,2026-08-23,Vetting Inspection,J. Smith,Kaohsiung,Taiwan,5,Satisfactory
+INS-00015,9300005,EASTERN SPIRIT 05,2025-08-04,Focused Inspection,J. Smith,Ulsan,Korea,11,Satisfactory
+INS-00016,9300006,NORTHSTAR MERIDIAN 06,2025-04-04,Vetting Inspection,J. Smith,Port Hedland,Australia,5,Satisfactory with Conditions
+INS-00017,9300006,NORTHSTAR MERIDIAN 06,2024-11-01,Vetting Inspection,D. Wilson,Busan,Korea,10,Satisfactory
+INS-00018,9300006,NORTHSTAR MERIDIAN 06,2024-05-02,Focused Inspection,A. Kim,Busan,Korea,6,Satisfactory with Conditions
+INS-00019,9300006,NORTHSTAR MERIDIAN 06,2025-08-08,Follow-up Inspection,R. Patel,Bintulu,Malaysia,11,Satisfactory
+INS-00020,9300006,NORTHSTAR MERIDIAN 06,2025-07-11,Vetting Inspection,R. Patel,Rotterdam,Netherlands,6,Satisfactory
+INS-00021,9300007,PACIFIC TRADER 07,2024-07-04,Vetting Inspection,D. Wilson,Hamburg,Germany,5,Satisfactory with Conditions
+INS-00022,9300007,PACIFIC TRADER 07,2024-03-25,Vetting Inspection,M. Tan,Richards Bay,South Africa,12,Satisfactory
+INS-00023,9300008,EASTERN FORTUNE 08,2025-06-04,Follow-up Inspection,J. Smith,Singapore,Singapore,7,Satisfactory
+INS-00024,9300008,EASTERN FORTUNE 08,2026-08-27,Vetting Inspection,R. Patel,Hamburg,Germany,6,Satisfactory with Conditions
+INS-00025,9300008,EASTERN FORTUNE 08,2024-10-05,Vetting Inspection,J. Smith,Newcastle,Australia,12,Satisfactory with Conditions
+INS-00026,9300008,EASTERN FORTUNE 08,2026-03-02,Follow-up Inspection,A. Kim,Visakhapatnam,India,7,Satisfactory
+INS-00027,9300009,EASTERN SPIRIT 09,2026-08-15,Vetting Inspection,M. Tan,Mundra,India,10,Satisfactory
+INS-00028,9300009,EASTERN SPIRIT 09,2026-11-05,Focused Inspection,R. Patel,Tubarao,Brazil,7,Satisfactory
+INS-00029,9300009,EASTERN SPIRIT 09,2025-09-13,Vetting Inspection,D. Wilson,Rotterdam,Netherlands,6,Satisfactory with Conditions
+INS-00030,9300010,PACIFIC SPIRIT 10,2025-09-04,Vetting Inspection,M. Tan,Hamburg,Germany,6,Satisfactory with Conditions
+INS-00031,9300010,PACIFIC SPIRIT 10,2024-05-27,Vetting Inspection,R. Patel,Visakhapatnam,India,12,Satisfactory
+INS-00032,9300010,PACIFIC SPIRIT 10,2024-01-09,Focused Inspection,D. Wilson,Yokohama,Japan,11,Satisfactory with Conditions
+INS-00033,9300010,PACIFIC SPIRIT 10,2026-03-10,Follow-up Inspection,J. Smith,Bintulu,Malaysia,11,Satisfactory
+INS-00034,9300010,PACIFIC SPIRIT 10,2024-11-13,Vetting Inspection,M. Tan,Port Klang,Malaysia,6,Satisfactory
+INS-00035,9300011,EASTERN FORTUNE 11,2024-12-25,Vetting Inspection,A. Kim,Visakhapatnam,India,8,Satisfactory
+INS-00036,9300011,EASTERN FORTUNE 11,2025-05-17,Focused Inspection,R. Patel,Bintulu,Malaysia,9,Unsatisfactory
+INS-00037,9300011,EASTERN FORTUNE 11,2025-09-09,Follow-up Inspection,A. Kim,Newcastle,Australia,11,Satisfactory
+INS-00038,9300012,MERIDIAN FORTUNE 12,2024-12-15,Focused Inspection,M. Tan,Port Klang,Malaysia,11,Satisfactory
+INS-00039,9300012,MERIDIAN FORTUNE 12,2025-07-19,Focused Inspection,R. Patel,Singapore,Singapore,10,Satisfactory
+INS-00040,9300012,MERIDIAN FORTUNE 12,2026-02-09,Follow-up Inspection,J. Smith,Newcastle,Australia,9,Satisfactory
+INS-00041,9300012,MERIDIAN FORTUNE 12,2025-09-05,Vetting Inspection,M. Tan,Richards Bay,South Africa,11,Satisfactory with Conditions
+INS-00042,9300012,MERIDIAN FORTUNE 12,2026-11-01,Focused Inspection,M. Tan,Visakhapatnam,India,9,Satisfactory with Conditions
+INS-00043,9300013,EASTERN PRIDE 13,2025-09-15,Follow-up Inspection,A. Kim,Visakhapatnam,India,6,Satisfactory with Conditions
+INS-00044,9300013,EASTERN PRIDE 13,2024-02-13,Follow-up Inspection,D. Wilson,Port Klang,Malaysia,10,Satisfactory with Conditions
+INS-00045,9300013,EASTERN PRIDE 13,2026-10-10,Follow-up Inspection,M. Tan,Visakhapatnam,India,6,Satisfactory with Conditions
+INS-00046,9300014,HORIZON TRADER 14,2026-08-17,Vetting Inspection,R. Patel,Bintulu,Malaysia,10,Satisfactory
+INS-00047,9300014,HORIZON TRADER 14,2025-06-18,Focused Inspection,M. Tan,Tubarao,Brazil,9,Satisfactory with Conditions
+INS-00048,9300014,HORIZON TRADER 14,2024-09-09,Follow-up Inspection,J. Smith,Tubarao,Brazil,6,Satisfactory
+INS-00049,9300014,HORIZON TRADER 14,2025-06-23,Vetting Inspection,A. Kim,Visakhapatnam,India,7,Satisfactory
+INS-00050,9300015,HORIZON PRIDE 15,2024-01-10,Follow-up Inspection,M. Tan,Richards Bay,South Africa,12,Satisfactory
+INS-00051,9300015,HORIZON PRIDE 15,2024-07-22,Vetting Inspection,R. Patel,Ulsan,Korea,10,Satisfactory
+INS-00052,9300015,HORIZON PRIDE 15,2026-06-23,Vetting Inspection,R. Patel,Yokohama,Japan,9,Satisfactory
+INS-00053,9300015,HORIZON PRIDE 15,2025-10-08,Follow-up Inspection,J. Smith,Yokohama,Japan,12,Unsatisfactory
+INS-00054,9300016,NORTHSTAR STAR 16,2025-01-10,Vetting Inspection,R. Patel,Bintulu,Malaysia,10,Satisfactory
+INS-00055,9300016,NORTHSTAR STAR 16,2026-07-27,Follow-up Inspection,J. Smith,Yokohama,Japan,9,Satisfactory
+INS-00056,9300017,MERIDIAN STAR 17,2024-02-20,Focused Inspection,A. Kim,Singapore,Singapore,8,Satisfactory
+INS-00057,9300017,MERIDIAN STAR 17,2025-08-08,Vetting Inspection,J. Smith,Mundra,India,9,Satisfactory
+INS-00058,9300017,MERIDIAN STAR 17,2025-03-22,Follow-up Inspection,M. Tan,Mundra,India,5,Satisfactory
+INS-00059,9300018,OCEAN NAVIGATOR 18,2024-05-13,Follow-up Inspection,J. Smith,Busan,Korea,8,Satisfactory with Conditions
+INS-00060,9300018,OCEAN NAVIGATOR 18,2024-04-24,Follow-up Inspection,J. Smith,Ulsan,Korea,8,Satisfactory with Conditions
+INS-00061,9300018,OCEAN NAVIGATOR 18,2026-11-24,Focused Inspection,M. Tan,Visakhapatnam,India,7,Satisfactory
+INS-00062,9300018,OCEAN NAVIGATOR 18,2024-11-02,Vetting Inspection,J. Smith,Newcastle,Australia,6,Satisfactory
+INS-00063,9300018,OCEAN NAVIGATOR 18,2024-09-18,Focused Inspection,M. Tan,Bintulu,Malaysia,9,Satisfactory
+INS-00064,9300019,ATLAS NAVIGATOR 19,2024-02-04,Vetting Inspection,D. Wilson,Mundra,India,9,Satisfactory
+INS-00065,9300019,ATLAS NAVIGATOR 19,2025-07-13,Focused Inspection,A. Kim,Mundra,India,7,Satisfactory
+INS-00066,9300019,ATLAS NAVIGATOR 19,2025-07-21,Vetting Inspection,D. Wilson,Newcastle,Australia,5,Satisfactory
+INS-00067,9300019,ATLAS NAVIGATOR 19,2024-06-01,Focused Inspection,R. Patel,Yokohama,Japan,6,Satisfactory
+INS-00068,9300019,ATLAS NAVIGATOR 19,2025-04-27,Focused Inspection,D. Wilson,Ulsan,Korea,11,Satisfactory
+INS-00069,9300020,PACIFIC PRIDE 20,2025-03-13,Vetting Inspection,R. Patel,Hamburg,Germany,10,Satisfactory with Conditions
+INS-00070,9300020,PACIFIC PRIDE 20,2024-03-09,Vetting Inspection,A. Kim,Kaohsiung,Taiwan,7,Satisfactory
+INS-00071,9300021,PACIFIC SPIRIT 21,2025-06-10,Follow-up Inspection,D. Wilson,Hamburg,Germany,8,Satisfactory
+INS-00072,9300021,PACIFIC SPIRIT 21,2024-11-10,Vetting Inspection,R. Patel,Yokohama,Japan,11,Satisfactory
+INS-00073,9300021,PACIFIC SPIRIT 21,2025-10-16,Focused Inspection,R. Patel,Richards Bay,South Africa,5,Satisfactory
+INS-00074,9300022,OCEAN PRIDE 22,2024-09-24,Focused Inspection,D. Wilson,Mundra,India,8,Satisfactory
+INS-00075,9300022,OCEAN PRIDE 22,2024-08-24,Vetting Inspection,M. Tan,Hamburg,Germany,5,Satisfactory
+INS-00076,9300022,OCEAN PRIDE 22,2024-06-21,Vetting Inspection,J. Smith,Ulsan,Korea,7,Satisfactory
+INS-00077,9300022,OCEAN PRIDE 22,2025-01-24,Follow-up Inspection,D. Wilson,Richards Bay,South Africa,11,Satisfactory with Conditions
+INS-00078,9300023,OCEAN SPIRIT 23,2026-09-23,Vetting Inspection,D. Wilson,Tubarao,Brazil,7,Satisfactory
+INS-00079,9300023,OCEAN SPIRIT 23,2026-05-06,Focused Inspection,R. Patel,Newcastle,Australia,6,Satisfactory
+INS-00080,9300023,OCEAN SPIRIT 23,2025-09-27,Vetting Inspection,R. Patel,Port Klang,Malaysia,8,Satisfactory
+INS-00081,9300023,OCEAN SPIRIT 23,2025-12-10,Focused Inspection,A. Kim,Kaohsiung,Taiwan,7,Satisfactory
+INS-00082,9300023,OCEAN SPIRIT 23,2025-06-19,Focused Inspection,A. Kim,Singapore,Singapore,12,Satisfactory with Conditions
+INS-00083,9300024,ATLAS TRADER 24,2024-01-23,Follow-up Inspection,J. Smith,Port Klang,Malaysia,12,Satisfactory with Conditions
+INS-00084,9300024,ATLAS TRADER 24,2026-10-01,Follow-up Inspection,M. Tan,Richards Bay,South Africa,8,Satisfactory
+INS-00085,9300024,ATLAS TRADER 24,2026-12-13,Follow-up Inspection,J. Smith,Port Klang,Malaysia,8,Unsatisfactory
+INS-00086,9300024,ATLAS TRADER 24,2025-09-22,Vetting Inspection,A. Kim,Busan,Korea,6,Satisfactory with Conditions
+INS-00087,9300024,ATLAS TRADER 24,2025-02-10,Vetting Inspection,J. Smith,Ulsan,Korea,10,Satisfactory
+INS-00088,9300025,NORTHSTAR TRADER 25,2024-12-25,Vetting Inspection,A. Kim,Port Hedland,Australia,10,Satisfactory
+INS-00089,9300025,NORTHSTAR TRADER 25,2024-01-16,Vetting Inspection,J. Smith,Port Klang,Malaysia,5,Satisfactory
+INS-00090,9300025,NORTHSTAR TRADER 25,2025-06-19,Vetting Inspection,D. Wilson,Visakhapatnam,India,8,Unsatisfactory
+INS-00091,9300025,NORTHSTAR TRADER 25,2024-01-08,Follow-up Inspection,M. Tan,Tubarao,Brazil,12,Satisfactory with Conditions
+INS-00092,9300026,NORTHSTAR FORTUNE 26,2026-05-09,Vetting Inspection,R. Patel,Port Hedland,Australia,12,Unsatisfactory
+INS-00093,9300026,NORTHSTAR FORTUNE 26,2026-05-16,Follow-up Inspection,A. Kim,Bintulu,Malaysia,6,Satisfactory with Conditions
+INS-00094,9300027,OCEAN MERIDIAN 27,2024-04-22,Focused Inspection,A. Kim,Yokohama,Japan,8,Satisfactory
+INS-00095,9300027,OCEAN MERIDIAN 27,2024-06-20,Follow-up Inspection,J. Smith,Yokohama,Japan,10,Satisfactory with Conditions
+INS-00096,9300027,OCEAN MERIDIAN 27,2025-03-06,Focused Inspection,R. Patel,Hamburg,Germany,10,Unsatisfactory
+INS-00097,9300028,PACIFIC SPIRIT 28,2025-12-03,Follow-up Inspection,J. Smith,Yokohama,Japan,6,Satisfactory
+INS-00098,9300028,PACIFIC SPIRIT 28,2025-07-12,Follow-up Inspection,D. Wilson,Mundra,India,8,Satisfactory
+INS-00099,9300028,PACIFIC SPIRIT 28,2025-03-13,Focused Inspection,A. Kim,Busan,Korea,10,Satisfactory with Conditions
+INS-00100,9300029,MERIDIAN NAVIGATOR 29,2025-06-06,Follow-up Inspection,R. Patel,Visakhapatnam,India,9,Satisfactory
+INS-00101,9300029,MERIDIAN NAVIGATOR 29,2026-06-26,Focused Inspection,J. Smith,Mundra,India,5,Satisfactory
+INS-00102,9300029,MERIDIAN NAVIGATOR 29,2024-07-03,Focused Inspection,J. Smith,Rotterdam,Netherlands,9,Satisfactory
+INS-00103,9300029,MERIDIAN NAVIGATOR 29,2024-07-05,Focused Inspection,A. Kim,Busan,Korea,6,Satisfactory
+INS-00104,9300030,MERIDIAN FORTUNE 30,2026-06-14,Follow-up Inspection,D. Wilson,Kaohsiung,Taiwan,12,Satisfactory
+INS-00105,9300030,MERIDIAN FORTUNE 30,2024-05-13,Focused Inspection,R. Patel,Busan,Korea,5,Satisfactory
+INS-00106,9300030,MERIDIAN FORTUNE 30,2025-04-27,Focused Inspection,M. Tan,Bintulu,Malaysia,5,Satisfactory with Conditions
+INS-00107,9300030,MERIDIAN FORTUNE 30,2026-07-17,Focused Inspection,A. Kim,Singapore,Singapore,12,Satisfactory with Conditions
+INS-00108,9300031,OCEAN SPIRIT 31,2026-02-16,Follow-up Inspection,M. Tan,Ulsan,Korea,9,Satisfactory
+INS-00109,9300031,OCEAN SPIRIT 31,2025-07-13,Focused Inspection,D. Wilson,Hamburg,Germany,8,Satisfactory
+INS-00110,9300031,OCEAN SPIRIT 31,2026-09-25,Focused Inspection,M. Tan,Tubarao,Brazil,6,Satisfactory
+INS-00111,9300031,OCEAN SPIRIT 31,2024-08-02,Focused Inspection,D. Wilson,Port Hedland,Australia,6,Satisfactory
+INS-00112,9300032,EASTERN PRIDE 32,2024-08-09,Vetting Inspection,D. Wilson,Yokohama,Japan,7,Satisfactory with Conditions
+INS-00113,9300032,EASTERN PRIDE 32,2025-08-12,Follow-up Inspection,A. Kim,Newcastle,Australia,8,Satisfactory
+INS-00114,9300033,HORIZON TRADER 33,2025-12-21,Focused Inspection,M. Tan,Newcastle,Australia,5,Satisfactory
+INS-00115,9300033,HORIZON TRADER 33,2026-02-21,Focused Inspection,A. Kim,Port Hedland,Australia,11,Satisfactory
+INS-00116,9300034,PACIFIC STAR 34,2025-09-07,Follow-up Inspection,J. Smith,Port Klang,Malaysia,5,Satisfactory
+INS-00117,9300034,PACIFIC STAR 34,2025-06-26,Focused Inspection,A. Kim,Rotterdam,Netherlands,6,Satisfactory
+INS-00118,9300034,PACIFIC STAR 34,2024-03-22,Follow-up Inspection,R. Patel,Rotterdam,Netherlands,9,Satisfactory
+INS-00119,9300035,PACIFIC TRADER 35,2025-03-04,Follow-up Inspection,M. Tan,Bintulu,Malaysia,11,Satisfactory
+INS-00120,9300035,PACIFIC TRADER 35,2025-02-14,Follow-up Inspection,M. Tan,Visakhapatnam,India,5,Satisfactory
+INS-00121,9300035,PACIFIC TRADER 35,2026-11-21,Focused Inspection,D. Wilson,Bintulu,Malaysia,5,Satisfactory
+INS-00122,9300035,PACIFIC TRADER 35,2026-03-17,Follow-up Inspection,J. Smith,Port Hedland,Australia,6,Satisfactory
+INS-00123,9300036,OCEAN STAR 36,2026-10-21,Focused Inspection,J. Smith,Kaohsiung,Taiwan,12,Satisfactory with Conditions
+INS-00124,9300036,OCEAN STAR 36,2025-01-21,Vetting Inspection,R. Patel,Port Hedland,Australia,12,Satisfactory
+INS-00125,9300037,EASTERN PRIDE 37,2026-10-06,Vetting Inspection,R. Patel,Hamburg,Germany,10,Satisfactory with Conditions
+INS-00126,9300037,EASTERN PRIDE 37,2025-03-10,Vetting Inspection,M. Tan,Rotterdam,Netherlands,8,Satisfactory
+INS-00127,9300037,EASTERN PRIDE 37,2025-08-04,Focused Inspection,D. Wilson,Richards Bay,South Africa,8,Satisfactory with Conditions
+INS-00128,9300038,NORTHSTAR FORTUNE 38,2026-03-14,Vetting Inspection,M. Tan,Mundra,India,8,Satisfactory
+INS-00129,9300038,NORTHSTAR FORTUNE 38,2026-06-15,Focused Inspection,D. Wilson,Yokohama,Japan,8,Satisfactory with Conditions
+INS-00130,9300039,OCEAN PRIDE 39,2025-11-07,Vetting Inspection,J. Smith,Port Klang,Malaysia,5,Satisfactory
+INS-00131,9300039,OCEAN PRIDE 39,2024-11-21,Focused Inspection,R. Patel,Newcastle,Australia,6,Satisfactory
+INS-00132,9300040,PACIFIC FORTUNE 40,2026-06-02,Vetting Inspection,M. Tan,Ulsan,Korea,6,Satisfactory
+INS-00133,9300040,PACIFIC FORTUNE 40,2024-07-22,Focused Inspection,D. Wilson,Ulsan,Korea,6,Satisfactory
+INS-00134,9300040,PACIFIC FORTUNE 40,2026-02-12,Follow-up Inspection,M. Tan,Tubarao,Brazil,6,Satisfactory
+INS-00135,9300040,PACIFIC FORTUNE 40,2025-11-26,Follow-up Inspection,A. Kim,Port Hedland,Australia,7,Satisfactory with Conditions
+INS-00136,9300040,PACIFIC FORTUNE 40,2024-10-27,Vetting Inspection,D. Wilson,Kaohsiung,Taiwan,5,Satisfactory
+INS-00137,9300041,EASTERN TRADER 41,2026-10-12,Follow-up Inspection,J. Smith,Newcastle,Australia,5,Satisfactory
+INS-00138,9300041,EASTERN TRADER 41,2025-03-18,Focused Inspection,A. Kim,Yokohama,Japan,6,Satisfactory
+INS-00139,9300041,EASTERN TRADER 41,2026-11-01,Follow-up Inspection,D. Wilson,Port Hedland,Australia,8,Satisfactory
+INS-00140,9300042,ATLAS PRIDE 42,2026-09-16,Follow-up Inspection,R. Patel,Rotterdam,Netherlands,8,Satisfactory with Conditions
+INS-00141,9300042,ATLAS PRIDE 42,2025-11-13,Vetting Inspection,D. Wilson,Port Klang,Malaysia,9,Satisfactory
+INS-00142,9300042,ATLAS PRIDE 42,2026-02-16,Vetting Inspection,D. Wilson,Rotterdam,Netherlands,7,Satisfactory
+INS-00143,9300042,ATLAS PRIDE 42,2024-04-27,Focused Inspection,J. Smith,Bintulu,Malaysia,9,Satisfactory
+INS-00144,9300043,ATLAS STAR 43,2025-03-04,Focused Inspection,R. Patel,Singapore,Singapore,7,Satisfactory
+INS-00145,9300043,ATLAS STAR 43,2024-08-20,Focused Inspection,D. Wilson,Richards Bay,South Africa,6,Satisfactory
+INS-00146,9300043,ATLAS STAR 43,2025-11-05,Vetting Inspection,R. Patel,Tubarao,Brazil,11,Satisfactory
+INS-00147,9300043,ATLAS STAR 43,2024-12-24,Focused Inspection,A. Kim,Newcastle,Australia,5,Satisfactory
+INS-00148,9300043,ATLAS STAR 43,2025-09-18,Follow-up Inspection,D. Wilson,Visakhapatnam,India,10,Satisfactory
+INS-00149,9300044,OCEAN FORTUNE 44,2025-04-12,Focused Inspection,R. Patel,Ulsan,Korea,11,Satisfactory
+INS-00150,9300044,OCEAN FORTUNE 44,2025-04-21,Vetting Inspection,M. Tan,Singapore,Singapore,11,Unsatisfactory
+INS-00151,9300045,ATLAS STAR 45,2026-08-25,Follow-up Inspection,R. Patel,Yokohama,Japan,5,Satisfactory with Conditions
+INS-00152,9300045,ATLAS STAR 45,2024-02-04,Focused Inspection,R. Patel,Tubarao,Brazil,5,Satisfactory
+INS-00153,9300045,ATLAS STAR 45,2025-06-20,Focused Inspection,M. Tan,Port Klang,Malaysia,12,Satisfactory
+INS-00154,9300045,ATLAS STAR 45,2025-09-02,Focused Inspection,J. Smith,Mundra,India,12,Satisfactory
+INS-00155,9300045,ATLAS STAR 45,2026-09-15,Vetting Inspection,J. Smith,Port Klang,Malaysia,11,Satisfactory
+INS-00156,9300046,ATLAS NAVIGATOR 46,2025-10-09,Vetting Inspection,M. Tan,Busan,Korea,12,Satisfactory
+INS-00157,9300046,ATLAS NAVIGATOR 46,2026-05-26,Follow-up Inspection,J. Smith,Yokohama,Japan,7,Satisfactory
+INS-00158,9300046,ATLAS NAVIGATOR 46,2025-05-18,Follow-up Inspection,A. Kim,Port Hedland,Australia,7,Satisfactory
+INS-00159,9300046,ATLAS NAVIGATOR 46,2024-05-16,Follow-up Inspection,M. Tan,Port Hedland,Australia,9,Satisfactory
+INS-00160,9300047,EASTERN TRADER 47,2025-06-22,Focused Inspection,R. Patel,Mundra,India,6,Satisfactory
+INS-00161,9300047,EASTERN TRADER 47,2024-03-01,Focused Inspection,M. Tan,Busan,Korea,6,Satisfactory with Conditions
+INS-00162,9300047,EASTERN TRADER 47,2024-01-22,Follow-up Inspection,R. Patel,Port Klang,Malaysia,12,Satisfactory with Conditions
+INS-00163,9300047,EASTERN TRADER 47,2024-12-24,Follow-up Inspection,J. Smith,Rotterdam,Netherlands,9,Satisfactory
+INS-00164,9300048,EASTERN NAVIGATOR 48,2026-04-17,Focused Inspection,M. Tan,Newcastle,Australia,9,Satisfactory with Conditions
+INS-00165,9300048,EASTERN NAVIGATOR 48,2024-12-02,Vetting Inspection,D. Wilson,Yokohama,Japan,8,Satisfactory
+INS-00166,9300048,EASTERN NAVIGATOR 48,2024-01-19,Focused Inspection,D. Wilson,Newcastle,Australia,7,Satisfactory
+INS-00167,9300048,EASTERN NAVIGATOR 48,2025-12-07,Follow-up Inspection,J. Smith,Singapore,Singapore,9,Satisfactory
+INS-00168,9300048,EASTERN NAVIGATOR 48,2025-12-15,Focused Inspection,R. Patel,Mundra,India,8,Satisfactory
+INS-00169,9300049,PACIFIC MERIDIAN 49,2025-05-18,Focused Inspection,D. Wilson,Port Klang,Malaysia,11,Satisfactory
+INS-00170,9300049,PACIFIC MERIDIAN 49,2026-11-16,Focused Inspection,M. Tan,Newcastle,Australia,10,Satisfactory
+INS-00171,9300049,PACIFIC MERIDIAN 49,2026-01-12,Follow-up Inspection,M. Tan,Mundra,India,5,Satisfactory with Conditions
+INS-00172,9300049,PACIFIC MERIDIAN 49,2025-07-01,Follow-up Inspection,D. Wilson,Hamburg,Germany,5,Satisfactory
+INS-00173,9300049,PACIFIC MERIDIAN 49,2024-01-15,Follow-up Inspection,M. Tan,Port Klang,Malaysia,8,Satisfactory
+INS-00174,9300050,ATLAS STAR 50,2026-06-26,Focused Inspection,D. Wilson,Visakhapatnam,India,6,Satisfactory
+INS-00175,9300050,ATLAS STAR 50,2025-09-02,Vetting Inspection,M. Tan,Port Klang,Malaysia,8,Satisfactory

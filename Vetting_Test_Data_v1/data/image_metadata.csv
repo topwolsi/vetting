@@ -1,0 +1,7 @@
+﻿image_id,imo,vessel_name,inspection_id,category,finding_id,caption,synthetic,filename
+IMG-00001,9300001,OCEAN MERIDIAN 01,INS-00001,MAIN DECK / MOORING AREA,FND-000101,Mooring line condition and deck housekeeping,True,deck_01.png
+IMG-00002,9300002,ATLAS MERIDIAN 02,INS-00002,ENGINE ROOM,FND-000102,Auxiliary machinery inspection / minor oil residue,True,engine_room_01.png
+IMG-00003,9300003,MERIDIAN MERIDIAN 03,INS-00003,BRIDGE,FND-000103,Navigation console and bridge equipment inspection,True,bridge_01.png
+IMG-00004,9300004,ATLAS TRADER 04,INS-00004,CARGO HOLD,FND-000104,Cargo hold condition / coating inspection,True,cargo_hold_01.png
+IMG-00005,9300005,EASTERN SPIRIT 05,INS-00005,FIRE SAFETY,FND-000105,Firefighting equipment inspection,True,fire_safety_01.png
+IMG-00006,9300006,NORTHSTAR MERIDIAN 06,INS-00006,ACCOMMODATION,FND-000106,Safety signage and housekeeping inspection,True,accommodation_01.png

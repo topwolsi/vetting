@@ -1,0 +1,33 @@
+{
+  "project": "Synthetic Maritime Vetting Database v1",
+  "purpose": "Development and UI/AI testing only. All vessel names, IMO numbers, companies, inspections, findings and incidents are fictional.",
+  "entities": [
+    "vessels",
+    "inspections",
+    "findings",
+    "corrective_actions",
+    "psc",
+    "certificates",
+    "incidents",
+    "risk_scores"
+  ],
+  "recommended_dashboard": [
+    "Fleet Risk Distribution",
+    "High-Risk Vessels",
+    "Open Findings",
+    "Repeat Findings",
+    "PSC Deficiencies",
+    "Certificate Expiry"
+  ],
+  "image_metadata_fields": [
+    "image_id",
+    "imo",
+    "vessel_name",
+    "inspection_id",
+    "category",
+    "finding_id",
+    "caption",
+    "synthetic"
+  ],
+  "note": "Do not present this dataset as real OCIMF/SIRE/company data."
+}
